@@ -16,6 +16,6 @@ The problem is that we rarely have the luxury of time to read a textbook cover t
 
 Please goto the following link to access the proposal
 
-[Proposal in PDF](./document/CS410_Final Project_Proposal.pdf) 
+![Proposal in PDF](./document/CS410_Final Project_Proposal.pdf) 
 
-[Proposal in DOC](./document/CS410_Final Project_Proposal.docx)
+![Proposal in DOC](./document/CS410_Final Project_Proposal.docx)
