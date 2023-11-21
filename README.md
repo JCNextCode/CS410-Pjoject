@@ -22,4 +22,4 @@ Please goto the following link to access the proposal.
 
 Please goto the following link to access the progress report.
 
-[Proposal](https://github.com/JCNextCode/CS410-Project/tree/main/document) 
+[Progress Report](https://github.com/JCNextCode/CS410-Project/tree/main/document) 
