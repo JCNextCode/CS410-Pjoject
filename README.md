@@ -14,7 +14,12 @@ The problem is that we rarely have the luxury of time to read a textbook cover t
 
 ## PROPOSAL
 
-Please goto the following link to access the proposal
+Please goto the following link to access the proposal.
 
 [Proposal](https://github.com/JCNextCode/CS410-Project/tree/main/document) 
 
+## PROGRESS REPORT
+
+Please goto the following link to access the progress report.
+
+[Proposal](https://github.com/JCNextCode/CS410-Project/tree/main/document) 
