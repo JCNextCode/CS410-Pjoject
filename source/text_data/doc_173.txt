@@ -1,0 +1,78 @@
+8.3 Scorer
+153
+<1,1,3>
+<2,1,2>
+<3,1,1>
+…
+<1,2,2>
+<3,2,3>
+<4,2,2>
+…
+doc1
+doc2
+doc300
+…
+Sort by doc-id
+Parse and count
+<1,300,3>
+<3,300,1>
+…
+<1,1,3>
+<1,2,2>
+<2,1,2>
+<2,4,3>
+…
+<1,5,3>
+<1,6,2>
+…
+Sort by term-id
+“Local” sort
+<1,299,3>
+<1,300,1>
+…
+<1,1,3>
+<1,2,2>
+<1,5,2>
+<1,6,3>
+…
+<1,300,3>
+<2,1,2>
+…
+All info about term 1
+Term
+lexicon:
+Merge sort
+<5000,299,1>
+<5000,300,1>
+…
+the 1
+campaign 2
+news 3
+a 4
+…
+DocID
+lexicon:
+doc1 1
+doc2 2
+doc3 3
+…
+Figure 8.2
+Sort-based inversion of inverted index chunks.
+Aforwardindexmaybecreatedinaverysimilarwaytotheinvertedindex.Instead
+of mapping terms to documents, a forward index maps documents to a list of
+terms that occur in them. This type of setup is useful when doing other operations
+aside from search. For example, clustering or classification would need to access
+an entire document’s content at once. Using an inverted index to do this is not
+efficient at all, since we’d have to scan the entire postings file to find all the terms
+that occur in a specific document. Thus, we have the forward index structure that
+records a term vector for each document ID.
+In the next section, we’ll see how using the inverted term-to-document mapping
+can greatly decrease query scoring time. There are other efficiency aspects that are
+relevant to the forward index as well, such as compression and caching.
+8.3
+Scorer
+Now that we have our inverted index, how can we use it to efficiently score queries?
+Imagine for a moment that we don’t have an inverted index; we only have the
+forward index, which maps document IDs to a list of terms that occur in them. To
+score a query vector, we’d need to iterate through every single entry (i.e., document)
+in the forward index and run a scoring function on the each (document, query) pair.

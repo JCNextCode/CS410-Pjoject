@@ -1,0 +1,35 @@
+Chapter 20
+Toward A Unified System for Text Management and Analysis
+447
+Search
+Information synthesis and analysis
+Analysis engine
+Task completion
+Decision making
+Learning
+…
+Search1
+Search2
+…
+Figure 20.2
+Extending a search engine to create an analysis engine that directly supports a user’s
+task.
+plays two important roles. For one, it enables a user to quickly identify the most
+relevant text data, which is often what we really need for solving a problem, thus
+avoiding dealing with a huge amount of non-relevant text data. Such a strategy
+of data selection (reduction) is logically the very first step we should take when
+tackling the scalability problem caused by the size of data. Secondly, it provides
+knowledge provenance in the sense that it allows a user to easily navigate into any
+source to examine its reliability in depth. At this extreme, the computer has done
+the minimum, if anything at all, to support text analysis. However, the system (i.e.,
+search engine) is very robust and can handle large amounts of data quickly.
+At the other extreme, the system can attempt to provide task support directly to
+the user so as to minimize the user’s effort, as illustrated in Figure 20.2.
+Providing such a support for arbitrary tasks or even a large class of tasks is im-
+possible due to the inability of computers to understand natural language and the
+lack of knowledge about specific task requirements. As a result, we can only build
+very specialized predictive models for a particular problem, where the features gen-
+erally have to be designed by humans. This kind of system may provide maximum
+support for a decision task, but the function of the system is inevitably restricted
+to a specific task. Since predictive modeling generally requires the use of machine
+learning techniques and combining features extracted from both text and non-text

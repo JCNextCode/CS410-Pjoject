@@ -1,0 +1,39 @@
+14.3 Term Clustering
+289
+merged gradually, but the criterion for merging in Brown clustering is based on
+a similarity function derived from the likelihood function. Specifically, the maxi-
+mization of the likelihood function is shown to be equivalent to maximization of
+the mutual information of adjacent word classes, thus when merging two words,
+the algorithm would favor merging two words that are distributed very similarly
+since when such words are replaced by their respective classes, it would minimize
+the decrease of mutual information between adjacent classes.
+Mathematically, assuming that we partition all the words in the vocabulary into
+C classes, the n-gram class language model defines the probability of observing a
+word wn given that we have already n − 1 words preceeding wn, i.e., wn−1, . . . , w1
+as
+p(wn | wn−1, . . . , w1) = p(wn | cn)p(cn | cn−1, . . . , c1),
+where ci is the class of word wi. It essentially assumes that the probability of
+observing wn only depends on the classes of the previous words, but does not
+depend on the specific words, thus unless C is the same as vocabulary size (i.e.,
+every word is in its own class), the n-gram class language model always has fewer
+parameters than the regular n-gram language model.
+As a generative model, we would generate a word by first looking up the classes
+of the previous words, i.e., cn−1, . . . , c1, then sample a class for the n-th position cn
+using p(cn | cn−1, . . . , c1), and finally sample a word at the n-th position by using
+p(w | cn). The distribution p(w | cn) captures how frequently we will observe word
+w when the latent class cn is used.
+If we are given the partitioning of words into C classses, then the maximum
+likelihood estimation is not hard as we can simply replace the words with their
+corresponding classes to estimate p(cn | cn−1, . . . , c1) in the same way as we would
+for estimating a regular n-gram language model, and the probability of a word given
+a particular class p(w | c) can also be easily estimated by pooling together all the
+observations of words in the data belonging to the class c and normalizing their
+counts, which gives an estimate of p(w | c) essentially based on the count of word
+w in the whole data set.
+However, finding the best partitioning of words is computationally intractable.
+Fortunately, we can use a greedy algorithm to construct word classes in very much
+the same way as agglomerative hierarchical clustering, i.e., gradually merging
+words to form classes by keeping track of the objective of maximizing the like-
+lihood. A neat theoretical result is that the maximization of the likelihood is equiv-
+alent to maximization of the mutual information between all the adjacent classes
+in the case of bigram model. Thus, the best pairs of words to merge would tend to

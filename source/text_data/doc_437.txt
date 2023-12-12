@@ -1,0 +1,39 @@
+19.2 Contextual Text Mining
+417
+data in different ways based on the companion non-text data (e.g., partitioning text
+based on time or location). This opens up possibilities of contextual text mining, or
+mining text data in the context defined by non-text data to discover context-specific
+knowledge (such as topics associated with a specific non-text variable such as time),
+or patterns across different contexts like temporal trends. Second, text data can
+help interpret patterns discovered from non-text data. For example, if a frequent
+pattern is discovered from non-text data, we can separate the text data associated
+with the data instances where the pattern occurs from those associated with the
+instances that do not match the pattern. We can then analyze the difference be-
+tween these two sets of text data, which may be associated with the meaning of the
+pattern, and thus can offer insights about how to interpret the pattern which would
+otherwise be hard to interpret by only looking at the non-text data. This technique
+is called pattern annotation and discussed in detail in Mei et al. [2006].
+19.2
+Contextual Text Mining
+In this section, we discuss how to use non-text data as context to enrich topic
+analysis of text data. Such analysis techniques can be regarded as an extension
+of topic analysis to further reveal the correlation of topics and any associated
+context (e.g., time or location). When topics represent opinions, we may also reveal
+context-dependent opinions. Contextual text mining can be very useful for text-
+based prediction because it allows us to combine non-text data with text data to
+derive potentially very effective sophisticated predictors.
+Contextual text mining is generally useful because text often has rich contextual
+information. First, text data almost always have metadata available (such as time,
+location, author, and source of the data), which can be regarded as direct context
+information. Second, text data may also have indirect context which refers to addi-
+tional data related to the metadata. For example, from the authors of a text article,
+we can further obtain additional context such as the social network of the author,
+the author’s age, or the author’s location. Such information is not in general di-
+rectly related to the text, yet through such a propagation process, we can connect
+all of them. There may also be other articles from the same source as a current arti-
+cle, and we can connect these articles from the same source and make them related
+as well. In general, any related data can be regarded as context.
+What can the context of text data be used for? Context can be used to partition
+text data in many interesting ways. It can almost allow us to partition text data in
+any way that we want, and thus enables comparative analysis of text to be done
+across any context dimension that is interesting to us.

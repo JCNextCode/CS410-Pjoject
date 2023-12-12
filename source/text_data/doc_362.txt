@@ -1,0 +1,55 @@
+342
+Chapter 17
+Topic Analysis
+.
+Data: Document d = x1x2 . . . x|d|, xi ∈ V = {w1, . . . , wM} is a word
+.
+Model: Unigram LMθ(= topic) : {θi = p(wi | θ)}, i = 1, . . . , M; θ1 + . . . + θM = 1
+.
+Likelihood function:
+p(d | θ) = p(x1 | θ) × . . . × p(x|d| | θ)
+= p(w1 | θ)c(w1,d) × . . . × p(wM | θ)c(wM ,d)
+=
+M
+�
+i=1
+p(wi | θ)c(wi,d) =
+M
+�
+i=1
+θc(wi,d)
+i
+.
+ML estimate: ( ˆθ1, . . . , ˆθM) arg maxθ1, ...,θM p(d | θ) = arg maxθ1, ...,θM
+M
+�
+i=1
+θc(wi,d)
+i
+Figure 17.10
+Unigram language model for discovering one topic.
+document as a sequence of words. Each word here is denoted by xi. Our model is a
+unigram language model, i.e., a word distribution that denotes the latent topic that
+we hope to discover. Clearly, the model has as many parameters as the number of
+words in our vocabulary, which is M in this case. For convenience, we will use θi to
+denote the probability of word wi. According to our model, the probabilities of all
+the words must sum to one: �M
+i=1 θi = 1.
+Next, we see that our likelihood function is the probability of generating this
+whole document according to our model. In a unigram language model, we assume
+independence in generating each word so the probability of the document equals
+the product of the probability of each word in the document (the first line of the
+equation for the likelihood function). We can rewrite this product into a slightly
+different form by grouping the terms corresponding to the same word together so
+that the product would be over all the distinct words in the vocabulary (instead of
+over all the positions of words in the document), which is shown in the second line
+of the equation for the likelihood function.
+Since some words might have repeated occurrences, when we use a product over
+the unique words we must also incorporate the count of a word wi in document
+d, which is denoted by c(wi, d). Although the product is taken over the entire
+vocabulary, it is clear that if a word did not occur in the document, it would have a
+zero count (c(wi, d) = 0), and that corresponding term would be essentially absent
+in the formula, thus the product is still essentially over the words that actually
+occurred in the document. We often prefer such a form of the likelihood function
+where the product is over the entire vocabulary because it is convenient for deriving
+formulas for parameter estimation.

@@ -1,0 +1,46 @@
+226
+Chapter 11
+Recommender Systems
+Thresholding
+Threshold
+learning
+Vector
+learning
+Utility
+evaluation
+Scoring
+threshold
+proﬁle vector
+doc
+vector
+no
+yes
+Feedback
+information
+Figure 11.3
+The three modules in content-based recommendation and how they fit into its
+framework.
+36.5
+33.4
+32.1
+29.9
+27.3
+…
+…
+θ = 30.0
+Rel
+NonRel
+Rel
+?
+?
+No judgments are available for these documents
+Figure 11.4
+Information available to the content-based recommender system.
+There are some interesting challenges in threshold learning. Figure 11.4 depicts
+the type of data that you can collect in the filtering system. We have the scores and
+the status of relevance. The first document has a score 36.5 and it’s relevant. The
+second one is not relevant. We have many documents for which we don’t know the
+status, since their scores are less than θ and are not shown to the user for judging.
+Thus, the judged documents are not a random sample; it’s biased or censored
+data, which creates some difficulty for learning an optimal θ. Secondly, there are in
+general very little labeled data and very few relevant data, which make it challenging

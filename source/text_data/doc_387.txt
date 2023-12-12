@@ -1,0 +1,36 @@
+17.3 Mining One Topic from Text
+367
+θ
+EM as Hill-Climbing → Converse to Local Maximum
+Likelihood p(d|θ) 
+Original likelihood
+Lower bound of likelihood function
+M-step = maximizing the lower bound
+E-step = computing the lower bound
+Next guess   p(n+1)(w|θd)
+Current guess   p(n)(w|θd)
+Figure 17.26
+EM as hill-climbing for optimizing likelihood.
+current guess of the parameter value is p(n)(w | θd), and it is seen to be non-optimal
+in the picture. In the E-step, the EM algorithm (conceptually) computes an auxiliary
+function which lower bounds the original likelihood function. Lower bounding
+means that for any given value of θd, the value of this auxiliary function would
+be no larger than that of the original likelihood function. In the M-step, the EM
+algorithm finds an optimal parameter value that would maximize the auxiliary
+function and treat this parameter value as our improved estimate, p(n+1)(w | θd).
+Since the auxiliary function is a lower bound of the original likelihood function,
+maximizing the auxiliary function ensures the new parameter to also have a higher
+value according to the original likelihood function unless it has already reached a
+local maximum, in which case, the optimal value maximizing the auxiliary function
+is also a local maximum of the original likelihood function. This explains why the
+EM algorithm is guaranteed to converge to a local maximum. You might wonder
+why we don’t work on finding an improved parameter value directly on the original
+likelihood function. Indeed, it is possible to do that, but in the EM algorithm, the
+auxiliary function is usually much easier to optimize than the original likelihood
+function, so in this sense, it reduces the problem into a somewhat simpler one.
+Although the auxiliary function is generally easier to optimize, it does not always
+have an analytical solution, which means that the maximization of the auxiliary
+function may itself require another iterative process, which would be embedded in
+the overall iterative process of the EM algorithm.
+In our case of the simple mixture model, we did not explicitly compute this
+auxiliary function in the E-step because the auxiliary function is very simple and

@@ -1,0 +1,56 @@
+17.3 Mining One Topic from Text
+357
+d =
+text the
+Behavior 2: high frequency words get higher p(w|θd)
+What if we increase p(θB)?
+→ p(“text”|θd) = 0.9  >>  p(“the”|θd) = 0.1!
+What is the optimal solution now? p(“text”|θd) > 0.1? or  p(“the”|θd) < 0.1?
+p(d|�) = [0.5 * p(“text”|θd) + 0.5 * 0.1]
+ 
+ 
+     × [0.5 * p(“the”|θd) + 0.5 * 0.9]
+p(d′|�) = [0.5 * p(“text”|θd) + 0.5 * 0.1]
+ 
+ 
+      × [0.5 * p(“the”|θd) + 0.5 * 0.9]
+ 
+ 
+      × [0.5 * p(“the”|θd) + 0.5 * 0.9]
+ 
+ 
+      × [0.5 * p(“the”|θd) + 0.5 * 0.9]
+ 
+ 
+ 
+…
+ 
+ 
+      × [0.5 * p(“the”|θd) + 0.5 * 0.9]
+d′ =
+text the
+the the
+the … the
+Figure 17.21
+Behavior of a mixture model: maximizing data likelihood.
+One way to address this question is to take away some probability mass from one
+word and add the probability mass to the other word, which would ensure that they
+sum to one. The question is, of course, which word to have a reduced probability
+and which word to have a larger probability. Should we make the probability of the
+larger or that of text larger?
+If you look at the formula for a moment, you might notice that the new likelihood
+function (which is our objective function for optimization) is influenced more by
+the than text, so any reduction of probability of the would cause more decrease of
+the likelihood than the reduction of probability of text. Indeed, it would make sense
+to take away some probability from text, which only affects one term, and add the
+extra probability to the, which would benefit more terms in the likelihood function
+(since the occurred many times), thus generating an overall effect of increasing
+the value of the likelihood function. In other words, because the is repeated many
+times in the likelihood function, if we increase its probability a little bit, it will have
+substantial positive impact on the likelihood function, whereas a slight decrease of
+probability of text will have a relatively small negative impact because it occurred
+just once.
+The analysis above reveals another behavior of the ML estimate of a mixture
+model: high frequency words in the observed text would tend to have high prob-
+abilities in all the distributions. Such a behavior should not be surprising at all
+because—after all—we are maximizing the likelihood of the data, so the more a

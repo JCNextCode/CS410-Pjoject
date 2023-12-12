@@ -1,0 +1,37 @@
+Exercises
+217
+to schedule crawling these links and to not get stuck in a cycle. This is easily avoided
+by keeping a list of already visited sites.
+Using wget is not the only way to build a simple web crawler. You can make your
+own in Ruby or Python. These languages have many useful libraries for crawling.
+It’s also possible to use an existing web crawler. For Python, Scrapy and Beautiful
+Soup are two popular crawling tools.
+The last important point is to have a short wait period in between page requests.
+Not only is it considered polite to wait a few seconds between requests to avoid
+hammering the server, you may get blocked if you attempt to crawl too fast!
+Use one of the above-mentioned tools to create a simple web crawler. Limit your
+crawling to 100 pages initially.
+10.4. JavaScript Crawlers.
+For a simple page, an easy call to wget works very well.
+But nowadays, most web pages have a large amount of dynamically generated con-
+tent that isn’t part of the downloadable source. Try crawling a page that generates
+dynamic content. (Hint: you can find a page that generates dynamic content by us-
+ing wget and searching for text you know is on the page. If you can’t find it in the
+downloaded HTML file, it must have been dynamically generated!)
+Most modern sites are composed almost entirely of dynamically generated con-
+tent. Simply downloading the basic HTML source will not retrieve all the necessary
+content for indexing. We need to actually load the page and run the JavaScript that
+is called to populate the content.
+Open up the URL of a dynamic page you’d like to crawl in your browser, and start
+the JavaScript console. (In Chrome, it’s CTRL-SHIFT-I.) You can now interact with
+the page via JavaScript. Try typing this in the console:
+alert(’I’m a popup!’)
+Then try
+for(var i = 0; i < 5; ++i) { console.log(’Hello ’ + i); }
+Besides making annoying popups and useless counters, we can access the page
+title:
+document.title
+or we can access the text content:
+document.body.innerText
+This is what we want for indexing! Experiment with a JavaScript crawler using
+a technology such as PhantomJS. We’ve provided a simple script to download a

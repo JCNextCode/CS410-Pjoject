@@ -1,0 +1,48 @@
+458
+Appendix A
+Bayesian Statistics
+In fact, this constant just ensures that given the α and β parameters, the Beta
+distribution still integrates to one over its support. As you probably recall, this is a
+necessity for a probability distribution. Mathematically, we can write this as
+� 1
+0
+xα−1(1 − x)β−1dx = �(α)�(β)
+�(α + β) .
+(A.4)
+Note that the sum over the support of x is the reciprocal of that constant. If we
+divide by it (multiply by reciprocal), we will get one as desired:
+� 1
+0
+�(α + β)
+�(α)�(β)xα−1(1 − x)β−1dx = 1.
+(A.5)
+If you’re proficient in calculus (or know how to use Wolfram Alpha or similar),
+you can confirm this fact for yourself.
+One more note on the Beta distribution: its expected value is
+α
+α + β .
+(A.6)
+We’ll see how this can be useful in a minute. Let’s finally rewrite our estimate
+of p(θ | D). The data we have observed is H , T . Additionally, we are using the two
+hyperparameters α and β for our Beta distribution prior. They’re called hyperparam-
+eters because they are parameters for our prior distribution.
+p(θ | H , T , α, β) ∝ p(H , T | θ)p(θ | α, β)
+∝ θH(1 − θ)T θα−1(1 − θ)β−1
+= θH+α−1(1 − θ)T +β−1.
+But this is itself a Beta distribution! Namely,
+p(θ | H , T , α, β) = Beta(H + α, T + β).
+(A.7)
+Finally, we can get our Bayesian parameter estimation. Unlike maximum likeli-
+hood estimation (MLE), where we have the parameter that maximizes our data, we
+integrate over all possible θ, and find its expected value given the data, E[θ | D]. In
+this case, our “data”, is the flip results and our hyperparameters α and β:
+E[θ | D] =
+� 1
+0
+p(x = H | θ)p(θ | D)dθ =
+H + α
+H + T + α + β .
+(A.8)
+We won’t go into detail with solving the integral since that isn’t our focus. What
+we do see, though, is our final result. This result is general for any Bayesian estimate
+of a binomial parameter with a Beta prior.

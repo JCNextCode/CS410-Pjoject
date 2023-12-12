@@ -1,0 +1,45 @@
+344
+Chapter 17
+Topic Analysis
+At this point, our problem is a well-defined mathematical optimization prob-
+lem where the goal is to find the optimal solution of a constrained maximization
+problem. The objective function is the log-likelihood function and the constraint is
+that all the word probabilities must sum to one. How to solve such an optimization
+problem is beyond the scope of this book, but in this case, we can obtain a simple
+analytical solution by using the Lagrange multiplier approach. This is a commonly
+used approach, so we provide some detail on how it works in Figure 17.11.
+We will first construct a Lagrange function, which combines our original ob-
+jective function with another term that encodes our constraint with the Lagrange
+multiplier, denoted by λ, introducing an additional parameter. It can be shown that
+the solution to the original constrained optimization problem is the same as the
+solution to the new (unconstrained) Lagrange function.
+Since there is no constraint involved any more, it is straightforward to solve this
+optimization problem by taking partial derivatives with respect to all the parame-
+ters and setting all of them to zero, obtaining an equation for each parameter.1 We
+thus have, in total, M + 1linear equations, corresponding to the M word probability
+parameters and λ. Note that the equation for the Lagrange multiplier λ is precisely
+our original constraint. We can easily solve this system of linear equations to obtain
+the Maximum Likelihood estimate of the unigram language model as
+p(wi | ˆθ) =
+c(wi, d)
+�M
+j=1 c(wj , d)
+= c(wi, d)
+|d|
+.
+(17.3)
+This has a very meaningful interpretation: the estimated probability of a word is
+the count of each word normalized by the document length, which is also a sum of
+allthecountsofwordsinthedocument.Thisestimatemostlymatchesourintuition
+in order to maximize the likelihood: words observed more often “deserve” higher
+probabilities, and only words observed are “allowed” to have non-zero probabilities
+(unseen words should have a zero probability). In general, maximum likelihood
+estimation tends to result in a probability estimated as normalized counts of the
+corresponding event so that the events observed often would have a higher proba-
+bility and the events not observed would have zero probability.
+While we have obtained an analytical solution to the maximum likelihood esti-
+mate in this simple case, such an analytical solution is not always possible; indeed,
+it is often impossible. The optimization problem of the MLE can often be very
+1. Zero derivatives are a necessary condition for the function to reach an optimum, but not
+sufficient. However, in this case, we have only one local optimum, thus the condition is also
+sufficient.

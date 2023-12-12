@@ -1,0 +1,147 @@
+10.3 Link Analysis
+205
+p(dj) =
+N
+�
+i=1
+� 1
+N α + (1 − α)Mij
+�
+. p(di) → ⃗p = (αI + (1 − α)M)T ⃗p,
+(10.2)
+where
+Iij = 1
+N
+∀i, j.
+The vector ⃗p equals the transpose of a matrix multiplied by ⃗p again. The trans-
+posed matrix is in fact the sum from 1 to N written in matrix form. Recall from
+linear algebra that this is precisely the equation for an eigenvector. Thus, this equa-
+tion can be solved by using an iterative algorithm. In this iterative algorithm, called
+power iteration, we simply start with a random ⃗p. We then repeatedly update ⃗p by
+multiplying the transposed matrix expression by ⃗p.
+Let’s look at a concrete example: set α = 0.2. This means that there is a 20%
+chance of randomly jumping to a page on the entire web and an 80% chance of
+randomly following a link from the current page. We have the original transition
+matrix M as before that encodes the actual links in the graph. Then, we have
+this uniform smoothing transition matrix I representing random jumping. We
+combine them together with interpolation via α to form another matrix we call A:
+A = (1 − 0.2)M + 0.2I = 0.8
+⎡
+⎢⎢⎢⎢⎣
+0
+0
+1
+2
+1
+2
+1
+0
+0
+0
+0
+1
+0
+0
+1
+2
+1
+2
+0
+0
+⎤
+⎥⎥⎥⎥⎦
++ 0.2
+⎡
+⎢⎢⎢⎢⎣
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+1
+4
+⎤
+⎥⎥⎥⎥⎦
+.
+(10.3)
+The PageRank algorithm will randomly initialize ⃗p first, and then iteratively
+update it by using matrix multiplication. If we rewrite this matrix multiplication
+in terms of just A, we’ll get the following:
+⎡
+⎢⎢⎢⎢⎣
+pt+1(d1)
+pt+1(d2)
+pt+1(d3)
+pt+1(d4)
+⎤
+⎥⎥⎥⎥⎦
+= AT
+⎡
+⎢⎢⎢⎢⎣
+pt(d1)
+pt(d2)
+pt(d3)
+pt(d4)
+⎤
+⎥⎥⎥⎥⎦
+=
+⎡
+⎢⎢⎢⎢⎣
+0.05
+0.85
+0.05
+0.45
+0.05
+0.05
+0.85
+0.45
+0.45
+0.05
+0.05
+0.05
+0.45
+0.05
+0.05
+0.05
+⎤
+⎥⎥⎥⎥⎦
+⎡
+⎢⎢⎢⎢⎣
+pt(d1)
+pt(d2)
+pt(d3)
+pt(d4)
+⎤
+⎥⎥⎥⎥⎦
+.
+(10.4)
+If you want to compute the updated value for d1, you multiply the top row
+in A by the column vector of PageRank scores from the previous iteration. This
+is how we update the vector; we started with some initial values and iteratively
+multiply the matrices together, which generates a new set of scores. We repeat
+this multiplication until the values in ⃗p converge. From linear algebra, we know

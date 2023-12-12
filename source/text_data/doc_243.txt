@@ -1,0 +1,37 @@
+11.1 Content-based Recommendation
+223
+Filtering
+system
+…
+My interest:
+Figure 11.1
+Diagram of a generic information filtering system; blue documents should be delivered
+to the user based on the user’s preferences.
+Binary
+classiﬁer
+User
+interest
+proﬁle
+utility func
+…
+Initialization
+Accepted docs
+Doc source
+User
+Learning
+Feedback
+Accumulated
+docs
+User proﬁle
+text
+Figure 11.2
+A content-based information filtering system with more details filled in for each
+component.
+As shown in Figure 11.2, in an information filtering system there would be a
+binary classifier1 that would have some knowledge of the user’s interests, called
+the user interest profile. Originally, the user profile could be a text summary or
+keywords of what the user is interested in for the case of text document recommen-
+dation. This information is set in an initialization module that would take a user’s
+1. A binary classifier is an algorithm that can take an item and determine whether it belongs to one
+of two categories. In this case, the categories are relevant or non-relevant. For more information
+on classification, see Chapter 15.

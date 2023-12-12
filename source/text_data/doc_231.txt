@@ -1,0 +1,49 @@
+10.4 Learning to Rank
+211
+p({q, d1, R = 1}, {q, d2, R = 0}) =
+1
+1 + exp
+�
+−β0 − 0.7β1 − 0.11β2 − 0.65β3
+�
+×
+�
+1 −
+1
+1 + exp
+�
+−β0 − 0.3β1 − 0.05β2 − 0.4β3
+�
+�
+.
+We hypothesize that the probability of relevance is related to the features in this
+way. We’re going to see for what values of β we can predict the relevance effectively.
+The expression for d1 should give a higher value than the expression for d2; in fact,
+we hope d1’s value is close to one since it’s a relevant document.
+Let’s see how this can be mathematically expressed. It’s similar to expressing the
+probability of a document, only we are not talking about the probability of words,
+but the probability of relevance. We need to plug in the X values. The β values
+are still unknown, but this expression gives us the probability that this document
+is relevant if we assume such a model. We want to maximize this probability
+for d1 since this is a relevant document. For the second document, we want to
+predict the probability that the document is non-relevant. This means we have to
+compute 1 minus the probability of relevance. That’s the reasoning behind this
+whole expression then; it’s our probability of predicting these two relevance values.
+The whole equation is our probability of observing a R = 1 and R = 0 for d1 and d2
+respectively. Our goal is then to adjust the β values to make the whole expression
+reach its maximum value. In other words, we will look at the function and choose
+β values to make this expression as large as possible.
+After we learn the regression parameters, we can use this expression for any new
+query and new document once we have their features. This formula is then applied
+to generate a ranking score for a particular query.
+There are many more advanced learning algorithms than the regression-based
+reproaches. They generally attempt to theoretically optimize a retrieval measure
+such as MAP or NDCG. Note that the optimization objective we just discussed is
+not directly related to a retrieval measure. By maximizing the prediction of one
+or zero, we don’t necessarily optimize the ranking of those documents. One can
+imagine that while our prediction may not be too bad, the ranking can be wrong.
+We might have a larger probability of relevance for d2 than d1. So, that won’t be
+good from a retrieval perspective, even though by likelihood the function is not
+bad. More advanced approaches will try to correct this problem. Of course, then
+the challenge is that the optimization problem will be harder to solve. In contrast,
+we might have another case where we predicted probabilities of relevance around

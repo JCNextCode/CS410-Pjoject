@@ -1,0 +1,42 @@
+14.3 Term Clustering
+287
+With such a formula, an unseen word would not have a zero probability, and the
+estimated probability is, in general, more accurate. We can replace p(w | C) in the
+previous scoring function with our smoothed version. In the example, this brings
+the score for artichoke much lower since we “pretend” to have seen a count of it in
+the background. Words that actually are semantically related (i.e., that occur much
+more frequently in the context of computer) would not be affected by this smoothing
+and instead would “rise up” as the unrelated words are shifted downwards in the
+list of sorted scores.
+From Chapter 6 we learned that this Add-1 smoothing may not be the best
+smoothing method as it applies too much probability mass to unseen words. In
+an even more improved scoring function, we could use other smoothing methods
+such as Dirichlet prior or Jelinek-Mercer interpolation.
+In any event, this semantic relatedness is what we wish to capture in our term
+clustering applications. However, you can probably see that it would be infeasible
+to run this calculation for every term in our vocabulary. Thus, in the next section,
+we will examine a more efficient method to cluster terms together. The basic idea
+of the problem is exactly the same.
+14.3.2
+Pointwise Mutual Information
+Pointwise Mutual Information (PMI) treats word occurrences as random variables
+and quantifies the probability of their co-occurrence within some context of a
+window of words. For example, to find words that co-occur with wi using a window
+of size n, we look at the words
+wi−n, . . . , wi−1, wi, wi+1, . . . , wi+n.
+This allows us to calculate the probability of wi and wj co-occurring, which is rep-
+resented as the joint probability p(wi, wj). Along with the individual probabilities
+p(wi) and p(wj), we can write the formula for PMI:
+pmi(xi, xj) = log
+�
+p(wi, wj)
+p(wi)p(wj)
+�
+.
+(14.7)
+Note that if wi and wj are independent, then p(wi)p(wj) = p(wi, wj). This forces
+us to take a logarithm of 1, which yields a PMI of zero; there is no measure of
+information transferred by two independent words. If, however, the probability of
+observing the two words occurring together, i.e., p(wi, wj) is substantially larger
+than their expected probability of co-occurrence if there were independent, i.e.,
+p(wi)p(wj), then the PMI would be high as we would expect.

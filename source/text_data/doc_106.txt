@@ -1,0 +1,10 @@
+86
+Chapter 5
+Overview of Text Data Access
+5.9. In the same way as the previous two questions, categorize “citation alerts.”
+These are alerts that are based on previous search history in an academic search
+engine. When new papers are found that are potentially interesting to the user
+based on their browsing history, an alert is created.
+5.10. One assumption of the probability ranking principle is that each document’s
+usefulness to the user is independent of the usefulness of other documents in the
+index. What is a scenario where this assumption does not hold?

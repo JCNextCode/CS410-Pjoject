@@ -1,0 +1,41 @@
+202
+Chapter 10
+Web Search
+OnthebottomofFigure10.6, therearesomepatternsoflinkswhichmayindicate
+the utility of a document. For example, on the right side you can see a page has
+received many inlinks, meaning many other pages are pointing to this page. This
+shows that this page is quite useful. On the left side you can see a page that points
+to many other pages. This is a central page that would allow you to see many other
+pages. We call the first case an authority page and the second case a hub page. This
+means the link information can help in two ways; one is to provide extra text for
+matching (in the case of anchors) and the other is to provide some additional scores
+for the web pages to characterize how likely a page is a hub or an authority.
+10.3.1
+PageRank
+Google’s PageRank, a main technique that was used originally for link analysis,
+is a good example of leveraging page link information. PageRank captures page
+popularity, which is another word for authority. The intuition is that links are just
+like citations in literature. Think about one page pointing to another page; this is
+very similar to one paper citing another paper. Thus, if a page is cited often, we
+can assume this page is more useful. PageRank takes advantage of this intuition
+and implements it in a principled approach. In its simplest sense, PageRank is
+essentially doing citation counting or inlink counting.
+It improves this simple idea in two ways. One is to consider indirect citations.
+This means you don’t just look at the number of inlinks, rather you also look at the
+inlinks of your inlinks, recursively. If your inlinks themselves have many inlinks,
+your page gets credit from that. In short, if important pages are pointing to you,
+you must also be important. On the other hand, if those pages that are pointing to
+you are not pointed to by many other pages, then you don’t get that much credit.
+This is the concept of indirect citations, or cascading citations.
+Again, we can understand this idea by considering research papers. If you are
+cited by ten papers that are not very influential, that’s not as good as if you’re cited
+by ten papers that themselves have attracted a lot of other citations. Clearly, this is a
+case where we would like to consider indirect links, which is exactly what PageRank
+does. The other idea is that it’s good to smooth the citations to accommodate
+potential citations that have not yet been observed. Assume that every page has
+a non-zero pseudo citation count. Essentially, you are trying to imagine there are
+many virtual links that will link all the pages together so that you actually get pseudo
+citations from everyone.
+Another way to understand PageRank is the concept of a random surfer visiting
+every web page. Let’s take a look at this example in detail, illustrated in Figure 10.7.
+On the left, there is a small graph, where each document d1, d2, d3, and d4 is a web

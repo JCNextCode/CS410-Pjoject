@@ -1,0 +1,46 @@
+96
+Chapter 6
+Retrieval Models
+d1
+f(q, d1) = 2
+f(q, d2) = 3
+f(q, d3) = 3
+f(q, d4) = 3
+f(q, d5) = 2
+… news about …
+Query = “news about presidential campaign”
+d2
+… news about organic food campaign …
+d3
+… news of presidential campaign …
+d4
+… news of presidential campaign …
+… presidential candidate …
+d5
+… news of organic food campaign …
+campaign … campaign … campaign …
+Figure 6.6
+Ranking of example documents using the simple vector space model.
+In Figure 6.6, we show all the scores for these five documents. The bit vector
+scoring function counts the number of unique query terms matched in each docu-
+ment. If a document matches more unique query terms, then the document will be
+assumed to be more relevant; that seems to make sense. The only problem is that
+there are three documents, d2, d3, and d4, that are tied with a score of three. Upon
+closer inspection, it seems that d4 should be right above d3 since d3 only mentioned
+presidential once while d4 mentioned it many more times. Another problem is that
+d2 and d3 also have the same score since for d2, news, about, and campaign were
+matched. In d3, it matched news, presidential, and campaign. Intuitively, d3 is more
+relevant and should be scored higher than d2. Matching presidential is more impor-
+tant than matching about even though about and presidential are both in the query.
+But this model doesn’t do that, and that means we have to solve these problems.
+To summarize, we talked about how to instantiate a vector space model. We need
+to do three things:
+1. define the dimensions (the concept of what a document is);
+2. decide how to place documents and queries as vectors in the vector space;
+and
+3. define the similarity between two vectors.
+Based on this idea, we discussed a very simple way to instantiate the vector
+space model. Indeed, it’s probably the simplest vector space model that we can
+derive. We used each word to define a dimension, with a zero-one bit vector to
+represent a document or a query. In this case, we only care about word presence or
+absence, ignoring the frequency. For a similarity measure, we used the dot product

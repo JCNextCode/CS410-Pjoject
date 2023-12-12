@@ -1,0 +1,35 @@
+ACM Books
+Editor in Chief
+M. Tamer ¨Ozsu, University of Waterloo
+ACM Books is a new series of high-quality books for the computer science community,
+published by ACM in collaboration with Morgan & Claypool Publishers. ACM Books
+publications are widely distributed in both print and digital formats through booksellers
+and to libraries (and library consortia) and individual ACM members via the ACM Digital
+Library platform.
+Text Data Management and Analysis: A Practical Introduction to Information
+Retrieval and Text Mining
+ChengXiang Zhai, University of Illinois at Urbana–Champaign
+Sean Massung, University of Illinois at Urbana–Champaign
+2016
+An Architecture for Fast and General Data Processing on Large Clusters
+Matei Zaharia, Massachusetts Institute of Technology
+2016
+Reactive Internet Programming: State Chart XML in Action
+Franck Barbier, University of Pau, France
+2016
+Verified Functional Programming in Agda
+Aaron Stump, The University of Iowa
+2016
+The VR Book: Human-Centered Design for Virtual Reality
+Jason Jerald, NextGen Interactions
+2016
+Ada’s Legacy: Cultures of Computing from the Victorian to the Digital Age
+Robin Hammerman, Stevens Institute of Technology
+Andrew L. Russell, Stevens Institute of Technology
+2016
+Edmund Berkeley and the Social Responsibility of Computer Professionals
+Bernadette Longo, New Jersey Institute of Technology
+2015
+Candidate Multilinear Maps
+Sanjam Garg, University of California, Berkeley
+2015

@@ -1,0 +1,91 @@
+xii
+Contents
+Chapter 13
+Word Association Mining 251
+13.1
+General idea of word association mining
+252
+13.2
+Discovery of paradigmatic relations
+255
+13.3
+Discovery of Syntagmatic Relations
+260
+13.4
+Evaluation of Word Association Mining
+271
+Bibliographic Notes and Further Reading
+273
+Exercises
+273
+Chapter 14
+Text Clustering 275
+14.1
+Overview of Clustering Techniques
+277
+14.2
+Document Clustering
+279
+14.3
+Term Clustering
+284
+14.4
+Evaluation of Text Clustering
+294
+Bibliographic Notes and Further Reading
+296
+Exercises
+296
+Chapter 15
+Text Categorization 299
+15.1
+Introduction
+299
+15.2
+Overview of Text Categorization Methods
+300
+15.3
+Text Categorization Problem
+302
+15.4
+Features for Text Categorization
+304
+15.5
+Classification Algorithms
+307
+15.6
+Evaluation of Text Categorization
+313
+Bibliographic Notes and Further Reading
+315
+Exercises
+315
+Chapter 16
+Text Summarization 317
+16.1
+Overview of Text Summarization Techniques
+318
+16.2
+Extractive Text Summarization
+319
+16.3
+Abstractive Text Summarization
+321
+16.4
+Evaluation of Text Summarization
+324
+16.5
+Applications of Text Summarization
+325
+Bibliographic Notes and Further Reading
+327
+Exercises
+327
+Chapter 17
+Topic Analysis 329
+17.1
+Topics as Terms
+332
+17.2
+Topics as Word Distributions
+335

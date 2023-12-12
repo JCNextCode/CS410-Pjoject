@@ -1,0 +1,44 @@
+214
+Chapter 10
+Web Search
+Users
+Lawyers
+Scientists
+UIUC employees
+Online shoppers
+…
+Services
+Search
+Browsing
+Mining
+Task support
+…
+Data
+Web pages
+News articles
+Blog articles
+Literature
+Email
+…
+Figure 10.10
+The Data-User-Service triangle.
+These questions specify an information system; there are many different ways to
+connect them. Depending on how they are connected, we can specify all different
+types of systems. Let’s consider some examples.
+On the top of Figure 10.10 there are different kinds of users. On the left side,
+there are different types of data or information, and on the bottom, there are
+different service functions. Now imagine you can connect all these in different
+ways. For example, if you connect everyone with web pages, and support search and
+browsing, you get web search. If we connect university employees with organization
+documents or enterprise documents and support the search and browsing, we get
+enterprise search.
+We could connect scientists with literature information to provide all kinds of
+services including search, browsing, alert to new relevant documents, mining or
+analyzing research trends, or task and decision support. For example, we might be
+able to provide support for automatically generating a related works section for a
+research paper; this would be closer to task support. Then, we can imagine this
+intelligent information system would be a type of literature assistant.
+If we connect online shoppers with blog articles or product reviews, then we can
+help these people improve their shopping experience. We can provide data mining
+capabilities to analyze reviews, compare products and product sentiment, and pro-
+vide task or decision support on choosing which product to buy. Or, we can connect

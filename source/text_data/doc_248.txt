@@ -1,0 +1,46 @@
+228
+Chapter 11
+Recommender Systems
+Utility
+θoptimal
+θzero
+α
+θ
+0 1 2 3 …
+K …
+β
+γ, N
+β, γ 2 [0, 1]
+θ = α * θzero + (1 – α) * θoptimal
+α = β + (1 – β) * e–N*γ
+N = number of training examples
+Encourage exploration
+up to θzero 
+The more examples, the less
+exploration (closer to θoptimal) 
+Cutoff position (descending
+order of doc sources)
+Figure 11.5
+Beta-gamma threshold learning to set the optimal value of θ.
+just the interpolation of the zero utility threshold and the optimal threshold via the
+interpolation parameter α.
+Now the question is how we should set α and deviate from the optimal utility
+point. This can depend on multiple factors and one way to solve the problem is to
+encourage this threshold mechanism to explore only up to the θzero point (which is
+still a safe point), but not necessarily reach all the way to it. Rather, we’re going to
+use other parameters to further define α’s value given some additional information.
+The β parameter controls the deviation from θopt, which can be based on our
+previously observed documents (i.e., the training data). What’s more interesting is
+the γ parameter which controls the influence of the number of examples in the
+training data set, N. As N becomes greater, it encourages less exploration. In other
+words, when N is very small, the algorithm will try to explore more, meaning that
+if we have seen only a few examples, we’re not sure whether we have exhausted the
+space of interest. But, as we observe many data points from the user, we feel that
+we probably don’t have to explore as much. This gives us a dynamic strategy for
+exploration: the more examples we have seen, the less exploration we are going to
+do, so the threshold will be closer to θopt.
+This approach has worked well in some empirical studies, particularly on the
+TREC filtering tasks. It’s also convenient that it welcomes any arbitrary utility
+function with an appropriate lower bound. It explicitly addresses the exploration-
+exploration tradeoff, and uses θzero as a safeguard. That is, we’re never going to
+explore further than the zero utility point. If you take the analogy of gambling, you

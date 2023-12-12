@@ -1,0 +1,38 @@
+30
+Chapter 2
+Background
+Here it is easy to see that the MAP estimate would deviate from the MLE with
+consideration of maximizing the probability of the parameter according to our
+prior belief encoded as p(θ). It is through the use of appropriate prior that we
+can address the overfitting problem of MLE since our prior can strongly prefer an
+estimate where neither heads, nor tails should have a zero probability.
+For a continuation and more in-depth discussion of this material, consult Ap-
+pendix A.
+2.1.6
+Probabilistic Models and Their Applications
+With the statistical foundation from the previous sections, we can now start to see
+how we might apply a probabilistic model to text analysis.
+In general, in text processing, we would be interested in a probabilistic model
+for text data, which defines distributions over sequences of words. Such a model is
+often called statistical language model, or a generative model for text data (i.e., a
+probabilistic model that can be used for sampling sequences of words).
+As we started to explain previously, we usually treat the sample space � as V , the
+set of all observed words in our corpus. That is, we define probability distributions
+over words from our dataset, which are essentially multinomial distributions if
+we do not consider the order of words. While there are many more sophisticated
+models for text data (see, e.g., Jelinek [1997]), this simplest model (often called
+unigram language model) is already very useful for a number of tasks in text data
+management and analysis due to the fact that the words in our vocabulary are very
+well designed meaningful basic units for human communications.
+For now, we can discuss the general framework in which statistical models
+are “learned.” Learning a model means estimating its parameters. In the case
+of a distribution over words, we have one parameter for each element in V . The
+workflow looks like the following.
+1. Define the model.
+2. Learn its parameters.
+3. Apply the model.
+The first step has already been addressed. In our example, we wish to capture the
+probabilities of individual words occurring in our corpus. In the second step, we
+need to figure out actually how to set the probabilities for each word. One obvious
+way would be to calculate the probability of each individual word in the corpus
+itself. That is, the count of a unique word wi divided by the total number of words

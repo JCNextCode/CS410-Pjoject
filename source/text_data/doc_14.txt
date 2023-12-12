@@ -1,0 +1,45 @@
+xiv
+Contents
+A.4
+The Dirichlet Distribution
+461
+A.5
+Bayesian Estimate of Multinomial Parameters
+463
+A.6
+Conclusion
+464
+Appendix B
+Expectation- Maximization 465
+B.1
+A Simple Mixture Unigram Language Model
+466
+B.2
+Maximum Likelihood Estimation
+466
+B.3
+Incomplete vs. Complete Data
+467
+B.4
+A Lower Bound of Likelihood
+468
+B.5
+The General Procedure of EM
+469
+Appendix C
+KL-divergence and Dirichlet Prior Smoothing 473
+C.1
+Using KL-divergence for Retrieval
+473
+C.2
+Using Dirichlet Prior Smoothing
+475
+C.3
+Computing the Query Model p(w | �θQ)
+475
+References
+477
+Index
+489
+Authors’ Biographies
+509

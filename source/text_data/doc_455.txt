@@ -1,0 +1,73 @@
+19.5 Topic Analysis with Time Series Context
+435
+Text stream
+Zoom into
+word level
+Non-text
+time series
+Sept.
+2001
+Topic 1
+Oct.
+2001
+…
+Topic 2
+Topic 3
+Topic 4
+Topic modeling
+Split words
+Topic 1
+Topic 1
+W1
+W2
+W3
+W4
+W5
++
+–
++
+–
+Topic 2
+Topic 3
+Topic 4
+Causal topics
+Causal
+words
+Feedback
+as prior
+Topic 1
+W1
+W3
+Pos
++
++
+Topic 1
+W2
+W4
+Neg
+–
+–
+Figure 19.15
+Causal topic discovery algorithm. (Adapted from Kim et al. [2013])
+figure, topic 1 and topic 4 may be more correlated than topic 2 and topic 3. The
+simple approach that we discussed earlier would have just stopped here and taken
+topics 1 and 4 as potential causal topics. However, here we go further to improve
+them by zooming into the word level to further identify the words that are most
+strongly correlated with the time series. Specifically, we can look into each word in
+the top ranked words for each topic (those with highest probabilities), and compute
+the correlation of each word with the time series.
+This would allow us to further separate those words into three groups: strongly
+positively correlated words; strongly negatively correlated words; and weakly cor-
+related words. The first two groups can then each be regarded as seeds to define
+two new subtopics that can be expected to be positively and negatively correlated
+with the time series, respectively. The figure shows a potential split of topic 1 into
+two such potentially more correlated subtopics: one with w1 and w3 (positive) and
+one with w2 and w4 (negative). However, these two subtopics may not necessarily
+be coherent semantically. To improve the coherence, the algorithm would not take
+these directly as topics, but rather feed them as a prior to the topic model so as
+to steer the topic model toward discovering topics matching these two subtopics.
+Thus, we can expect the topics discovered by the topic model in the next iteration
+to be more correlated with the time series than the original topics discovered from
+the previous iteration. Once we discover a new generation of topics, we can repeat
+the process to analyze the words in correlated topics and generate another set of
+seed topics, which would then be fed into the topic model again as prior.

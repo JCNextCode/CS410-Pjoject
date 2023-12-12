@@ -1,0 +1,71 @@
+9.4 Evaluation with Multi-level Judgements
+181
+Gain
+3
+2
+1
+1
+3
+1
+1
+2
+1
+1
+Cumulative
+gain
+3
+3 + 2
+3 + 2 + 1
+3 + 2 + 1 + 1
+…
+Discounted
+cumulative gain
+3
+3 + 2/log 2
+3 + 2/log 2 + 1/log 3
+…
+D1
+D2
+D3
+D4
+D5
+D6
+D7
+D8
+D9
+D10
+DCG@10 = 3 + 2/log 2 + 1/log 3 + … + 1/log 10
+IdealDCG@10 = 3 + 3/log 2 + 3/log 3 + … + 3/log 9 + 2/log 10
+DCG@10
+—
+IdealDCG@10
+Normalized DCG = 
+Assume: there are 9 documents rated “3” in total in the collection
+Relevance level: r = 1 (non-relevant), 2 (marginally relevant), 3 (very relevant)
+Figure 9.7
+Computation of NDCG.
+Earlier we made the point that relevance is a matter of degree. We often are able to
+distinguish very highly relevant documents from documents that are still useful,
+but with a lower relevance.
+In Figure 9.7, we show an example of three relevance levels: level three for highly
+relevant, two for marginally relevant, and one for non-relevant. How do we evaluate
+a new system using these judgements? We can’t use average precision since it only
+operates on binary relevance values; if we treat level two and three as only one level,
+then we lose the information gained from comparing these two categories. MAP,
+gMAP, and MRR depend on average precision, so we can’t use them either.
+Let’s look at the top relevant results when using these judgments. We imagine
+the user would mostly care about the top ten results. We call these multi-level
+judgements “gains,” since they roughly correspond to how much information a
+user gains when viewing a document. Looking at the first document, the user can
+gain three points; looking at the non-relevant documents, the user would only
+gain one point. This gain usually matches the utility of a document from a user’s
+perspective. If we assume the user stops at ten documents we can cumulatively sum
+the information gain from traversing the list of returned documents. Let ri be the
+gain of result i, and let i range from one to n, where we set n to ten in our example.
+We then have the cumulative gain (CG) as
+CG(L) =
+n
+�
+i=1
+ri.
+(9.5)

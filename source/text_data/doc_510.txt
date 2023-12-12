@@ -1,0 +1,89 @@
+490
+Index
+Bayes’ rule (continued)
+formula, 25–26
+LDA, 383
+Bayesian inference
+EM algorithm, 361–362
+PLSA, 379, 382
+Bayesian parameter estimation
+formula, 458
+overfitting problem, 28–30
+unigram language model, 341, 359
+Bayesian smoothing, 125
+Bayesian statistics
+binomial estimation and beta distribu-
+tion, 457–459
+Dirichlet distribution, 461–463
+LDA, 382
+multinomial distribution, 460–461
+multinomial parameters, 463–464
+Naive Bayes algorithm, 309–312
+pseudo counts, smoothing, and setting
+hyperparameters, 459–460
+Berkeley study, 3
+Bernoulli distribution, 26
+Beta distribution, 457–459
+Beta-gamma threshold learning, 227–228
+Bias, clustering, 276
+Big text data, 5–6
+Bigram language model
+abstractive summarization, 323
+Brown clustering, 290
+Bigrams
+frequency analysis, 68
+sentiment classification, 394–395
+text categorization, 305
+words tokenizers, 149
+Binary classification
+content-based recommendation, 223
+text categorization, 303
+Binary hidden variables in EM algorithm,
+362–364, 366, 368, 467
+Binary logistic regression, 397
+Binomial distribution, 26–27
+Binomial estimation, 457–459
+Bit vector representation, 93–97
+Bitwise compression, 159–160
+Blind feedback, 133, 135
+Block compression, 161–162
+Block world project, 42
+BM25 model
+description, 88
+document clustering, 279
+document length normalization, 108–109
+link analysis, 201
+Okapi, 89, 108
+popularity, 90
+probabilistic retrieval models, 111
+BM25-F model, 109
+BM25 score
+paradigmatic relations, 258–261
+syntagmatic relations, 270
+web search ranking, 210
+BM25 TF transformation
+description, 104–105
+paradigmatic relations, 258–259
+BM25+ model, 88, 110
+Breadth-first crawler searches, 193
+Breakeven point precision, 189
+Brown clustering, 278, 288–291
+Browsing
+multimode interactive access, 76–78
+pull access mode, 73–75
+support for, 445
+text information systems, 9
+web searches, 214
+word associations, 252
+Business intelligence
+opinion mining, 393
+text data analysis, 243
+C++ language, 16, 58
+Caching
+DBLRU, 164–165
+LRU, 163–164
+META toolkit, 60
+search engine implementation, 148,
+162–165
+Categories
+categorical distributions, 460–461

@@ -1,0 +1,42 @@
+168
+Chapter 9
+Search Engine Evaluation
+in this chapter. This has been very important for comparing different algorithms
+and for improving search engines systems in general.
+9.1.1
+What to Measure?
+There are many aspects of a search engine we can measure—here are the three
+major ones.
+Effectiveness or accuracy.
+How accurate are the search results? In this case,
+we’re measuring a system’s capability of ranking relevant documents on top
+of non-relevant ones.
+Efficiency.
+How quickly can a user get the results? How large are the computing
+resources that are needed to answer a query? In this case, we need to measure
+the space and time overhead of the system.
+Usability.
+How useful is the system for real user tasks? Here, interfaces and
+many other things are also important and we typically have to do user studies.
+In this book, we’re going to talk mainly about the effectiveness and accu-
+racy measures because the efficiency and usability dimensions are not unique
+to search engines (they are needed for evaluating other software systems). There
+is also very good coverage of such material in other books, so we suggest the
+reader consult Harman [2011] for further reading in this area. Additional readings
+are Sanderson [2010] and Kelly [2009], which cover user studies and A-B testing
+(concepts that are discussed later in this chapter).
+9.1.2
+Cranfield Evaluation Methodology
+The Cranfield evaluation methodology was developed in the 1960s and is a strategy
+for laboratory testing of system components. It’s actually a methodology that has
+been very useful not only for search engine evaluation, but also for evaluating
+virtually all kinds of empirical tasks. For example, in image processing or other
+fields where the problem is empirically defined we typically would need to use a
+method such as this.
+The basic idea of this approach is to build reusable test collections and define
+measures using these collections. Once such a test collection is built, it can be used
+again and again to test different algorithms or ideas. Using these test collections,
+we will define measures that allow us to quantify the performance of a system or al-
+gorithm. The assembled test collection of documents is similar to a real document
+collection in a search application. We can also have a sample set of queries or topics
+that simulate the user’s information need. Then, we need to have relevance judg-

@@ -1,0 +1,40 @@
+294
+Chapter 14
+Text Clustering
+In summary, we have shown several methods to measure term similarity, which
+can then be used for term clustering. We started with a unigram language modeling
+approach, followed by pointwise mutual information. We then briefly introduced
+twomodel-basedapproaches, onebasedonn-gramlanguagemodelsandonebased
+on neural language models for word embedding. These term clustering methods
+can be leveraged to improve the computation of similarity between documents or
+other text objects by allowing inexact matching of terms (e.g., allowing words in
+the same cluster or with high similarity to “match” with each other).
+14.4
+Evaluation of Text Clustering
+All clustering methods attempt to maximize the following measures.
+Coherence.
+How similar are objects in the same cluster?
+Separation.
+How far away are objects in different clusters?
+Utility. How useful are the discovered clusters for an application?
+As with most text mining (and many other) tasks, we can evaluate in one of
+two broad strategies: manual evaluation (using humans) or automatic evaluation
+(using predefined measures). Of the three criteria mentioned above, coherence
+and separation can be measured automatically with measures such as vector sim-
+ilarity, purity, or mutual information. There is a slight challenge when evaluating
+term clustering, since word-to-word similarity algorithms may not be as obvious as
+document-to-document similarities. We may choose to encode terms as word vec-
+tors and use the document similarity measures, or we may wish to use some other
+concept of semantic similarity as defined by preexisting ontologies like WordNet.2
+Although slightly more challenging, the concept of utility can also be captured if
+the final system output can be measured quantitatively. For example, if clustering is
+used as a component in search, we can see if using a different clustering algorithm
+improves F1, MAP, or NCDG (see Chapter 9).
+All clustering methods need some notion of similarity (or bias). After all, we wish
+to find groups of objects that are similar to one another in some way. We mainly
+discussed unigram words representations, though in this book we have elaborated
+on many different feature types. Indeed, feature engineering is an important compo-
+nent of implementing a clustering algorithm, and in fact any text mining algorithm
+in general. Choosing the right representation for your text allows you to quantify
+the important differences between items that cause them to end up in either the
+2. https://wordnet.princeton.edu/

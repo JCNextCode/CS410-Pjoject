@@ -1,0 +1,41 @@
+17.6 Evaluating Topic Analysis
+383
+p({θi}, {πd,j} | C, α, β) as follows by using Bayes’ Rule:
+p({θi}, {πd,j} | C, α, β) =
+p(C | {θi}, {πd,j})p({θi}, {πd,j} | α, β)
+p(C | α, β)
+.
+(17.8)
+This gives us a posterior distribution over all the possible values of these interesting
+variables, from which we can then further obtain a point estimate or compute
+other interesting properties that depend on the distribution. The computation
+process is once again complicated due to the integrals involved in some of the
+probabilities. Many different inference algorithms have been proposed. A very
+popular and efficient approach is collapsed Gibbs sampling, which works in a very
+similar way to the EM algorithm of PLSA.
+Empirically, LDA and PLSA have been shown to work similarly on various tasks
+when using such a model to learn a low-dimensional semantic representation of
+documents (by using πd,j to represent a document in the k-dimensional space).
+The learned word distributions also tend to look very similar.
+17.6
+Evaluating Topic Analysis
+Topic analysis evaluation has similar difficulties to information retrieval evalua-
+tion. In both cases, there is usually not one true answer, and evaluation metrics
+heavily depend on the human issuing judgements. What defines a topic? We ad-
+dressed this issue the best we could when defining the models, but the challenging
+nature of such a seemingly straightforward question complicates the eventual eval-
+uation task.
+Log-likelihood and model perplexity are two common evaluation measures used
+by language models, and they can be applied for topic analysis in the same way. Both
+are predictive measures, meaning that held-out data is presented to the model and
+the model is applied to this new information, calculating its likelihood. If the model
+generalizes well to this new data (by assigning it a high likelihood or low perplexity),
+then the model is assumed to be sufficient.
+In Chapter 13, we mentioned Chang et al. [2009]. Human judges responded to
+intrusion detection scenarios to measure the coherency of the topic-word distribu-
+tions. A second test that we didn’t cover in the word association evaluation is the
+document-topic distribution evaluation. This test can measure the coherency of top-
+ics discovered from documents through the previously used intrusion test.
+The setup is as follows: given a document d from the collection the top three
+topics are chosen; call these most likely topics θ1, θ2, and θ3. An additional low-
+probability topic θu is also selected, and displayed along with the top three topics.

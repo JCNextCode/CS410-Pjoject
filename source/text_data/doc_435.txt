@@ -1,0 +1,40 @@
+19.1 Introduction
+415
+the prediction problem that we can build into the predictive model. Once we have
+the predicted values for the variables, humans would be involved in taking actions
+to change the world or make decisions based on these particular values.
+Finally, it’s interesting that a human could be involved in controlling the sensors
+to collect the most useful data for prediction. Thus, this forms a data mining loop
+because as we perturb the sensors, they will collect additional new and potentially
+more useful data, allowing us to improve the prediction. In this loop, humans
+will recognize what additional data will need to be collected. Machines can help
+humans identify what data should be collected next. In general, we want to collect
+data that is most useful for learning. The study of how to identify data points that
+would be most helpful for machine learning is often referred to as active learning,
+which is an important subarea in machine learning.
+There is a loop from data acquisition to data analysis; from data mining to
+prediction of values; from actions to change the world; and finally, we observe what
+happens. We can then decide what additional data have to be collected and adjust
+the sensors accordingly. Analysis of the prediction errors can help reveal what
+additional data we need to acquire in order to improve the accuracy of prediction.
+This big picture is actually very general and can serve as a model for many important
+applications of big data.
+Since the focus of the book is on text data, it is useful to consider the special case
+of the loop shown in Figure 19.2 where the goal is to use text data to infer values of
+some other variables in the real world that may not be directly related to the text.
+Such an analysis task is different from a task such as topic mining where the goal is
+to directly characterize the content of text. In text-based prediction, our goal can be
+to infer any information about the world. This is, of course, only possible if there
+exist clues in the text data about the target variable; fortunately, this is often the
+case since people report everything in text data. In many cases (e.g., stock price
+prediction), the non-text data (historical stock prices) are much more effective for
+prediction than text data, though text data can generally help provide additional
+indicators for the prediction task.
+Sometimes text data contain more useful indicators than non-text data, and
+text data alone may also be sufficient for making predictions. Typically, in such
+a case, the prediction is about human behavior or human preferences or opinions.
+In general though, text data will be put together with non-text data.
+In all cases of text-based prediction, there are two important questions. First,
+what features (indicators) are most useful for the prediction task? Second, how can
+we generate such effective indicators from text? For convenience, we will use the
+term “feature” and “indicator” interchangeably. The first question has much to do

@@ -1,0 +1,38 @@
+2
+Background
+This chapter contains background information that is necessary to know in order
+to get the most out of the rest of this book; readers who are already familiar with
+these basic concepts may safely skip the entire chapter or some of the sections.
+We first focus on some basic probability and statistics concepts required for most
+algorithms and models in this book. Next, we continue our mathematical back-
+ground with an overview of some concepts in information theory that are often
+used in many text mining applications. The last section introduces the basic idea
+and problem setup of machine learning, particularly supervised machine learning,
+which is useful for classification, categorization, or text-based prediction in the text
+domain. In general, machine learning is very useful for many information retrieval
+and data mining tasks.
+2.1
+Basics of Probability and Statistics
+As we will see later in this chapter and in many other chapters, probabilistic or
+statistical models play a very important role in text mining algorithms. This section
+gives every reader a sufficient background and vocabulary to understand these
+probabilistic and statistical approaches covered in the later chapters of the book.
+A probability distribution is a way to assign likelihood to an event in some
+probability space �. As an example, let our probability space be a six-sided die.
+Each side has a different color. Thus, � = {red, orange, yellow, green, blue, purple}
+and an event is the act of rolling the die and observing a color.
+We can quantify the uncertainty of rolling the die by declaring a probability
+distribution over all possible events. Assuming we have a fair die, the probability
+of rolling any specific color is 1
+6, or about 16%. We can represent our probability
+distribution as a collection of probabilities such as
+θ =
+�1
+6 , 1
+6 , 1
+6 , 1
+6 , 1
+6 , 1
+6
+�
+,

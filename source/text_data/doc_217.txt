@@ -1,0 +1,42 @@
+10.2 Web Indexing
+197
+Map(K, V)
+Output
+Input
+1. “Hello World Bye World”
+<Hello,1>
+<World,1>
+<Bye,1>
+<World,1>
+Map(K, V)
+{For each word w in V,   Collect(w, 1);}
+Map(K, V)
+2. “Hello Hadoop Bye Hadoop” 
+…
+<Hello,1>
+<Hadoop,1>
+<Bye,1>
+<Hadoop,1>
+Figure 10.3
+The map function for word counting.
+and then just call a Collect function, which means it would then send the word
+and the counter to the collector. The collector would then try to sort all these key
+value pairs from different map functions. The programmer specifies this function
+as a way to process each part of the data. Of course, the second line will be handled
+by a different instance of the map function, which will produce a similar output.
+As mentioned, the collector will do the internal grouping or sorting. At this stage,
+you can see we have collected multiple pairs. Each pair is a word and its count in the
+line. Once we see all these pairs, then we can sort them based on the key, which is
+the word. Each word now is attached to a number of values, i.e., a number of counts.
+These counts represent the occurrences of this word in different lines. These new
+(key, value) pairs will then be fed into a reduce function.
+Figure 10.4 shows how the reduce function finishes the job of counting the total
+occurrences of this word. It already has these partial counts, so all it needs to do
+is simply add them up. We have a counter and then iterate over all the words that
+we see in this array, shown in pseudocode at the bottom of the figure. Finally, we
+output the key and the total count, which is precisely what we want as the output
+of this whole program. As we can see, this is already very similar to building an
+inverted index; the output here is indexed by a word, and we have a dictionary of the
+vocabulary. What’s missing is the document IDs and the specific frequency counts
+of words in each particular document. We can modify this slightly to actually build
+an inverted index in parallel.

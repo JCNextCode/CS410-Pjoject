@@ -1,0 +1,38 @@
+302
+Chapter 15
+Text Categorization
+they may optimize a different objective function (also called a loss/cost function),
+and their way of combining features (e.g., linear vs. non-linear).
+In the rest of the chapter, we will further discuss learning-based approaches
+in more detail. These automatic categorization methods generally fall into three
+categories. Lazy learners or instance-based classifiers do not model the class labels
+explicitly, but compare the new instances with instances seen before, usually with
+a similarity measure. These models are called “lazy” due to their lack of explicit
+generalization or training step; most calculation is performed at testing time.
+Generative classifiers model the data distribution in each category (e.g., unigram
+language model for each category). They classify an object based on the likelihood
+that the object would be observed according to each distribution. Discriminative
+classifiers compute features of a text object that can provide a clue about which
+category the object should be in, and combine them with parameters to control
+their weights. Parameters are optimized by minimizing categorization errors on
+training data.
+As with clustering, we will be able to leverage many of the techniques we’ve dis-
+cussed in previous chapters to create classifiers, the algorithms that assign labels
+to unseen data based on seen, labeled data. This chapter starts out with an expla-
+nation of the categorization problem definition. Next, we examine what types of
+features (text representation) are often used for classification. Then, we investigate
+a few common learning algorithms that we can implement with our forward and
+inverted indexes. After that, we see how evaluation for classification is performed,
+since the problem is inherently different from search engine evaluation.
+15.3
+Text Categorization Problem
+Let’s take our intuitive understanding of categorizing documents and rewrite the
+example from Chapter 2 into a more mathematical form. Let our collection of doc-
+uments be X; perhaps they are stored in a forward index (see Chapter 8). Therefore,
+one xi ∈ X is a term vector of features that represent document i. As with our re-
+trieval setup, each xi has |xi| = |V | (one dimension for each feature, as assigned by
+the tokenizer). Our vector from Chapter 8 is an example of such an xi with a very
+small vocabulary of size |V | = 8.
+{mr.: 1, quill: 1, ’s: 1, book: 1, is: 1, very: 2, long: 1, .: 1}.
+Recall that if a document xj consisted of the text long long book, it would be
+{mr.: 0, quill: 0, ’s: 0, book: 1, is: 0, very: 0, long: 2, .: 0}.

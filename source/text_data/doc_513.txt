@@ -1,0 +1,88 @@
+Index
+493
+Document clustering, 277
+agglomerative hierarchical, 280–282
+K-means, 282–284
+overview, 279–280
+Document frequency
+bag-of-words representation, 89
+vector space model, 99–100
+Document IDs
+compression, 158–159
+inverted indexes, 152
+tokenizers, 149
+Document language model, 118–123
+Document length
+bag-of-words representation, 89
+vector space model, 105–108
+Documents
+filters, 155–156
+ranking vs. selecting, 82–84
+tokenizing, 148–150
+vectors, 92–96
+views in multimode interactive access, 77
+Domains, crawling, 218
+Dot products
+document length normalization, 109
+linear classifiers, 311
+paradigmatic relations, 257–258
+vector space model, 93–95, 98
+Double Barrel Least-Recently Used (DBLRU)
+caches, 164–165
+Dynamic coefficient interpolation in
+smoothing methods, 125
+Dynamically generated content and
+crawlers, 217
+E step in EM algorithm, 362–368, 373–377,
+465, 469
+E-discovery (electronic discovery), 326
+Edit features in text categorization, 306
+Effectiveness in search engine evaluation,
+168
+Efficiency
+database data retrieval, 81–82
+search engine evaluation, 168
+Electronic discovery (E-discovery), 326
+Eliza project, 42, 44–45
+EM algorithm. See Expectation-
+maximization (EM) algorithm
+Email counts, 3
+Emotion analysis, 394
+Empirically defined problems, 82
+Enron email dataset, 326
+Entity-relation re-creation, 47
+Entropy
+information theory, 31–33
+KL-divergence, 139, 474
+mutual information, 264–265
+PMI, 288
+skewed distributions, 158
+syntagmatic relations, 261–264, 270
+Evaluation, search engine. See Search
+engine evaluation
+Events
+CPLSA, 426–427
+probability, 21–23
+Exhaustivity in sentiment classification, 396
+Expectation-maximization (EM) algorithm
+CPLSA, 422
+general procedure, 469–471
+incomplete vs. complete data, 467–468
+K-means, 282–283
+KL-divergence, 476
+lower bound of likelihood, 468–469
+MAP estimate, 378–379
+mining topics from text, 359–368
+mixture unigram language model, 466
+MLE, 466–467
+network supervised topic models, 431
+overview, 465–466
+PLSA, 373–377
+Expected overlap of words in paradigmatic
+relations, 257–258
+Expected value in Beta distribution, 458
+Exploration-exploitation tradeoff in
+content-based filtering, 227
+Extractive summarization, 318–321
+F measure
+ranked lists evaluation, 179

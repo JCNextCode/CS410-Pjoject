@@ -1,0 +1,39 @@
+18.3 Latent Aspect Rating Analysis
+405
+To compute the αi(d) values, we must use maximum a posteriori. This means that
+we maximize the product of the prior of α (according to our assumed multivariate
+Gaussian distribution) and the likelihood of the rating rd:
+α(d)∗ = arg maxα(d) p(α(d) | μ, �)p(rd | d, βi,w, δ2, α(d)).
+(18.3)
+The likelihood rating is the probability of generating this observed overall rating
+given this particular α value and some other parameters. For more details about
+this model, we refer the reader to Wang et al. [2010].
+Earlier, we talked about how to solve the LARA problem in two stages. First, we
+did segmentation of different aspects, and then used a latent regression model to
+learn the aspect ratings and weights. It’s also possible to develop a unified gen-
+erative model for solving this problem. That is, we not only model the generation
+of overall ratings based on text, but also model the generation of the text itself. A
+natural solution would be to use a topic model.
+Given an entity, we can assume there are aspects that are described by word
+distributions (i.e., topics). We then use a topic model to model the generation
+of the reviewed text. We assume words in the review text are drawn from these
+distributions in the same way as we assumed in PLSA. Then, we can plug in the
+latent regression model to use the text to further predict the overall rating. To
+predict the overall rating based on the generated text, we first predict the aspect
+rating and then combine them with aspect weights to predict the overall rating.
+This gives us a unified generative model, where we model both the generation of
+text and the overall rating conditioned on text. We don’t have space to discuss this
+model in detail, so we refer reader to Wang et al. [2011] for additional reading.
+Let’s look at some applications enabled by using these kinds of generative mod-
+els. First, consider the decomposed ratings for some hotels that have the same
+overall rating. If you just look at the overall rating, you can’t really tell much differ-
+ence between these hotels, but by decomposing these ratings into aspect ratings
+we can see some hotels have higher ratings for some dimension (like value) while
+others might score better in other dimensions (like location). This breakdown can
+give us detailed opinions at the aspect level.
+Another application is that you can compare different reviews on the same hotel.
+Atahighlevel, overallratingsmaylookthesame, butafterdecomposingtheratings,
+you might see that they have high scores on different dimensions. This is because
+themodelcandiscerndifferencesinopinionsofdifferentreviewers.Suchadetailed
+understanding can help us learn about the reviewers and better incorporate their
+feedback.

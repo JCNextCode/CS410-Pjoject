@@ -1,0 +1,20 @@
+xx
+Preface
+to thank all the people who have helped with these two MOOCs, especially TAs
+Hussein Hazimeh and Alex Morales, and UIUC instruction support staff Jason
+Mock, Shannon Bicknell, Katie Woodruff, and Edward Noel Dignan, and the Head
+of Computer Science Department, Rob Rutenbar, whose encouragement, support,
+and help are all essential for these two MOOCs to happen. The first author also
+wants to thank UIUC for allowing him to use the sabbatical leave in Fall 2015 to
+work on this book. Special thanks are due to Chase Geigle, co-founder of META. In
+addition to all the above, the second author would like to thank Chase Geigle, Jason
+Cho, and Urvashi Khandelwal (among many others) for insightful discussion and
+encouragement.
+Finally, we would like to thank all our family members, particularly our wives,
+Mei and Kai, for their love and support. The first author wants to further thank
+his brother Chengxing for the constant intellectual stimulation in their regular
+research discussions and his parents for cultivating his passion for learning and
+sharing knowledge with others.
+ChengXiang Zhai
+Sean Massung
+June 2016

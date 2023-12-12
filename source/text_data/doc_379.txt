@@ -1,0 +1,41 @@
+17.3 Mining One Topic from Text
+359
+unigram language model to model the data. The behaviors of the ML estimate of
+such a mixture model ensure that the use of a fixed background model in such a spe-
+cialized mixture model can effectively factor out common words such as the in the
+other topic word distribution, making the discovered topic more discriminative.
+We may view our specialized mixture model as one where we have imposed a
+very strong prior on the model parameter and we use Bayesian parameter estima-
+tion. Our prior is on one of the two unigram language models and it requires that
+this particular unigram LM must be exactly the same as a pre-defined background
+language model. In general, Bayesian estimation would seek for a compromise
+between our prior and the data likelihood, but in this case, we can assume that
+our prior is infinitely strong, and thus there is essentially no compromise, hold-
+ing one component model as constant (the same as the provided background
+model). It is useful to point out that this mixture model is precisely the mix-
+ture model for feedback in information retrieval that we introduced earlier in the
+book.
+17.3.5
+Expectation-Maximization
+The discussion of the behaviors of the ML estimate of the mixture model provides
+an intuition about why we can use a mixture model to mine one topic from a docu-
+ment with common words factored out through the use of a background model.
+In this section, we further discuss how we can compute such an ML estimate.
+Unlike the simplest unigram language model, whose ML estimate has an analyti-
+cal solution, there is no analytical solution to the ML estimation problem for the
+two-component mixture model even though we have exactly the same number of
+parameters to estimate as a single unigram language model after we fix the back-
+ground model and the choice probability of the component models (i.e., p(θd)). We
+must use a numerical optimization algorithm to compute the ML estimate.
+In this section, we introduce a specific algorithm for computing the ML esti-
+mate of the two-component mixture model, called the Expectation-Maximization
+(EM) algorithm. EM is a family of useful algorithms for computing the maximum
+likelihood estimate of mixture models in general.
+Recall that we have assumed both p(w | θB) and p(θB) are already given, so the
+only “free” parameters in our model are p(w | θd) for all the words subject to the
+constraint that they sum to one. This is illustrated in Figure 17.22. Intuitively, when
+we compute the ML estimate, we would be exploring the space of all possible values
+for the word distribution θd until we find a set of values that would maximize the
+probability of the observed documents.
+According to our mixture model, we can imagine that the words in the text data
+can be partitioned into two groups. One group will be explained (generated) by

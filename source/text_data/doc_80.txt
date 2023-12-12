@@ -1,0 +1,40 @@
+60
+Chapter 4
+META: A Unified Toolkit for Text Data Management and Analysis
+Once these steps are complete, the reader should be able to complete any exer-
+cise or run any demo. If any additional files or information are needed, it will be
+provided in the accompanying section.
+4.3
+Architecture
+All processed data in META is stored in an index. There are two index types:
+forward_index and inverted_index. The former is keyed by document IDs, and
+the latter is keyed by term IDs.
+forward_index is used for applications such as topic modeling and most clas-
+sification tasks.
+inverted_index is used to create search engines, or do classification with k-
+nearest-neighbor or similar algorithms.
+Since each META application takes an index as input, all processed data is
+interchangeable between all the components. This also gives a great advantage to
+classification: META supports out-of-core classification by default! If a dataset is
+small enough (like most other toolkits assume), a cache can be used such as no_
+evict_cache to keep it all in memory without sacrificing any speed. (Index usage
+is explained in much more detail in the search engine exercises.)
+There are four corpus input formats.
+line_corpus. each dataset consists of one to three files:
+corpusname.dat. each document appears on one line
+corpusname.dat.labels. optional file that includes the class or label of
+the document on each line, again corresponding to the order in cor-
+pusname.dat. These are the labels that are used for the classification
+tasks.
+file_corpus. each document is its own file, and the name of the file becomes
+the name of the document. There is also a corpusname-full-corpus.txt
+which contains (on each line) a required class label for each document fol-
+lowed by the path to the file on disk. If there are no class labels, a placeholder
+label should be required, e.g., “[none]”.
+gz_corpus. similar to line_corpus, but each of its files and metadata files are
+compressed using gzip compression:
+corpusname.dat.gz. compressed version of corpusname.dat
+corpusname.dat.labels.gz. compressed
+version
+of corpusname.
+dat.labels

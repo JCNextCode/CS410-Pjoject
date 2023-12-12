@@ -1,0 +1,35 @@
+162
+Chapter 8
+Search Engine Implementation
+In this method, the “blocks” that we are encoding are bytes.
+Frame of reference encoding takes a block size k and encodes k integers at a time,
+so a block in this method is actually a sequence of numbers. Take the following
+block of size k = 8 as an example:
+{45, 47, 51, 59, 63, 64, 70, 72}.
+We transform this block by subtracting the minimum value in the list from each
+element:
+{0, 2, 6, 14, 18, 19, 25, 27}, min = 45.
+Up to this point, this is similar to the gap encoding discussed previously. However,
+instead of encoding each value with a bitwise compression such as γ - or δ-encoding,
+we will simply use binary with the smallest number of bits possible. Since the
+maximum number in this chunk is 27, we will store each of the integers in 5 bits:
+{00000, 00010, 00110, 01110, 10010, 10011, 11001, 11011}, min = 45, bytes = 5.
+This might look like
+45, 5, 0000000010001100111010010100111100111011,
+where 45 and 5 could be stored however is convenient (e.g., fixed binary length).
+This method also reduces the number of bitwise operations, since we read chunks
+of 5 bits and add them to the base value 45 to recreate the sequence. Another
+nice side effect is that we know the minimum value and maximum possible value
+stored in this chunk; therefore, if we are looking for a particular integer (say for a
+document ID), we know we can skip this chunk and not decompress it if ID < 45
+or ID > 45 + 25.
+8.6
+Caching
+While we designed our inverted index structure to be very efficient, we still have
+the issue of disk latency. For this reason, it is very common for a real-world search
+engine to also employ some sort of caching structure stored in memory for postings
+data objects. In this section, we’ll overview two different caching strategies.
+The basic idea of a cache is to make frequently accessed objects fast to acquire.
+To accomplish this, we attempt to keep the frequently accessed objects in memory
+so we don’t need to seek to the disk. In our case, the objects we access are postings
+lists. Due to Zipf’s law [Zipf 1949], we expect that a relatively small number of

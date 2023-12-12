@@ -1,0 +1,129 @@
+18.1 Sentiment Classification
+393
+Lorem ipsum,
+  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. 
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+ofﬁcia deserunt mollit anim id est laborum.
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+pariatur.
+t occaecat cupidatat non pro
+Lorem ipsum,
+  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. 
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+ofﬁcia deserunt mollit anim id est laborum.
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+pariatur.
+Lorem ipsum,
+  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. 
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+ofﬁcia deserunt mollit anim id est laborum.
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+pariatur.
+Lorem ipsum,
+  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. 
+d
+i im veniam quis nostrud exercitation ullamco laboris 
+d lor
+   Ut enim ad minim veniam, quis n
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+t cupidatat non proident, sunt in culpa qui 
+Lorem ipsum,
+  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. 
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+ofﬁcia deserunt mollit anim id est laborum.
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+pariatur.
+Lorem ipsum,
+  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. 
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+ofﬁcia deserunt mollit anim id est laborum.
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+pariatur.
+ccaecat cupidat
+p
+st laborum.
+citation ullamco laboris 
+olor in
+Lorem ipsum,
+  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. 
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+ofﬁcia deserunt mollit anim id est laborum.
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+pariatur.
+Lorem ipsum,
+  dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. 
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+ofﬁcia deserunt mollit anim id est laborum.
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+pariatur.
+Text data
+A set of opinion representations
+Opinion holder
+Opinion target
+Opinion content
+Opinion context
+Opinion
+sentiment
+Figure 18.4
+The task of opinion mining.
+Opinion mining is important and useful for three major reasons. First, it can
+aid decision support; it can help us optimize our decisions. We often look at other
+people’s opinions by reading their reviews in order to make a decision such as
+which product to buy or which service to use. We also would be interested in others’
+opinions when we decide whom to vote for. Policymakers may also want to know
+their constituents’ opinions when designing a new policy. The second application is
+to understand people. For example, it could help understand human preferences.
+We could optimize a product search engine or optimize a recommender system
+if we know what people are interested in. It also can help with advertising; we
+can have targeted advertising if we know what kind of people tend to like which
+types of products. The third kind of application is aggregating opinions from many
+humans at once to assess a more general opinion. This would be very useful for
+business intelligence where manufacturers want to know where their products have
+advantages or disadvantages. What are the winning features of their products or
+competitors’ products? Market research has to do with understanding consumer
+opinions. Data-driven social science research can benefit from this because they
+can do text mining to understand group opinions. If we aggregate opinions from
+social media, we can study the behavior of people on social networks. In general,
+we can gain a huge advantage in any prediction task because we can leverage the
+text data as extra data to any problem.
+18.1
+Sentiment Classification
+If we assume that most of the elements in an opinion representation are already
+known, then our only task may be sentiment classification. That is, suppose we
+know the opinion holder and the opinion target, and also know the content and

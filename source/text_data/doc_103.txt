@@ -1,0 +1,40 @@
+5.5 Document Selection vs. Document Ranking
+83
+is often typed in by a user using a search engine system, and users generally do not
+want to make much effort to type in many words. However, this is not always the
+case. For example, in a Twitter search, each document is a tweet which is very short,
+and a user may also cut and paste a text segment from an existing document as a
+query, which can be very long. Our text collection C = {d1, . . . , dM} is a set of text
+documents. In general, we may assume that there exists a subset of documents in
+the collection, i.e., R(q) ⊂ C, which are relevant to the user’s query q; that is, they
+are relevant documents or documents useful to the user who typed in the query.
+Naturally, this relevant set depends on the query q. However, which documents are
+relevant is generally unknown; the user’s query is only a “hint” at which documents
+should be in the set R(q). Furthermore, different users may use the same query
+to intend to retrieve somewhat different sets of relevant documents (e.g., in an
+extreme case, a query word may be ambiguous). This means that it is unrealistic
+to expect a computer to return exactly the set R(q), unlike the case in database
+search where this is feasible. Thus, the best a computer can do is to return an
+approximation of R(q), which we will denote by R′(q).
+Now, how can a computer compute R′(q)? At a high level, there are two alterna-
+tive strategies: document selection vs. document ranking. In document selection,
+we will implement a binary classifier to classify a document as either relevant or
+non-relevant with respect to a particular query. That is, we will design a binary clas-
+sification function, or an indicator function, f (q, d) ∈ {0, 1}. If f (q, d) = 1, d would
+be assumed to be relevant, whereas if f (q, d) = 0, it would be non-relevant. Thus,
+R′(q) = {d|f (q, d) = 1, d ∈ C}. Using such a strategy, the system must estimate the
+absolute relevance, i.e., whether a document is relevant or not.
+An alternative strategy is to rank documents and let the user decide a cutoff. That
+is, we will implement a ranking function f (q, d) ∈ R and rank all the documents in
+descending values of this ranking function. A user would then browse the ranked
+list and stop whenever they consider it appropriate. In this case, the set R′(q) is
+actually defined partly by the system and partly by the user, since the user would
+implicitly choose a score threshold θ based on the rank position where he or she
+stopped. In this case, R′(q) = {d|f (q, d) ≥ θ}. Using this strategy, the system only
+needs to estimate the relative relevance of documents: which documents are more
+likely relevant.
+Since estimation of relative relevance is intuitively easier than that of absolute
+relevance, we can expect it to be easier to implement the ranking strategy. Indeed,
+ranking is generally preferred to document selection for multiple reasons.
+First, due to the difficulty for a user to prescribe the exact criteria for selecting
+relevant documents, the binary classifier is unlikely accurate. Often the query is

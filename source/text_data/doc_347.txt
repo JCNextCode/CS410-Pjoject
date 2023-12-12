@@ -1,0 +1,35 @@
+Exercises
+327
+Bibliographic Notes and Further Reading
+As mentioned in this chapter, Das and Martins [2007] is a comprehensive survey
+on summarization techniques. Additionally, Nenkova and McKeown [2012] is a
+valuable read. For applications, latent aspect rating analysis [Wang et al. 2010],
+[Wang et al. 2011] is a form of summarization applied to product reviews. We
+mention this particular application in more detail in Chapter 18. A typical extractive
+summarizer is presented in Radev et al. [2004], a typical abstractive summarizer
+is presented in Ganesan et al. [2010], and evaluation suggestions are presented
+in Steinberger and Jezek [2009]. The MMR algorithm was originally described
+inCarbonellandGoldstein[1998].ForadvancedNLG(naturallanguagegeneration)
+techniques, a good starting point is Reiter and Dale [2000].
+Exercises
+16.1. Do you think one summarization method (extractive or abstractive) would
+perform better on a small dataset? How about a large dataset? Justify your reason-
+ing.
+16.2. Explain how you can improve the passage detection by looking beyond only
+the adjacent sentences. How would you implement this?
+16.3. Write a basic passage segmenter in META. As input, take a document and
+extract the sentences into a vector with a built-in tokenizer. Segment the vector
+into passages using a similarity algorithm.
+16.4. Now that you have a document segmented into passages, use META to set
+up a search engine over each passage, where you treat passages as individual
+documents. Ensure that you have enough sentences per passage. You many need
+to tweak your previous answer to achieve this.
+16.5. With your passage search engine, find a representative sentence from each
+passage to create a summary for the original document.
+16.6. Use META’s language model to learn a distribution of words over a document
+you wish to summarize.
+16.7. Add a generate function to the language model. It should take a context
+(n − 1 terms) and generate the nth term. Use the calculation described in this
+chapter to generate the next word.
+16.8. Summarize the input document using the generator. Experiment with dif-
+ferent stopping criteria. Which seems to work the best?

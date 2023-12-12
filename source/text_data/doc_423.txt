@@ -1,0 +1,42 @@
+18.3 Latent Aspect Rating Analysis
+403
+ment weights of the words. Of course, these sentiment weights might be different
+for different aspects. For each aspect i we have a set of term sentiment weights for
+word w denoted as βi,w.
+In the second stage, we assume that the overall rating is simply a weighted
+combination of these aspect ratings. We assume we have aspect weights αi(d),
+and these will be used to take a weighted average of the aspect ratings ri(d). This
+method assumes the overall rating is simply a weighted average of these aspect
+ratings, which allows us to predict the overall rating based on the observable word
+frequencies.
+On the left side of Figure 18.10 is all the observed information, rd (the overall
+rating) and ci(w, d). On the right side is all the latent (hidden) information that
+we hope to discover. This is a typical case of a generative model where we embed
+the interesting latent variables. Then, we set up a generative probability for the
+overall rating given the observed words. We can adjust these parameter values to
+maximize the conditional probability of the observed rating given the document.
+We have seen such cases before in other models such as PLSA, where we predict
+topics in text data. Here, we’re predicting the aspect ratings and other parameters.
+More formally, the data we are modeling here is a set of review documents with
+overall ratings, as shown in Figure 18.11. Each review document is denoted as d
+and the overall ratings denoted by rd. We use ci(w, d) to denote the count of word
+w in aspect segment i. The model is going to predict the rating based on d, so
+we’re interested in the rating regression problem of p(rd | d). This model is set
+• Data: a set of review documents with overall ratings: C = {(d, rd)}
+ – d is pre-segmented into k aspect segments
+ – ci(w, d) = count of word w in aspect segment i (zero if w didn’t occur)
+• Model: predict rating based on d: p(rd|d)
+Overall rating = weighted average of aspect ratings
+Aspect rating = sum of sentiment weights of words in the aspect
+Aspect-speciﬁc
+sentiment of w
+Multivariate
+Gaussian prior
+rd » N(∑k
+i=1αi(d)ri(d), δ2),
+α �(d) » N(μ
+ �, �)
+ri(d) = ∑w2Vci(w, d)βi,w
+βi,w 2 <
+Figure 18.11
+Latent rating regression.

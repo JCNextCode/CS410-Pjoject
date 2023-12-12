@@ -1,0 +1,40 @@
+References
+487
+J. Weizenbaum. 1966. ELIZA—A Computer Program for the Study of Natural Language
+Communication Between Man and Machine, Communications of the ACM 9 (1):
+36–45, DOI: 10.1145/265153.365168. 44
+J. S. Whissell and C. L. A. Clarke. 2013. Effective Measures for Inter-document Similarity.
+In Proc. of the 22nd ACM International Conference on Conference on Information
+& Knowledge Management, CIKM ’13, ACM, pages 1361–1370, New York. DOI:
+10.1145/2505515.2505526. 279
+R. W. White and R. A. Roth. 2009. Exploratory Search: Beyond the Query-Response
+Paradigm. Synthesis Lectures on Information Concepts, Retrieval, and Services.
+Morgan & Claypool Publishers. DOI: 10.2200/S00174ED1V01Y200901ICR003. 85
+R. W. White, B. Kules, S. M. Drucker, and m.c. schraefel. 2006. Introduction. Commun.
+ACM, 49(4):36–39. DOI: 10.1145/1121949.1121978. 85
+I. H. Witten, A. Moffat, and T. C. Bell. 1999. Managing Gigabytes (2Nd Ed.): Compressing
+and Indexing Documents and Images. Morgan Kaufmann Publishers Inc., San
+Francisco, CA. 18, 165
+C.F J. Wu. 1983. On the convergence properties of the EM algorithm. Ann. of stat.,
+95–103. 368
+J. Xu and W. B. Croft. 1996. Query expansion using local and global document analysis.
+In Proc. of the 19th Annual International ACM SIGIR Conference on Research and
+Development in Information Retrieval, SIGIR ’96, ACM, pp. 4–11, New York. DOI:
+10.1145/243199.243202. 144
+Y. Yang. 1999. An evaluation of statistical approaches to text categorization. Journal of
+Information Retrieval, 1:67–88. 315
+C. Zhai. 1997. Exploiting context to identify lexical atoms—a statistical view of linguistic
+context. In Proc. of the International and Interdisciplinary Conference on Modelling
+and Using Context (CONTEXT-97), pages 119–129. Rio de Janeiro, Brazil. 273, 291
+C. Zhai. 2008. Statistical Language Models for Information Retrieval. Synthesis Lectures
+on Human Language Technologies. Morgan & Claypool Publishers. DOI: 10.2200/
+S00158ED1V01Y200811HLT001. 55, 87, 128, 129
+C. Zhai and J. Lafferty. 2001. Model-based Feedback in the Language Modeling
+Approach to Information Retrieval. In Proceedings of the Tenth International
+Conference on Information and Knowledge Management, CIKM ’01, ACM, pp. 403–
+410, New York. DOI: 10.1145/502585.502654. 143, 466, 473
+C. Zhai and J. Lafferty. 2004. A Study of Smoothing Methods for Language Models
+Applied to Information Retrieval. ACM Trans. Inf. Syst., 22(2):179–214. 475
+C. Zhai, P. Jansen, E. Stoica, N. Grot, and D. A. Evans. 1998. Threshold Calibration in
+CLARIT Adaptive Filtering. In Proc. of Seventh Text REtrieval Conference (TREC-7),
+pp. 149–156. 227

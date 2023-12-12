@@ -1,0 +1,39 @@
+8.5 Compression
+159
+up less space and are more frequent:
+{23, 2, 9, 1, 4, 4, 6, 2, 6, 2, . . .}.
+To get the actual document ID values, simply add the offset to the previous value.
+So the first ID is 23 and the second is 23 + 2 = 25. The third is 25 + 9 = 34, and
+so on.
+In this section, we will discuss the following types of compression, which may
+or may not operate on gap-encoded values:
+.
+unary encoding (bitwise);
+.
+γ -encoding (bitwise);
+.
+δ-encoding (bitwise);
+.
+vByte (block); and
+.
+frame of reference (block).
+8.5.1
+Bitwise compression
+With bitwise compression, instead of writing out strings representing numbers
+(like “1624”), or fixed byte-width chunks (like a 4-byte integer as “00000658”), we
+are writing raw binary numbers. When the representation ends, the next number
+begins. There is no fixed width, or length, of the number representations. Using
+bitwise compression means performing some bit operations for every bit that is
+encoded in order to “build” the compressed integer back into its original form.
+Unary. Unary encoding is the simplest method. To write the integer k, we simply
+write k − 1 zeros followed by a one. The one acts as a delimiter and lets us know
+when to stop reading:
+1 → 1
+2 → 01
+3 → 001
+4 → 0001
+5 → 00001
+19 → 0000000000000000001
+Note that we can’t encode the number zero—this is true of most other methods
+as well. An example of a unary-encoded sequence is
+000100100010000000101000100001 = 4, 3, 4, 8, 2, 4, 5.

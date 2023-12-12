@@ -1,0 +1,39 @@
+12.3 Landscape of text mining tasks
+249
+what the user has said in text data (e.g., reviews), in which case, the results
+from mining knowledge about the observer would clearly be very useful for
+prediction.
+Futhermore, non-text data can be very important in predictive analysis. For
+example, if you want to predict stock prices or changes of stock prices, the
+historical stock price data are presumably the best data to use for prediction
+even though online discussions, news articles, or social media, may also
+be useful for further improvement of prediction accuracy by contributing
+additional effective features computed based on text data (which would be
+combined with non-text features).
+Non-text data can also be used for analyzing text by supplying context,
+thus opening up many interesting opportunities to mine context-sensitive
+knowledge from text data, i.e., associating the knowledge discovered from text
+data with the non-text data (e.g., associating topics discovered from text with
+time would generate temporal trends of topics). When we look at the text data
+alone, we’ll be mostly looking at the content or opinions expressed in the text.
+However, text data generally also has context associated with it. For example,
+the time and the location of the production of the text data are both useful
+“metadata” values of a text document. This context can provide interesting
+angles for analyzing text data; we might partition text data into different time
+periods because of the availability of the time. Now, we can analyze text data
+in each time period and make a comparison. Similarly, we can partition text
+data based on location or any other metadata that’s associated with it to
+form interesting comparisons in those areas. In this sense, non-text data can
+provide interesting angles or perspectives for text data analysis. It can help us
+make context-sensitive analysis of content, language usage, or opinions about
+the observer or the authors of text data. We discuss joint analysis of text and
+non-text data in detail in Chapter 19.
+This is a fairly general landscape of the topics in text mining and analytics. In
+this book, we will selectively cover some of those topics that are representative of
+the different kinds of text mining tasks. Chapters 2 and 3 already covered natural
+language processing and the basics of machine learning, which allow us to under-
+stand, represent, and classify text data—important steps in any text mining task. In
+the remaining chapters of Part III of the book, we will start to enumerate different
+text mining tasks that build upon the NLP and IR techniques discussed earlier.
+First, we will discuss how to mine word associations from text data (Chapter 13),
+revealing lexical knowledge about language. After word association mining, we will

@@ -1,0 +1,90 @@
+Index
+499
+Modification in NLP, 41
+Modules in content-based filtering, 224–226
+MRR (mean reciprocal rank), 180
+Multiclass classification
+linear classifiers, 313
+text categorization, 303
+Multi-level judgments in search engine
+evaluation, 180–183
+Multimode interactive access, 76–78
+Multinomial distributions
+Bayesian estimate, 463–464
+generalized, 460–461
+LDA, 380
+Multinomial parameters in Bayesian
+estimate, 463–464
+Multiple-level sentiment analysis, 397–398
+Multiple occurrences in vector space model,
+103–104
+Multiple queries in ranked lists evaluation,
+178–180
+Multivariate Gaussian distribution, 404–405
+Mutual information
+information theory, 33–34
+syntagmatic relations, 264–271
+text clustering, 278
+n-fold cross validation, 314
+n-gram language models
+abstractive summarization, 322–323
+frequency analysis, 68–69
+sentiment classification, 394–395
+term clustering, 288–291
+vector space model, 109
+Naive Bayes algorithm, 309–312
+Named entity recognition, 323
+Natural language, mining knowledge about,
+247
+Natural language generation in text
+summarization, 323–324
+Natural language processing (NLP)
+history and state of the art, 42–43
+pipeline, 306–307
+sentiment classification, 395
+statistical language models, 50–54
+tasks, 39–41
+text information systems, 43–45
+text representation, 46–50
+Navigating maps in multimode interactive
+access, 77
+Navigational queries, 200
+NDCG (normalized discounted cumulative
+gain), 181–183
+NDCG@k score, 189
+Nearest-centroid classifiers, 309
+Negative feedback documents, 136–138
+Negative feelings, 390–394
+NetPLSA model, 430–433
+Network supervised topic models, 428–433
+Neural language model, 291–294
+News summaries, 317
+Newspaper output, 3
+ngram_pos_analyzer analyzer, 62
+ngram_word_analyzer analyzer, 62
+NLP. See Natural language processing (NLP)
+NLTK toolkit, 64
+no_evict_cache caches, 60
+Nodes in word associations, 252
+Non-text data
+context, 249
+predictive analysis, 249
+vs. text, 244–246
+Normalization
+document length, 105–108
+PageRank, 206
+query likelihood retrieval model, 122
+term clustering, 286
+topic analysis, 333
+Normalized discounted cumulative gain
+(NDCG), 181–183
+Normalized ratings in collaborative
+filtering, 230–231
+Normalized similarity algorithm, 279
+Objective statements vs. subjective, 389–390
+Observed world, mining knowledge about,
+247–248
+Observers, mining knowledge about, 248
+Office documents, 3
+Okapi BM25 model, 89, 108
+One-vs-all (OVA) method, 313

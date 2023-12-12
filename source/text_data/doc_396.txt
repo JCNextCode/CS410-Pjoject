@@ -1,0 +1,50 @@
+376
+Chapter 17
+Topic Analysis
+•  Initialize all unknown parameters randomly
+•  Repeat until likelihood converges
+– E-step
+– M-step
+/ ∑w2V c(w, d)(1 – p(zd,w = B))p(zd,w = j) 
+p(zd,w = j) /  
+∑k
+j=1 p(zd,w = j) = 1  
+8d2C, ∑k
+j=1πd,j = 1  
+8j2[1,k], ∑w2Vp(w|θj) = 1  
+p(zd,w = B) / λBp(w|θB)  
+What’s the normalizer for this one? 
+p(n)(w|θj)  
+p(n+1)(w|θj) / ∑d2Cc(w, d)(1 – p(zd,w = B))p(zd,w = j) 
+π(n+1)
+d,j
+π(n)
+d,j
+Figure 17.34
+Computation of the EM Algorithm for estimating PLSA.
+a loop until the likelihood converges. How do we know when the likelihood con-
+verges? We can keep track of the likelihood values in each iteration and compare
+the current likelihood with the likelihood from the previous iteration or the average
+of the likelihood from a few previous iterations. If the current likelihood is very sim-
+ilar to the previous one (judged by a threshold), we can assume that the likelihood
+has converged and can stop the algorithm.
+In each iteration, the EM algorithm would first invoke the E-step followed by the
+M-step. In the E-step, it would augment the data by predicting the hidden variables.
+In this case, the hidden variable, zd,w indicates whether word w in d is from a “real”
+topic or the background. If it’s from a real topic, it determines which of the k topics
+it is from.
+From Figure 17.34, we see that in the E-step we need to compute the probability
+of z values for every unique word in each document. Thus, we can iterate over
+all the documents, and for each document, iterate over all the unique words in
+the document to compute the corresponding p(zd,w). This computation involves
+computing the product of the probability of selecting a topic and the probability of
+word w given by the selected distribution. We can then normalize these products
+based on the constraints we have, to ensure �k
+j=1 p(zd,w = j) = 1. In this case, the
+normalization is among all the topics.
+In the M-step, we will also collect the relevant counts and then normalize appro-
+priately to obtain re-estimates of various parameters. We would use the estimated
+probability distribution p(zd,w) to split the count of word w in document d among
+all the topics. Note that the same word would generally be split in different ways in
+different documents. Once we split the counts for all the words in this way, we can
+aggregate the split counts and normalize them. For example, to re-estimate πd,j

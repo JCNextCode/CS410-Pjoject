@@ -1,0 +1,26 @@
+4
+META: A Unified Toolkit
+for Text Data
+Management and
+Analysis
+This chapter introduces the accompanying software META, a free and open-source
+toolkit that can be used to analyze text data. Throughout this book, we give hands-
+on exercises with META to practice concepts and explore different text mining
+algorithms.
+Most of the algorithms and methods discussed in this book can be found in
+some form in the META toolkit. If META doesn’t include a technique discussed in
+this book, it’s likely that a chapter exercise is to implement this feature yourself! De-
+spite being a powerful toolkit, META’s simplicity makes feature additions relatively
+straightforward, usually through extending a short class hierarchy.
+Configuration files are an integral part of META’s forward-facing infrastructure.
+They are designed such that exploratory analysis usually requires no programming
+effort from the user. By default, META is packaged with various executables that can
+be used to solve a particular task. For example, for a classification experiment the
+user would run the following command in their terminal1:
+./classify config.toml
+This is standard procedure for using the default executables; they take only one
+configuration file parameter. The configuration file format is explained in detail
+later in this chapter, but essentially it allows the user to select a dataset, a way
+1. Running the default classification experiment requires a dataset to operate on. The 20news-
+groups dataset is specified in the default META config file and can be downloaded here: https://
+meta-toolkit.org/data/20newsgroups.tar.gz. Place it in the meta/data/ directory.

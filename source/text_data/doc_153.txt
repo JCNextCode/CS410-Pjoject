@@ -1,0 +1,31 @@
+7
+Feedback
+In this chapter, we will discuss feedback in a TR system. Feedback takes the results
+of a user’s actions or previous search results to improve retrieval results. This is
+illustrated in Figure 7.1. As shown, feedback is often implemented as updates to
+a query, which alters the list of returned documents. We can see the user would
+type in a query and then the query would be sent to a standard search engine,
+which returns a ranked list of results (we discussed this in depth in Chapter 6).
+These search results would be shown to the user. The user can make judgements
+about whether each returned document is useful or not. For example, the user may
+say one document is good or one document is not very useful. Each decision on a
+document is called a relevance judgment. This overall process is a type of relevance
+feedback, because we’ve got some feedback information from the user based on the
+judgements of the search results.
+As one would expect, this can be very useful to the retrieval system since we
+should be able to learn what exactly is interesting to a particular user or users.
+The feedback module would then take these judgements as input and also use
+the document collection to try to improve future rankings. As mentioned, it would
+typically involve updating the query so the system can now rank the results more
+accurately for the user; this is the main idea behind relevance feedback.
+These types of relevance judgements are reliable, but the users generally don’t
+want to make extra effort unless they have to. There is another form of feedback
+called pseudo relevance feedback, or blind feedback. In this case, we don’t have to
+involve users since we simply assume that the top k ranked documents are relevant.
+Let’s say we assume the top k = 10 documents are relevant. Then, we will use these
+documents to learn and to improve the query. But how could this help if the top-
+ranked documents are random? In fact, the top documents are actually similar to
+relevant documents, even if they are not relevant. Otherwise, how would they have
+appeared high in the ranked list? So, it’s possible to learn some related terms to
+the query from this set anyway regardless whether the user says that a document is
+relevant or not.

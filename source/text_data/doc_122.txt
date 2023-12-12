@@ -1,0 +1,47 @@
+102
+Chapter 6
+Retrieval Models
+d1
+f(q, d1) = 2.5
+f(q, d2) = 5.6
+f(q, d3) = 7.1
+f(q, d4) = 9.6
+ff(q, , d5) = 13.9!
+) = 13.9!
+… news about …
+d2
+… news about organic food campaign …
+d3
+… news of presidential campaign …
+d4
+… news of presidential campaign …
+… presidential candidate …
+d5
+… news of organic food campaign …
+campaign … campaign … campaign …
+Query = “news about presidential campaign”
+Figure 6.12
+Scores of all five documents using TF-IDF weighting.
+seem to be quite reasonable. But again, we also see a new problem since d5 did not
+even have a very high score with our simplest vector space model, but now d5 has
+the highest score. This is actually a common phenomenon when designing retrieval
+functions; when you try to fix one problem, you tend to introduce other problems!
+That’s why it’s very tricky to design an effective ranking function, and why finding
+a “best” ranking function is an open research question. In the next few sections,
+we’ll continue to discuss some additional ideas to further improve this model and
+try to fix this problem.
+6.3.4
+TF Transformation
+In the previous section, we derived a TF-IDF weighting formula using the vector
+space model and showed that this model actually works pretty well for the examples
+shown in the figures—except for d5, which has a very high score. This document is
+intuitively non-relevant, so its position is not desirable. Now, we’re going to discuss
+how to use a TF transformation to solve this problem. Before we discuss the details,
+let’s take a look at the formula for the TF-IDF weighting and ranking function we
+previously derived. It is shown in Figure 6.13.
+If you look at the formula carefully, you will see it involves a sum over all the
+matched query terms. Inside the sum, each matched query term has a particular
+weight; this weight is TF-IDF weighting. It has an IDF component where we see two
+variables: one is the total number of documents in the collection, M. The other is
+the document frequency, df(w), which is the number of documents that contain
+w. The other variables involved in the formula include the count of the query term

@@ -1,0 +1,14 @@
+146
+Chapter 7
+Feedback
+7.12. In the feedback methods we discussed in this chapter, we assumed we only
+had sets of relevant and non-relevant documents. In reality, we actually have two
+ranked lists of relevant and non-relevant documents. How can we take advantage
+of these ranked lists for feedback? In other words, how can we treat feedback
+documents differently depending on how similar they are to the original query?
+Consider the vector space model, the query likelihood model, or both.
+7.13. In a real search system, storing modified query vectors for all observed
+queries will take up a large amount of space. How could you optimize the amount
+of space required? What kind of solutions provide a tradeoff between space and
+query time? How about an online system that benefits the majority of users or the
+majority of queries?

@@ -1,0 +1,24 @@
+B.5 The General Procedure of EM
+471
+p(zw = 1 | F , θ(n)
+F ) =
+λp(w | C)
+λp(w | C) + (1 − λ)p(w | θ(n)
+F )
+(E)
+(B.10)
+p(w | θ(n+1)
+F
+) =
+�k
+i=1(1 − p(zw = 1 | F , θ(n)
+F ))c(w, di)
+�k
+i=1
+�
+w′∈V (1 − p(zw′ = 1 | F , θ(n)
+F )c(w′, di))
+(M). (B.11)
+Note that we never need to explicitly compute the Q-function; instead, we compute
+the distribution of the hidden variable z and then directly obtain the new parameter
+values that will maximize the Q-function.

@@ -1,0 +1,40 @@
+17.2 Topics as Word Distributions
+337
+However, representing a topic by a distribution over words can involve many
+words to describe a topic and model subtle differences of topics. Through adjusting
+probabilities of different words, we may model variations of the general “sports”
+topic to focus more on a particular kind of sports such as basketball (where we
+would expect basketball to have a very high probability) or football (where football
+would have a much higher probability than basketball).
+Similarly, in the distribution for “travel,” we see top words like attraction, trip,
+flight, and so on. In “science,” we see scientist, spaceship, and genomics, which are all
+intuitively related to the corresponding topic. It is important to note that it doesn’t
+mean sports-related terms will necessarily have zero probabilities in a distribution
+representing the topic “science,” but they generally have much lower probabilities.
+Note that there are some words that are shared by these topics, meaning that they
+have reasonably high probabilities for all these topics. For example, the word travel
+occurred in the top-word lists for all the three topics, but with different probabili-
+ties. It has the highest probability for the “travel” topic, 0.05, but with much smaller
+probabilities for “sports” and “science,” which makes sense. Similarly, you can see
+star also occurred in “sports” and “science” with reasonably high probabilities be-
+cause the word is actually related to both topics due to its ambiguous nature. We
+have thus seen that representing a topic by a word distribution effectively addresses
+all the three problems of a topic as a single term mentioned earlier.
+.
+It now uses multiple words to describe a topic, allowing us to describe fairly
+complicated topics.
+.
+It assigns weights to terms, enabling the modeling of subtle differences of
+semantics in related topics. We can also easily bring in related words together
+to model a topic and estimate the coverage of the topic.
+.
+Because we have probabilities for the same word in different topics, we can
+accommodate multiple senses of a word, addressing the issue of word ambi-
+guity.
+Next, we examine the task of discovering topics represented in this way. Since the
+representation is a probability distribution, it is natural to use probabilistic models
+for discovering such word distributions, which is referred to as probabilistic topic
+modeling.
+When using a word distribution to denote a topic, our task of topic analysis can
+be further refined based on the formal definition in Figure 17.3 by making each
+topic a word distribution. That is, each θi is now a word distribution, and we have

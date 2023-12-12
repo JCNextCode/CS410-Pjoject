@@ -1,0 +1,31 @@
+17
+Topic Analysis
+This chapter is about topic mining and analysis, covering a family of unsupervised
+text mining techniques called probabilistic topic models that can be used to dis-
+cover latent topics in text data.
+A topic is something that we all understand intuitively, but it’s actually not easy to
+formally define it. Roughly speaking, a topic is the main idea discussed in text data,
+which may also be regarded as a theme or subject of a discussion or conversation.
+A topic can have different granularities. For example, we can talk about the topic
+of a sentence, the topic of an article, the topic of a paragraph, or the topic of all
+the research articles in a library. Different granularities of topics have different
+applications.
+There are many applications that require discovery and analysis of topics in
+text. For example, we might be interested in knowing about what Twitter users
+are talking about today. Are they talking about NBA sports, international events,
+or another topic? We may also be interested in knowing about research topics; one
+might be interested in knowing the current research topics in data mining, and how
+they are different from those five years ago. To answer such questions, we need to
+discover topics in the data mining literature, including specifically topics in today’s
+literature and those in the past so that we can make a comparison.
+We might also be interested in knowing what people like about some products,
+such as smartphones. This requires discovering topics in both positive reviews and
+negative reviews. Or, perhaps we’re interested in knowing what the major topics
+debated in a presidential election are. All these have to do with discovering topics
+in text and analyzing them. How to do this is a main topic of this chapter.
+We can view a topic as describing some knowledge about the world as shown
+in Figure 17.1. From text data, we want to discover a number of topics which can
+provide a description about the world. That is, a topic tells us something about the
+world (e.g., about a product or a person).
+Besides text data, we often also have some non-text data which can be used as
+additional context for analyzing the topics. We might know the time associated

@@ -1,0 +1,38 @@
+218
+Chapter 10
+Web Search
+page, located at: http://sifaka.cs.uiuc.edu/ir/textdatabook/files/text-scraper.js. Try
+experimenting with the script to make it a true crawler instead of downloading
+only a single page.
+10.5. Crawling a Domain.
+Now that you know how to download a single HTML
+file, you can start crawling a domain. This means starting with some base URL and
+having the crawler follow and download links up to a certain depth. wget has some
+nice options that make this very easy.
+wget --recursive --level=3 --wait=2 --accept html [url]
+This command tells wget to traverse the site recursively by following links up to
+a depth of 3. It waits 2 between requests (which is considered polite and will help
+you from getting blocked). Finally, it is told to only download HTML pages since
+those are the ones with text that we want to index.
+The output is kept in the same structure as on the web, downloaded into our
+working directory.
+If you don’t stop it manually (with CTRL-C), it will continue to crawl until all
+pages at the specified depth have been downloaded. Start off with a conservative
+depth, since you will not be sure how many pages are under a certain domain.
+10.6. Cleaning HTML Files.
+Before we add a page to the search engine’s index,
+we will probably want to “clean” the HTML page. This means converting the HTML
+file into a plaintext file so that the keywords given to the search engine more easily
+match the words in our crawled document.
+There are many tools available to convert HTML to text, some of which are even
+online. For our use though, we want to have a command-line based tool so we can
+automate it. We suggest using Python or Ruby. Below are two simple programs that
+both do the same thing.
+Python:
+from bs4 import BeautifulSoup
+html = open(’filename.html’).read()
+soup = BeautifulSoup(html)
+print soup.get_text() # or save to another file
+For this method, you will have to install the BeautifulSoup library.
+Ruby:
+require ’nokogiri’

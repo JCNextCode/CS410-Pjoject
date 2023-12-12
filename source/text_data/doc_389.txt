@@ -1,0 +1,56 @@
+17.4 Probabilistic Latent Semantic Analysis
+369
+government 0.3
+response 0.2
+…
+city 0.2
+new 0.1
+orleans 0.05
+…
+donate 0.1
+relief 0.05
+help 0.02
+…
+Topic θk
+the 0.04
+a 0.03
+…
+…
+Blog article about “Hurricane Katrina”
+[Criticisms of government response to the 
+hurricane primarily consisted of criticism of its
+response to the approach of the storm and its
+aftermath, speciﬁcally in the delayed response] 
+to the [ﬂooding of New Orleans. … 80% of the
+1.3 million residents of the greater New Orleans
+metropolitan area evacuated] … [Over seventy
+countries pledged monetary donations or other
+assistance.] …
+Many applications are possible if we
+can “decode” the topics in text …
+Background θB
+Topic θ2
+Topic θ1
+Figure 17.27
+A document as a sample of words from mixed topics.
+As we mentioned earlier, the general task of topic analysis is to mine multiple
+topics from text documents and compute the coverage of each topic in each doc-
+ument. PLSA is precisely designed to perform this task. As in all topic models, we
+make two key assumptions. First, we assume that a topic can be represented as
+a word distribution (or more generally a term distribution). Second, we assume
+that a text document is a sample of words drawn from a probabilistic model.
+We illustrate these two assumptions in Figure 17.27, where we see a blog article
+about Hurricane Katrina and some imagined topics, each represented by a word
+distribution, including, e.g., a topic on government response (θ1), a topic on the
+flood of the city of New Orleans (θ2), a topic on donation (θk), and a background
+topic θB. The article is seen to contain words from all these distributions. Specif-
+ically, we see there is a criticism of government response at the beginning of this
+excerpt, which is followed by discussion of flooding of the city, and then a sen-
+tence about donation. We also see background words mixed in throughout the
+article.
+The main goal of topic analysis is to try to decode these topics behind the text
+(by segmenting them), and figure out which words are from which distribution
+so that we can obtain both characterizations of all the topics in the text data
+and the coverage of topics in each document. Once we can do these, they can
+be directly used in many applications such as summarization, segmentation, and
+clustering.

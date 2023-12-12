@@ -1,0 +1,92 @@
+Index
+501
+Polarity analysis in sentiment classification,
+394
+Policy design, opinion mining for, 393
+Pooling in search engine evaluation, 186–
+187
+Porter2 English Stemmer, 66–67
+porter2_stemmer filter, 62
+POS (part-of-speech) tags
+META toolkit, 67
+NLP, 47
+sentiment classification, 395
+Positive feelings, 390–394
+Posterior distribution, 28
+Posterior probability in Bayesian parameter
+estimation, 29
+Postings files for inverted indexes, 150–152
+Power iteration for PageRank, 205
+Practitioners reader category, 17
+Pragmatic analysis in NLP, 39–40
+Precision
+search engine evaluation, 184
+set retrieval evaluation, 170–178
+Precision-recall curves in ranked lists
+evaluation, 174–176
+Predictive analysis for non-text data, 249
+Predictors features in joint analysis, 413–
+416
+Presupposition in NLP, 41
+Prior probability in Bayesian parameter
+estimation, 29
+Probabilistic inference, 88
+Probabilistic latent semantic analysis
+(PLSA)
+CPLSA, 419–428
+extension, 377–383
+overview, 368–377
+Probabilistic retrieval models
+description, 87–88
+overview, 110–112
+query likelihood retrieval model, 114–118
+Probability and statistics
+abstractive summarization, 322
+background language model, 346–349
+basics, 21–23
+Bayes’ rule, 25–26
+Bayesian parameter estimation, 28–30
+binomial distribution, 26–27
+EM algorithm, 362–366
+joint and conditional probabilities, 23–25
+KL-divergence, 474
+LARA, 403
+maximum likelihood parameter
+estimation, 27–28
+mixture model behavior, 354–358
+mutual information, 266–270
+Naive Bayes algorithm, 310
+PageRank, 202–206
+paradigmatic relations, 257–258
+PLSA, 368–377, 380
+probabilistic models and applications,
+30–31
+syntagmatic relations, 262–263
+term clustering, 286–289
+topics, 336–339
+unigram language model, 342–344
+web search ranking, 209–211
+Probability density function (pdf)
+Beta distribution, 457
+Dirichlet distribution, 461
+multinomial distribution, 461
+Probability distributions
+overview, 21–23
+statistical language models, 50–54
+Probability ranking principle, 84
+Probability space, 21–23
+Producer-initiated recommendations, 75
+Product reviews in opinion mining, 391–392
+profile command, 65–66
+Properties
+inferring knowledge about, 248
+text categorization for, 300
+Proximity heuristics for inverted indexes,
+151
+Pseudo counts
+Bayesian statistics, 459–460
+LDA, 381
+multinomial distribution, 463
+PLSA, 379, 381
+smoothing techniques, 128, 286
+Pseudo data in LDA, 378

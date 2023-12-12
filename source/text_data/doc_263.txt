@@ -1,0 +1,40 @@
+12.1 Motivation: Applications of Text Data Analysis
+243
+do. For example, automatic sorting of emails would save us a lot of time. The other
+kind is those that can discover knowledge that we humans may not be able to do
+even if we have “sufficient” time to read all the text data. For example, an intelligent
+biomedical literature anlayzer may reveal a chain of associations of genes and
+diseases by synthesizing gene-gene relations and gene-disease relations scattered
+in many different research articles, thus suggesting a potential opportunity to
+design drugs targeting some of the genes for treatment of a disease.
+Due to the broad coverage of knowledge in text data and our reliance on text
+data for communications, it is possible to imagine text analysis applications in
+virtually any domain. Below are just a few specific examples that may provide some
+application contexts for understanding the text analysis techniques covered in the
+subsequent chapters.
+One important application domain of text analysis is business intelligence. For
+example, product managers may be interested in hearing customer feedback about
+their products, knowing how well their products are being received as compared to
+the products of competitors. This can be a good opportunity for leveraging text data
+in the form of product reviews on the Web. If we can develop and master text mining
+techniques to tap into such an information source to extract the knowledge and
+opinions of people about these products, then we can help these product managers
+gain business intelligence or gain feedback from their customers.
+Another important application domain is scientific research, where timely di-
+gestion of knowledge encoded in literature articles is essential. Scientists are also
+interested in knowing the trends of research topics or learning about discover-
+ies in fields related to their own. This problem is especially important in biology
+research—different communities tend to use different terminologies, yet they’re
+stating very similar problems. How can we integrate the knowledge that is covered
+in different communities (using different vocabularies) to help study a particular
+problem? Answering such a question speeds up scientific discovery. There are many
+more such examples where we can leverage text data to discover usable knowledge
+to optimize our decision-making processes.
+Yet another broad category of applications is to leverage social media to opti-
+mize decision making. In general, we can imagine building an intelligent sensor
+system to “listen” to all the text data produced in real time, especially social me-
+dia data such as tweets which report real-world events almost in real time, and
+monitor interesting patterns relevant to an application. For example, perform-
+ing sentiment analysis on people’s opinions about policies can help better un-
+derstand society’s response to a policy and thus potentially improve the policy if
+needed. Disaster response and management would benefit early discovery of any

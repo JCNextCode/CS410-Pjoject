@@ -1,0 +1,90 @@
+Index
+507
+demand for, 4–5
+overview, 78–80
+Training and training data
+classification algorithms, 307–309
+collaborative filtering, 229–230
+content-based recommendation, 227–
+228
+linear classifiers, 311–313
+machine learning, 34–36
+Naive Bayes, 309–310
+NLP, 42–43, 45
+ordinal regression, 398–399
+text categorization, 299–303, 311–314
+web search ranking, 209–210, 212
+Transformations
+frequency, 258–259
+vector space model, 103–104
+Transition matrices in PageRank, 204
+Translation, machine, 42, 44–45
+TREC filtering tasks, 228
+tree_analyzer analyzer, 62
+Trends in web searches, 215–216
+Trigrams in frequency analysis, 69
+Twitter searches, 83
+Two-component mixture model, 356
+Unary bitwise compression, 159–160
+Under-constrained queries, 84
+Unified systems
+META as, 453–455
+overview, 445–448
+system architecture, 452–453
+text analysis operators, 448–452
+Uniform priors in Dirichlet distribution,
+461
+Unigram language models, 51–54
+EM algorithm, 466
+LDA, 381
+mining topics from text, 341–345
+PLSA, 370
+Unigrams
+abstractive summarization, 321–323
+frequency analysis, 68
+sentiment classification, 394
+words tokenizers, 149
+Unimodel Beta, 459
+Union operator, 449–450
+University of California Berkeley study, 3
+Unseen words
+document language model, 119–120,
+122–123
+KL-divergence, 474
+Naive Bayes algorithm, 310–311
+smoothing, 124, 285–287
+statistical language models, 52
+Unstructured text access, 80
+Unsupervised clustering algorithms, 275,
+278
+Unsupervised machine learning, 34, 36
+URLs and crawlers, 193
+Usability in search engine evaluation, 168
+Utility
+content-based filtering, 224–228
+text clustering, 294
+Valence scoring, 411
+Variable byte encoding, 161
+Variables
+context, 330
+contextual text mining, 419
+CPLSA, 422
+EM algorithm, 362–364, 366, 368, 373–
+376, 465, 467
+LARA, 403
+random. See Random variables
+vByte encoding, 161
+Vector space (VS) retrieval models, 87
+bit vector representation, 94–97
+content-based filtering, 225–226
+document length normalization, 105–108
+feedback, 135–138
+improved instantiation, 97–102
+improvement possibilities, 108–110
+instantiation, 93–95
+overview, 90–92
+paradigmatic relations, 256–258
+summary, 110
+TF transformation, 102–105
+Vectors
+collaborative filtering, 222

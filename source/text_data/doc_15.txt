@@ -1,0 +1,29 @@
+Preface
+The growth of “big data” created unprecedented opportunities to leverage compu-
+tational and statistical approaches to turn raw data into actionable knowledge that
+can support various application tasks. This is especially true for the optimization of
+decision making in virtually all application domains such as health and medicine,
+security and safety, learning and education, scientific discovery, and business in-
+telligence. Just as a microscope enables us to see things in the “micro world” and a
+telescope allows us to see things far away, one can imagine a “big data scope” would
+enable us to extend our perception ability to “see” useful hidden information and
+knowledgeburiedinthedata, whichcanhelpmakepredictionsandimprovetheop-
+timality of a chosen decision. This book covers general computational techniques
+for managing and analyzing large amounts of text data that can help users manage
+and make use of text data in all kinds of applications.
+Text data include all data in the form of natural language text (e.g., English text
+or Chinese text): all the web pages, social media data such as tweets, news, scien-
+tific literature, emails, government documents, and many other kinds of enterprise
+data. Text data play an essential role in our lives. Since we communicate using nat-
+ural languages, we produce and consume a large amount of text data every day on
+all kinds of topics. The explosive growth of text data makes it impossible, or at least
+very difficult, for people to consume all the relevant text data in a timely manner.
+Thus, there is an urgent need for developing intelligent information retrieval sys-
+tems to help people manage the text data and get access to the needed relevant
+information quickly and accurately at any time. This need is a major reason be-
+hind the recent growth of the web search engine industry. Due to the fact that text
+data are produced by humans for communication purposes, they are generally rich
+in semantic content and often contain valuable knowledge, information, opinions,
+and preferences of people. Thus, as a special kind of “big data,” text data offer a
+great opportunity to discover various kinds of knowledge useful for many applica-
+tions, especially knowledge about human opinions and preferences, which is often

@@ -1,0 +1,34 @@
+Exercises
+145
+you are using pseudo feedback compared to user-supplied relevance judgements?
+What about implicit feedback through clickthrough data?
+7.2. Imagine you are in charge of a large search-engine company. What other
+strategies could you devise to get relevance judgments from users?
+7.3. Say one of your new strategies is to measure the amount of time t a user spends
+on each search result document. How can you incorporate this t for each document
+into a feedback measure for a particular query?
+7.4. Implement Rocchio pseudo feedback in META.
+7.5. Implement mixture model feedback for language models in META. Use which-
+ever method is most convenient to estimate θF. Or, compare different estimation
+methods for θF.
+7.6. After implementing Rocchio pseudo feedback, index a dataset with relevance
+judgements. Plot MAP (see Chapter 9) across different values of k. Do you see any
+trends?
+7.7. After implementing mixture model feedback, index a dataset with relevance
+judgements. Plot MAP (see Chapter 9) across different values of the mixing param-
+eter α. Do you see any trends?
+7.8. Design a heuristic to automatically determine the best k for pseudo feedback
+on a query-by-query basis. You could look at the query itself, the number of match-
+ing documents, or the distribution of ranking scores in the original results. Test
+your heuristic by doing experiments.
+7.9. Design a heuristic to automatically determine the best α for mixture model
+feedback on a query-by-query basis. You could look at the query itself, the number
+of matching documents, or the distribution of ranking scores in the original results.
+Test your heuristic by doing experiments.
+7.10. In mixture model feedback, we discussed how to incorporate positive feed-
+back documents via a language model θF. Design a formula that also incorporates
+a set of negative feedback documents. Ensure that your new query language model
+is still a valid probability distribution.
+7.11. In mixture model feedback, we estimated the feedback LM with a probabilis-
+tic model that ensures stop words do not affect the reformulated query. Do we need
+to do anything like this for Rocchio feedback?

@@ -1,0 +1,98 @@
+19.4 Topic Analysis with Social Networks as Context
+431
+square loss defined on the difference of the topic selection probabilities of the two
+neighboring nodes u and v: �k
+j=1(p(θj | u) − p(θj | v))2, which strongly prefers to
+give p(θj | u) and p(θj | v) similar values. In front of this regularization term, we see
+a weight w(u, v), which is based on our network context where the edges may be
+weighted. This weight states that the more connected the two nodes are, the more
+important it is to ensure the two nodes have similar topics. In the case when the
+edges are not weighted, we may set w(u, v) = 1 if there exists an edge between u
+and v, and w(u, v) = 0 otherwise, essentially to keep only the regularizer for edges
+that exist on the graph. Note that there’s a negative sign in front of the regularizer
+because while we want to maximize the likelihood part, we want to minimize the
+loss defined by the regularizer.
+Such a modified optimization problem can still be solved using a variant of the
+EM algorithm, called General EM, where in the M-step, the algorithm does not
+attempt to find a maximum of the auxiliary function, but instead, just finds a new
+parameter value that would increase the value of the auxiliary function, thus also
+ensuring an increase of the likelihood function due to the fact that the auxiliary
+function is a lower bound of the original function (see Section 17.3.5 on the EM
+algorithm for more explanation about this). The whole algorithm is still a hill-
+climbing algorithm with guarantee of convergence to a local maximum.
+In Figure 19.12, we show the four major topics discovered using the standard
+PLSA from a bibliographic database data set DBLP which consists of titles of papers
+from four research communities, including information retrieval (IR), data mining
+Topic 1
+Topic 2
+Topic 3
+Topic 4
+term
+0.02
+peer
+0.02
+visual
+0.02
+interface
+0.02
+question
+0.02
+patterns 0.01
+analog
+0.02
+towards
+0.02
+protein
+0.01
+mining
+0.01
+neurons 0.02
+browsubg
+0.02
+training
+0.01
+clusters
+0.01
+vlsi
+0.01
+xml
+0.01
+weighting
+0.01
+stream
+0.01
+motion
+0.01
+generation 0.01
+multiple
+0.01
+frequent 0.01
+chip
+0.01
+design
+0.01
+recognition 0.01
+e
+0.01
+natural
+0.01
+engine
+0.01
+relations
+0.01
+page
+0.01
+cortex
+0.01
+service
+0.01
+library
+0.01
+gene
+0.01
+spike
+0.01
+social
+0.01
+Figure 19.12
+Sample results of PLSA. (Based on results from Mei et al. [2008])

@@ -1,0 +1,31 @@
+13
+Word Association Mining
+In this chapter, we’re going to talk about how to mine associations of words from
+text. This is an example of knowledge about the natural language that we can mine
+from text data. We’ll first talk about what word association is and then explain why
+discovering such relations is useful. Then, we’ll discuss some general ideas about
+how to mine word associations.
+In general, there are two types of word relations; one is called a paradigmatic re-
+lation and the other is a syntagmatic relation. Word wa and wb have a paradigmatic
+relation if they can be substituted for each other. That means the two words that
+have paradigmatic relation would be in the same semantic class, or syntactic class.
+We can replace one with another without affecting the understanding of the sen-
+tence. Chapter 14 gives some additional ideas not discussed in this chapter about
+how to group similar terms together.
+As an example, the words cat and dog have a paradigmatic relation because they
+are in the same word class: animal. If you replace cat with dog in a sentence, the
+sentence would still be (mostly) comprehensible. Similarly, Monday and Tuesday
+have a paradigmatic relation.
+The second kind of relation is called a syntagmatic relation. In this case, the
+two words that have this relation can be combined with each other. Thus, wa
+and wb have a syntagmatic relation if they can be combined with each other in a
+grammatical sentence—meaning that these two words are semantically related. For
+example, cat and sit are related because a cat can sit somewhere (usually anywhere
+they please). Similarly, car and drive are related semantically because they can be
+combined with each other to convey some meaning. However, we cannot replace
+cat with sit in a sentence or car with drive in the sentence and still have a valid
+sentence. Therefore, the previous pairs of words have a syntagmatic relation and
+not a paradigmatic relation.
+These two relations are in fact so fundamental that they can be generalized to
+capture basic relations between units in arbitrary sequences. They can be gener-
+alized to describe relations of any items in a language; that is, wa and wb don’t

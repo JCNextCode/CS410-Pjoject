@@ -1,0 +1,60 @@
+17.4 Probabilistic Latent Semantic Analysis
+371
+government 0.3
+response 0.2
+…
+city 0.2
+new 0.1
+orleans 0.05
+…
+donate 0.1
+relief 0.05
+help 0.02
+…
+Topic θk
+the 0.04
+a 0.03
+…
+…
+…
+Background θB
+Topic θ2
+Topic θ1
+p(w|θB)
+p(θB) = λB
+1 – λB
+Topic
+choice
+Generating Text with Multiple Topics: p(w) = ? 
+p(θk) = πd,k
+p(θ2) = πd,2
+p(θ1) = πd,1
+p(w|θk)
+W
+p(w|θ2)
+p(w|θ1)
+πd,i = 1
+k
+∑
+i=1
+Figure 17.29
+Generating words from a mixture of multiple topics.
+As in the case of the simple mixture model, the process of generating a word
+still consists of two steps. The first is to choose a component model to use; this
+decision is controlled by both a parameter λB (denoting the probability of choosing
+the background model) and a set of πd,i (denoting the probability of choosing
+topic θi if we decided not to use the background model). If we do not use the
+background model, we must choose one from the k topics, which has the constraint
+�k
+i=1 πd,i = 1. Thus, the probability of choosing the background model is λB while
+the probability of choosing topic θi is (1 − λB)πd,i.
+Once we decide which component word distribution to use, the second step in
+the generation process is simply to draw a word from the selected distribution,
+exactly the same as in the simple mixture model.
+As usual, once we design the generative model, the next step is to write down
+the likelihood function. We ask the question: what’s the probability of observing a
+word from such a mixture model? As in the simple mixture model, this probability
+is a sum over all the different ways to generate the word; we have a total of k + 1
+different component models, thus it is a sum of k + 1 terms, where each term
+captures the probability of observing the word from the corresponding component
+word distribution, which can be further written as the product of the probability

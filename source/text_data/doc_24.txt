@@ -1,0 +1,40 @@
+4
+Chapter 1
+Introduction
+Text is the most expressive form of information in the sense that it can be
+used to describe other media such as video or images. Indeed, image search
+engines such as those supported by Google and Bing often rely on matching
+companion text of images to retrieve “matching” images to a user’s keyword
+query.
+The explosive growth of online text information has created a strong demand
+for intelligent software tools to provide the following two related services to help
+people manage and exploit big text data.
+Text Retrieval.
+The growth of text data makes it impossible for people to con-
+sume the data in a timely manner. Since text data encode much of our accu-
+mulated knowledge, they generally cannot be discarded, leading to, e.g., the
+accumulation of a large amount of literature data which is now beyond any
+individual’s capacity to even skim over. The rapid growth of online text infor-
+mation also means that no one can possibly digest all the new information
+created on a daily basis. Thus, there is an urgent need for developing intel-
+ligent text retrieval systems to help people get access to the needed relevant
+information quickly and accurately, leading to the recent growth of the web
+search industry. Indeed, web search engines like Google and Bing are now an
+essential part of our daily life, serving millions of queries daily. In general,
+search engines are useful anywhere there is a relatively large amount of text
+data (e.g., desktop search, enterprise search or literature search in a specific
+domain such as PubMed).
+Text Mining. Due to the fact that text data are produced by humans for commu-
+nication purposes, they are generally rich in semantic content and often con-
+tain valuable knowledge, information, opinions, and preferences of people.
+As such, they offer great opportunity for discovering various kinds of knowl-
+edge useful for many applications, especially knowledge about human opin-
+ions and preferences, which is often directly expressed in text data. For exam-
+ple, it is now the norm for people to tap into opinionated text data such as
+product reviews, forum discussions, and social media text to obtain opinions
+about topics interesting to them and optimize various decision-making tasks
+such as purchasing a product or choosing a service. Once again, due to the
+overwhelming amount of information, people need intelligent software tools
+to help discover relevant knowledge to optimize decisions or help them com-
+plete their tasks more efficiently. While the technology for supporting text
+mining is not yet as mature as search engines for supporting text access, sig-

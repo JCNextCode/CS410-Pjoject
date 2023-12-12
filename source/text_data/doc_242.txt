@@ -1,0 +1,41 @@
+222
+Chapter 11
+Recommender Systems
+similar users like and assume that if those other users who are similar to you like an
+item, you may also like it. Note that if we can get user ratings of items, collaborative
+filtering can be applied to recommend any item. Content-based filtering, however,
+can only be applied to a case where we know how to measure similarity of items. In
+any specific application, we will want to combine the two approaches to optimize
+the filtering performance.
+Content-based filtering can usually be done by extending a retrieval system to
+add a thresholding component. There are two challenges associated with threshold
+setting. First, at the beginning, we must set an initial threshold without requiring
+much information from a user. Second, over time, we need to learn from feedback
+to optimize the threshold. Many threshold learning methods have been proposed.
+In practice, a simple thresholding strategy such as the beta-gamma threshold
+setting method we will discuss is often good enough.
+The basic idea behind collaborative filtering is to predict the rating of a current
+active user u for object x based on a weighted average of the ratings of x given by
+similar users to u. Thus, we can think of this approach involving two steps: In the
+first step, we simply “retrieve” similar users to the current user u where similarity
+is often defined as the similarity between the two vectors for two users. Each user
+can be represented by a rating vector (i.e., all the ratings given by this user). The
+similarity of two vectors can be measured based on the cosine similarity or Pearson
+correlation of the two vectors, which tends to perform very well empirically. In the
+second step, we compute a weighted average of the ratings of x given by all these
+retrieved similar users where the weight is the correlation between the active user
+and the corresponding user (to the weight).
+As we will see in this chapter, many recommender systems are extensions of
+the information retrieval systems and techniques we have discussed previously.
+Therefore, it may be beneficial to read Chapter 6 before this one if the reader is
+unfamiliar with the basic concepts or terminology. We continue this chapter with
+content-based recommendation, followed by a section on user-based recommen-
+dation (collaborative filtering).
+11.1
+Content-based Recommendation
+Figure 11.1 shows a generic information filtering system where a stream of content
+is absorbed by a filtering system. Based on either the content of the item or the other
+users that liked the item, the system decides whether or not to pass the item along
+to the user. In this section, the filtering system will inspect the content of the item
+and compare it to both the user’s preferences and feedback without considering
+information from other users.

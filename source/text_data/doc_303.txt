@@ -1,0 +1,41 @@
+14.2 Document Clustering
+283
+2
+3
+1
+2
+3
+1
+2
+3
+1
+2
+3
+1
+(a)
+(b)
+(c)
+(d)
+(e)
+Figure 14.4
+Steps in the K-means clustering algorithm for a small set of data points to be clustered
+(shown in (a)). First, three initial (starting) centroids are randomly chosen (shown in
+(b)). Then, all the data points are each assigned to one of the three clusters based on
+their distances to each centroid; the decision boundaries are shown as lines in (c). The
+assignments lead to three tentative clusters, each of which can then be used to compute
+a new centroid to better represent the cluster (shown as three stars in new locations in
+(d)). The algorithm continues to iterate with the new centroids as the starting centroids
+to re-assign all the data points. The new boundaries are shown in (e), which are easily
+seen to be already very close to the optimal centroids for generating three clusters from
+this data set.
+analysis through the PLSA algorithm. For this chapter, it is sufficient to realize that
+K-means is a particular manifestation of hard cluster assignment via EM.
+Figure 14.4 shows the K-means algorithm in action. Frame (a) shows our initial
+setup with the data points to be clustered. Here we visualize the data points with
+different shapes to suggest that there are three distinct clusters, corresponding to
+three shapes (crosses, circles, and triangles). Frame (b) shows how three random
+centroids are chosen (K = 3). In frame (c), the black lines show the partition of
+documents in their respective centroid. These lines can be found by first drawing a
+line to connect each pair of centroids and then finding the perpendicular bisectors
+of the segments connecting two centroids. This step is marked (Ex.) in the pseu-
+docode. Then, once the cluster assignments are determined, frame (d) shows how

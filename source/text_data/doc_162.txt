@@ -1,0 +1,94 @@
+142
+Chapter 7
+Feedback
+w
+w
+security
+airport
+beverage
+alcohol
+bomb
+terrorist
+author
+license
+bond
+counter-terror
+terror
+newsnet
+attack
+operation
+headline
+P(w|θF)
+0.0558
+0.0546
+0.0488
+0.0474
+0.0236
+0.0217
+0.0206
+0.0188
+0.0186
+0.0173
+0.0142
+0.0129
+0.0124
+0.0121
+0.0121
+λ = 0.9
+Query: “airport security”
+Mixture model approach
+Web database
+Top 10 docs
+the
+security
+airport
+beverage
+alcohol
+to
+of
+and
+author
+bomb
+terrorist
+in
+license
+state
+by
+P(w|θF)
+0.0405
+0.0377
+0.0342
+0.0305
+0.0304
+0.0268
+0.0241
+0.0214
+0.0156
+0.0150
+0.0137
+0.0135
+0.0127
+0.0127
+0.0125
+λ = 0.7
+Figure 7.6
+Example of query models learned via pseudo-relevance feedback.
+mixture model as a single distribution in that we can still ask it to generate words,
+and it will still give us a word in a random way (according to the underlying models).
+Which word will show up depends on both the topic distribution and background
+distribution. In addition, it would also depend on the mixing parameter λ; if λ is
+high, it’s going to prefer the background distribution. Conversely, if λ is very small,
+we’re going to use only our topic words.
+Once we’re thinking this way, we can do exactly the same as what we did before
+by using MLE to adjust this model and set the parameters to best explain the data.
+The difference, however, is that we are not asking the unknown topic model alone
+to explain all the words; rather, we’re going to ask the whole mixture model to
+explain the data. As a result, it doesn’t have to assign high probabilities to words like
+the, which is exactly what we want. It would then assign high probabilities to other
+words that are common in the topic distribution but not having high probability
+in the background distribution. As a result, this topic model must assign high
+probabilities to the words common in the feedback documents yet not common
+across the whole collection.
+Mathematically, we have to compute the log likelihood of the feedback docu-
+ments F with another parameter λ, which denotes noise in the feedback
+documents. We assume it will be fixed to some value. Assuming it’s fixed, then

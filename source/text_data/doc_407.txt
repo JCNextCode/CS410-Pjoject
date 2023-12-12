@@ -1,0 +1,7 @@
+Exercises
+387
+17.10. Supervised LDA (sLDA) is a probabilistic model over labeled documents,
+where each document contains some real-valued response variable. For example,
+if the dataset is movie reviews, the response variable could be the average rating.
+Explain what additional knowledge sLDA can discover in comparison to LDA or
+PLSA aside from predicting response variables for a new document.

@@ -1,0 +1,38 @@
+3.2 NLP and Text Information Systems
+43
+empirical uses of language, and rely solely on labeled training data by humans and
+application of machine learning techniques.
+While linguistic knowledge is always useful, today, the most advanced natural
+language processing techniques tend to rely on heavy use of statistical machine
+learning techniques with linguistic knowledge only playing a somewhat secondary
+role. These statistical NLP techniques are successful for some of the NLP tasks. Part
+of speech tagging is a relatively easy task, and state-of-the-art POS taggers may have
+a very high accuracy (above 97% on news data). Parsing is more difficult, though
+partial parsing can probably be done with reasonably high accuracy (e.g., above
+90% for recognizing noun phrases)1.
+However, full structure parsing remains very difficult, mainly because of ambi-
+guities. Semantic analysis is even more difficult, only successful for some aspects
+of analysis, notably information extraction (recognizing named entities such as
+names of people and organization, and relations between entities such as who
+works in which organization), word sense disambiguation (distinguishing different
+senses of a word in different contexts of usage), and sentiment analysis (recogniz-
+ing positive opinions about a product in a product review). Inferences and speech
+act analysis are generally only feasible in very limited domains.
+In summary, only “shallow” analysis of natural language processing can be done
+for arbitrary text and in a robust manner; “deep” analysis tends not to scale up well
+or be robust enough for analyzing unrestricted text. In many cases, a significant
+amount of training data (created by human labeling) must be available in order to
+achieve reasonable accuracy.
+3.2
+NLP and Text Information Systems
+Because of the required robustness and efficiency in TIS applications, in general,
+robust shallow NLP techniques tend to be more useful than fragile deep analysis
+techniques, which may hurt application performance due to inevitable analysis
+errors caused by the general difficulty of NLP. The limited value of deep NLP for
+some TIS tasks is further due to various ways to bypass the more difficult task of
+precisely understanding the meaning of natural language text and directly optimize
+the task performance. Thus, while improved NLP techniques should in general
+enable improved TIS task performance, lack of NLP capability isn’t necessarily a
+major barrier for some application tasks, notably text retrieval, which is a relatively
+1. These performance numbers were based on a specific data set, so they may not generalize well
+even within the same domain.

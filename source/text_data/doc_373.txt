@@ -1,0 +1,55 @@
+17.3 Mining One Topic from Text
+353
+θd
+θB
+p(θd) = 0.5
+p(θd) + p(θB) = 1
+p(θB) = 0.5
+text ?
+mining ?
+association ?
+clustering ?
+…
+the ?
+the 0.03
+a 0.02
+is 0.015
+we 0.01
+food 0.003
+…
+text 0.000006
+Topic
+choice
+d
+… text mining …
+is … clustering …
+we … Text … the
+Would the ML estimate demote
+background words in θd?
+Adjust θd to maximize p(d|�)  
+(all other parameters are known)
+Figure 17.18
+Estimation of one topic language model.
+assigns high probabilities to common words. For our application scenario (i.e.,
+factoring out common words), it is more appropriate to pre-set the background
+word distribution to bias the model toward allocating the common words to the
+background word distribution, and thus allow the topic word distribution to focus
+more on the content words as we will further explain.
+If we view the mixture model in Figure 17.18 as a black box, we would notice
+that it actually now has exactly the same number of parameters (indeed, the same
+parameters) as the simplest single unigram language model. However, the mix-
+ture model gives us a different likelihood function which intuitively requires θd to
+work together optimally with the fixed background model θB to best explain the ob-
+served document. It might not be obvious why the constraint of “working together”
+with the given background model would have the effect of factoring out the com-
+mon words from θd as it would require understanding the behavior of parameter
+estimation in the case of a mixture model, which we explain in the next section.
+17.3.4
+Behavior of a Mixture Model
+In order to understand some interesting behaviors of mixture models, we take
+a look at a very simple case, as illustrated in Figure 17.19. Although the example is
+very simple, the observed patterns here actually are applicable to mixture models
+in general.
+Let’s assume that the probability of choosing each of the two models is exactly
+the same. That is, we will flip a fair coin to decide which model to use. Furthermore,
+we will assume that there are precisely two words in our vocabulary: the and text.

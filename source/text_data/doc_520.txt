@@ -1,0 +1,91 @@
+500
+Index
+Operators in text analysis systems, 448–452
+Opinion analysis in text summarization,
+325–326
+Opinion holders, 390–392
+Opinion mining
+evaluation, 409–410
+LARA, 400–409
+overview, 389–392
+sentiment classification. See Sentiment
+analysis
+Opinion summarization, 318
+Optimization in web searches, 191
+Ordinal regression, 394, 396–400
+Organization in text information systems, 8
+OVA (one-vs-all) method, 313
+Over-constrained queries, 84
+Overfitting problem
+Bayesian parameter estimation, 28, 30
+sentiment classification, 395
+vector space model, 138
+Overlap of words in paradigmatic relations,
+257–258
+p-values in search engine evaluation,
+185–186
+PageRank technique, 202–206
+Paradigmatic relations
+Brown clustering, 290
+discovering, 252–260
+overview, 251–252
+Parallel crawling, 193
+Parallel indexing and searching, 192
+Parameters
+background language model, 350–351
+Bayesian parameter estimation, 28–30,
+341, 359, 458, 463–464
+Beta distribution, 458–460
+Dirichlet distribution, 461–463
+EM algorithm, 363, 465
+feedback, 142–144
+LARA, 404–405
+LDA, 380–381
+mixture model estimation, 352
+MLE. See Maximum likelihood
+estimation (MLE)
+network supervised topic models, 429
+PLSA, 372–373, 379–380
+probabilistic models, 30–31
+ranking, 209–211
+statistical language models, 51–52
+topic analysis, 338–339
+unigram language models, 52
+Parsing
+META toolkit, 67–68
+NLP, 43
+web content, 216
+Part-of-speech (POS) tags
+META toolkit, 67
+NLP, 47
+sentiment classification, 395
+Partitioning
+Brown clustering, 289
+extractive summarization, 319–320
+text data, 417–419
+Patterns
+contextual text mining, 417–419
+CPLSA, 425–426
+joint analysis, 417
+NLP, 45
+sentiment classification, 395
+Pdf (probability density function)
+Beta distribution, 457
+Dirichlet distribution, 461
+multinomial distribution, 461
+Pearson correlation
+collaborative filtering, 222, 231–232
+time series context, 437
+Perceptron classifiers, 312–313
+Personalization in web searches, 212, 215
+Personalized PageRank, 206
+Perspective in text data analysis, 246–247
+Pivoted length normalization, 89, 107–108
+PL2 model, 90
+PLSA (probabilistic latent semantic
+analysis)
+CPLSA, 419–428
+extension, 377–383
+overview, 368–377
+Pointwise Mutual Information (PMI), 278,
+287–288

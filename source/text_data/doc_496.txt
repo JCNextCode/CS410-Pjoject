@@ -1,0 +1,17 @@
+476
+Appendix C
+KL-divergence and Dirichlet Prior Smoothing
+where one component model is p(w | θF) and the other is p(w | C), the collection
+language model.
+log p(F | θF) =
+k
+�
+i=1
+�
+w
+c(w; di) log((1 − λ)p(w | θF) + λp(w | C)),
+whereF = {d1, . . . , dk}isthesetoffeedbackdocuments, andλisyetanotherparam-
+eter that indicates the amount of “background noise” in the feedback documents,
+and that needs to be set empirically. Now, given λ, the feedback documents F, and
+the collection language model p(w | C), we can use the EM algorithm to compute
+the maximum likelihood estimate of θF, as detailed in Appendix B.

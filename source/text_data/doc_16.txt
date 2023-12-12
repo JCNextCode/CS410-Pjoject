@@ -1,0 +1,41 @@
+xvi
+Preface
+directly expressed in text data. For example, it is now the norm for people to tap into
+opinionated text data such as product reviews, forum discussions, and social media
+text to obtain opinions. Once again, due to the overwhelming amount of informa-
+tion, people need intelligent software tools to help discover relevant knowledge for
+optimizing decisions or helping them complete their tasks more efficiently. While
+the technology for supporting text mining is not yet as mature as search engines
+for supporting text access, significant progress has been made in this area in re-
+cent years, and specialized text mining tools have now been widely used in many
+application domains. The subtitle of this book suggests that we cover two major
+topics, information retrieval and text mining. These two topics roughly correspond
+to the techniques needed to build the two types of application systems discussed
+above (i.e., search engines and text analytics systems), although the separation of
+the two is mostly artificial and only meant to help provide a high-level structure for
+the book, and a sophisticated application system likely would use many techniques
+from both topic areas.
+In contrast to structured data, which conform to well-defined schemas and are
+thus relatively easy for computers to handle, text has less explicit structure so
+the development of intelligent software tools discussed above requires computer
+processing to understand the content encoded in text. The current technology of
+naturallanguageprocessinghasnotyetreachedapointtoenableacomputertopre-
+cisely understand natural language text (a main reason why humans often should
+be involved in the loop), but a wide range of statistical and heuristic approaches
+to management and analysis of text data have been developed over the past few
+decades. They are usually very robust and can be applied to analyze and manage
+text data in any natural language, and about any topic. This book intends to provide
+a systematic introduction to many of these approaches, with an emphasis on cov-
+ering the most useful knowledge and skills required to build a variety of practically
+useful text information systems.
+This book is primarily based on the materials that the authors have used for
+teaching a course on the topic of text data management and analysis (i.e., CS410
+Text Information Systems) at the University of Illinois at Urbana–Champaign, as
+well as the two Massive Open Online Courses (MOOCs) on “Text Retrieval and
+Search Engines” and “Text Mining and Analytics” taught by the first author on
+Coursera in 2015. Most of the materials in the book directly match those of these
+two MOOCs with also similar structures of topics. As such, the book can be used as
+a main reference book for any of these two MOOCs.
+Information Retrieval (IR) is a relatively mature field and there are no short-
+age of good textbooks on IR; for example, the most recent ones include Modern
+Information Retrieval: The Concepts and Technology behind Search by Baeza-Yates

@@ -1,0 +1,40 @@
+10.5 The Future of Web Search
+213
+Another trend we can expect to see is search engines that are able to learn over
+time, a form of lifetime learning or lifelong learning. This is very attractive because
+that means the search engine will be able to self-improve. As more people use it,
+the search engine will become better and better. This is already happening, because
+the search engines can learn from the relevance feedback. More users use it, and
+the quality of the search engine allows for the popular queries that are typed in by
+many users to retrieve better results.
+A third trend might be the integration of information access. Search, navigation,
+and recommendation might be combined to form a full-fledged information man-
+agement system. In the beginning of this book, we talked about push access versus
+pull access; these modes can be combined. For example, if a search engine detects
+that a user is unsatisfied with search results, a “note” may be made. In the future,
+if a new document is crawled that matches the user’s information need recorded
+in the note, this new document could be pushed to the user. Currently, most of
+the cases of information recommendation are advertising, but in the future, you
+can imagine recommendation is seamlessly integrated into the system with multi-
+mode information access.
+Anothertrendisthatwemightseesystemsthattrytogobeyondsearchtosupport
+user tasks. After all, the reason why people want to search is to solve a problem or
+to make a decision to perform a task. For example, consumers might search for
+opinions about products in order to purchase a product, so it would be beneficial to
+support the whole shopping workflow. For example, you can sometimes look at the
+review displayed directly in search results; if the user decides to buy the product,
+they can simply click a button to go to the shopping site directly and make the
+purchase. While there is good support for shopping, current search engines do not
+provide good task support for many other tasks. Researchers might want to find
+related work or suggested citations. Currently, there’s not much support for a task
+such as writing a paper.
+We can think about any intelligent system—especially intelligent information
+systems—specified by three nodes. If we connect these nodes into a triangle, then
+we’ll able to specify an information system. We can call this triangle the Data-User-
+Service Triangle. The three questions you ask are as follows.
+.
+Who are you serving?
+.
+What kind of data are you managing?
+.
+What kind of service are you providing?

@@ -1,0 +1,41 @@
+6
+Chapter 1
+Introduction
+Once we obtain a small set of most relevant text data, we would need to further
+analyze the text data to help users digest the content and knowledge in the text
+data. This is the text mining step where the goal is to further discover knowledge
+and patterns from text data so as to support a user’s task. Furthermore, due to the
+need for assessing trustworthiness of any discovered knowledge, users generally
+have a need to go back to the original raw text data to obtain appropriate context
+for interpreting the discovered knowledge and verify the trustworthiness of the
+knowledge, hence a search engine system, which is primarily useful for text access,
+also has to be available in any text-based decision-support system for supporting
+knowledge provenance. The two steps are thus conceptually interleaved, and a
+full-fledged intelligent text information system must integrate both in a unified
+framework.
+It is worth pointing out that put in the context of “big data,” text data is very dif-
+ferent from other kinds of data because it is generally produced directly by humans
+and often also meant to be consumed by humans as well. In contrast, other data
+tend to be machine-generated data (e.g., data collected by using all kinds of physi-
+cal sensors). Since humans can understand text data far better than computers can,
+involvement of humans in the process of mining and analyzing text data is abso-
+lutely crucial (much more necessary than in other big data applications), and how
+to optimally divide the work between humans and machines so as to optimize the
+collaboration between humans and machines and maximize their “combined in-
+telligence” with minimum human effort is a general challenge in all applications of
+text data management and analysis. The two steps discussed above can be regarded
+as two different ways for a text information system to assist humans: information
+retrieval systems assist users in finding from a large collection of text data the most
+relevant text data that are actually needed for solving a specific application prob-
+lem, thus effectively turning big raw text data into much smaller relevant text data
+that can be more easily processed by humans, while text mining application sys-
+tems can assist users in analyzing patterns in text data to extract and discover useful
+actionable knowledge directly useful for task completion or decision making, thus
+providing more direct task support for users.
+With this view, we partition the techniques covered in the book into two parts to
+match the two steps shown in Figure 1.1, which are then followed by one chapter to
+discuss how all the techniques may be integrated in a unified text information sys-
+tem. The book attempts to provide a complete coverage of all the major concepts,
+techniques, and ideas in information retrieval and text data mining from a prac-
+tical viewpoint. It includes many hands-on exercises designed with a companion
+software toolkit META to help readers learn how to apply techniques of information

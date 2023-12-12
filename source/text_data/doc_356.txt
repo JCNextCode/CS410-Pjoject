@@ -1,0 +1,71 @@
+336
+Chapter 17
+Topic Analysis
+“Sports”
+sports 0.02
+game 0.01
+basketball 0.005
+football 0.004
+play 0.003
+star 0.003
+…
+nba 0.001
+…
+travel 0.0005
+…
+travel 0.05
+attraction 0.03
+trip 0.01
+ﬂight 0.004
+hotel 0.003
+island 0.003
+…
+culture 0.001
+…
+play 0.0002
+…
+science 0.04
+scientist 0.03
+spaceship 0.006
+telescope 0.004
+genomics 0.004
+star 0.002
+…
+genetics 0.001
+…
+travel 0.00001
+…
+θ1
+θ2
+θk
+“Travel”
+…
+“Science”
+P(w|θk)
+P(w|θ2)
+P(w|θ1)
+∑
+w2V
+p(w|θi) = 1
+Vocabulary set: V = {w1, w2, … }
+Figure 17.7
+Topic as a word distribution.
+It turns out that all these can be elegantly achieved by using a probability distri-
+bution over words (i.e., a unigram language model) to denote a topic, as shown in
+Figure 17.7. Here, you see that for every topic, we have a word distribution over all
+the words in the vocabulary.
+For example, the high probability words for the topic “sports” are sports, game,
+basketball, football, play, and star. These are all intuitively sports-related terms
+whose occurrences should contribute to the likelihood of covering the topic
+“sports” in an article. Note that, in general, the distribution may give all the words a
+non-zero probability since there is always a very very small chance that even a word
+not so related to the topic would be mentioned in an article about the topic. Note
+also that these probabilities for all the words always sum to one for each topic, thus
+forming a probability distribution over all the words.
+Such a word distribution represents a topic in that if we sample words from the
+distribution, we tend to see words that are related to the topic. It is also interesting
+to note that as a very special case, if the probability of the mass is concentrated
+entirely on just one word, e.g., sports, then the word distribution representation
+of a topic would degenerate to the simplest representation of a topic as just one
+single word discussed before. In this sense, the word distribution representation
+is a natural generalization and extension of the single-term representation.

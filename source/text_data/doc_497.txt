@@ -1,0 +1,27 @@
+References
+C. C. Aggarwal. 2015. Data Mining - The Textbook. Springer. DOI: 10.1007/978-3-319-
+14142-8. 296
+C. C. Aggarwal and C. Zhai, editors. 2012. Mining Text Data. Springer. DOI: 10.1007/978-
+1-4614-3223-4. 296, 315
+J. Allen. 1995. Natural Language Understanding. 2nd ed. Benjamin-Cummings
+Publishing Co., Inc., Redwood City, CA. 54
+G. Amati and C. J. Van Rijsbergen. October 2002. Probabilistic models of information
+retrieval based on measuring the divergence from randomness. ACM Trans. Inf.
+Syst., 20(4):357–389. DOI: 10.1145/582415.582416. 87, 88, 90, 111
+A. U. Asuncion, M. Welling, P. Smyth, and Y. W. Teh. 2009. On smoothing and inference
+for topic models. In UAI 2009, Proc. of the Twenty-Fifth Conference on Uncertainty in
+Artificial Intelligence, Montreal, QC, Canada, June 18-21, 2009, pp. 27–34. 385
+R. A. Baeza-Yates and B. A. Ribeiro-Neto. 2011. Modern Information Retrieval - the
+concepts and technology behind search. 2nd ed. Pearson Education Ltd., Harlow, UK.
+http://www.mir2ed.org/. xvii, 18, 19
+Y. Bar-Hillel, The Present Status of Automatic Translation of Languages, in Advances in
+Computers, vol. 1 (1960), pp. 91–163.
+R. Belew. 2008. Finding Out About: A Cognitive Perspective on Search Engine Technology
+and the WWW. Cambridge University Press. 18
+N. J. Belkin and W. B. Croft. 1992. Information filtering and information retrieval: Two
+sides of the same coin? Commun. ACM, 35(12):29–38. DOI: 10.1145/138859.138861.
+84
+C. M. Bishop. 2006. Pattern Recognition and Machine Learning (Information Science and
+Statistics). Springer-Verlag New York, Inc., Secaucus, NJ. 19, 37, 312, 385, 462
+D. M. Blei, A. Y. Ng, and M. I. Jordan. March 2003. Latent Dirichlet Allocation. J. of
+Mach. Learn. Res., 3:993–1022. 385

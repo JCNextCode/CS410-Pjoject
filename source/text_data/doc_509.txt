@@ -1,0 +1,64 @@
+Index
+Absolute discounting, 130
+Abstractive text summarization, 318, 321–
+324
+Access modes, 73–76
+Accuracy in search engine evaluation, 168
+Ad hoc information needs, 8–9
+Ad hoc retrieval, 75–76
+Add-1 smoothing, 130, 464
+Adjacency matrices, 207–208
+Advertising, opinion mining for, 393
+Agglomerative clustering, 277, 280–282, 290
+Aggregating
+opinions, 393
+scores, 234
+All-vs-all (AVA) method, 313
+Ambiguity
+full structure parsing, 43
+LARA, 406
+NLP, 40–41, 44
+one-vs-all method, 313
+text retrieval vs. database retrieval, 80
+topics, 335, 337
+Analyzers in META toolkit, 61–64, 453
+analyzers::filters namespace, 64
+analyzers::tokenizers namespace, 64
+Anaphora resolution in natural language
+processing, 41
+Anchor text in web searches, 201
+Architecture
+GFS, 194–195
+META toolkit, 60–61
+unified systems, 452–453
+Art retrieval models, 111
+Aspect opinion analysis, 325–326
+Associations, word. See Word association
+mining
+Authority pages in web searches, 202, 207
+Automatic evaluation in text clustering, 294
+AVA (all-vs-all) method, 313
+Average-link document clustering, 282
+Average precision
+ranked lists evaluation, 175, 177–180
+search engine evaluation, 184
+Axiomatic thinking, 88
+Background models
+mining topics from text, 345–351
+mixture model estimation, 351–353
+PLSA, 370–372
+Background words
+mixture models, 141, 351–353
+PLSA, 368–369, 372
+Bag-of-words
+frequency analysis, 69
+paradigmatic relations, 256
+text information systems, 10
+text representation, 88–90
+vector space model, 93, 109
+web searches, 215
+Bar-Hillel report, 42
+Baseline accuracy in text categorization, 314
+Bayes, Thomas, 25
+Bayes’ rule
+EM algorithm, 361–363, 373–374

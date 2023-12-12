@@ -1,0 +1,85 @@
+8.2 Indexer
+151
+… news about 
+Term
+# docs
+Total freq
+news
+campaign
+presidential
+food
+…
+3
+2
+1
+1
+…
+3
+2
+2
+1
+…
+Doc 1 
+Dictionary (or lexicon)
+Postings
+Doc 2 
+Doc 3 
+… news about
+organic food
+campaign …
+… news of presidential campaign …
+… presidential candidate …
+Doc ID
+Freq
+Position
+1
+2
+3
+2
+3
+3
+2
+…
+…
+1
+1
+1
+1
+1
+2
+1
+…
+…
+p1
+p2
+p3
+p4
+p5
+p6, p7
+p8
+Figure 8.1
+Inverted index postings and lexicon files.
+In order to support “proximity heuristics” (rewarding matching terms that are
+together), it is also common to store the position of each term occurrence. Such
+position information can be used to check whether all the query terms are matched
+within a certain window of text, e.g., it can be used to check whether a phrase
+is matched. This information is stored in the postings file since it is document-
+specific.
+Figure 8.1 shows a representation of the lexicon and postings files. The arrows
+in the image are actually integer offsets that represent bit or byte indices into the
+postings file.
+For example, if we want to score the term computer, which is term ID 56, we look
+up 56 in the lexicon. The information we receive could be:
+Term ID: 56
+Document frequency: 78
+Total number of occurrences: 443
+Offset into postings file: 8923754
+Of course, the actual lexicon would just store 56 → {78, 443, 8923754}. Since
+the tokenizer assigned term IDs sequentially, we could represent the lexicon as
+a large array indexed by term ID. Each element in the large array would store tuples
+of (document frequency, total count, offset) information. If we seek to position
+8,923,754 in the large postings file, we could see something like
+Term ID: 56
+Doc ID: 4, count: 1, position 56
+Doc ID: 7, count: 9, position 4, position 89, position...
+Doc ID: 24, count: 19, position 1, position 67, position...

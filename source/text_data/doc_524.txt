@@ -1,0 +1,92 @@
+504
+Index
+Semantic analysis in NLP, 39–40, 43, 47
+Semantically related terms in clustering,
+187, 285–287
+Sensors
+humans as, 244–246
+joint analysis, 413–415
+opinion mining. See Opinion mining
+Sentence vectors in extractive summariza-
+tion, 319
+Sentiment analysis, 389
+classification, 393–396
+evaluation, 409–410
+NLP, 43
+ordinal regression, 396–400
+text categorization, 304
+Separation in text clustering, 294–295
+Sequences of words in NLP, 46–47
+Set retrieval evaluation
+description, 170
+F measure, 172–173
+precision and recall, 170–173
+Shadow analysis in NLP, 48
+Shallow analysis in NLP, 43–45
+Short-range walks in multimode interactive
+access, 77
+Short-term needs in pull access mode, 75
+Sign tests in search engine evaluation, 185
+Signed-rank tests in search engine
+evaluation, 185
+Significance tests in search engine
+evaluation, 183–186
+Similarity algorithm for clustering, 276
+Similarity in clustering
+Similarity functions and measures
+extractive summarization, 319, 321
+paradigmatic relations, 256–259
+vector space model, 92, 109
+description, 277
+document clustering, 279–281
+term clustering, 285
+Single-link document clustering, 281–282
+Skip-gram neural language model, 292–293
+sLDA (supervised LDA), 387
+Smoothing techniques
+Add-1, 130, 464
+Bayesian statistics, 459–460
+KL-divergence, 474–475
+maximum likelihood estimation, 119–
+128
+multinomial distribution, 463–464
+Naive Bayes algorithm, 310
+unigram language models, 53
+Social media in text data analysis, 243
+Social networks as context, 428–433
+Social science research, opinion mining for,
+393
+Soft rules in text categorization, 301
+Spam in web searches, 191–192
+Sparse Beta, 459
+Sparse data in Naive Bayes algorithm,
+309–311
+Sparse priors in Dirichlet distribution,
+461–462
+Spatiotemporal patterns in CPLSA, 425–426
+Specificity in sentiment classification, 396
+Speech acts in NLP, 47–48
+Speech recognition
+applications, 42
+statistical language models, 51
+Spiders for web searches, 192–194
+Split counts in EM algorithm, 374–375
+Split operator for text analysis, 449–452, 455
+Stanford NLP toolkit, 64
+State-of-the-art support vector machines
+(SVM) classifiers, 311–312
+Statistical language models
+NLP, 45
+overview, 50–54
+Statistical machine learning
+NLP, 42–43
+text information systems, 10
+Statistical significance tests in search
+engine evaluation, 183–186
+Statistics. See Probability and statistics
+Stemmed words in vector space model, 109
+Stemming process in META toolkit, 66–67
+Sticky phrases in Brown clustering, 291
+Stop word removal
+feedback, 141
+frequency analysis, 69

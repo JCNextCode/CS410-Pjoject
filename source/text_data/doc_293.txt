@@ -1,0 +1,35 @@
+Exercises
+273
+convince others that such modifications are useful and worthwhile to the overall
+system.
+Bibliographic Notes and Further Reading
+Manning and Sch¨utze [1999] has two useful relevant chapters on the discovery of
+word associations: Chapter 5 (Collocations) and Chapter 8 (Lexical Acquisition). An
+early reference on the use of mutual information for discovering word associations
+is Church and Hanks [1990]. Both paradigmatic and syntagmatic relations can also
+be discovered using random walks defined on word adjacency graphs, and a unified
+framework for modeling both kinds of word associations was proposed in Jiang and
+Zhai [2014]. Non-compositional phrases (also called lexical atoms) such as hot dog
+can also be discovered using similar heuristics to what we have discussed in this
+chapter (see Zhai 1997, Lin 1999). Another approach to word association discovery
+is the n-gram class language model [Brown et al. 1992]. Recently, word embed-
+ding techniques (e.g., word2vec; Mikolov et al. 2013) have shown great promise
+for learning a vector representation of a word that can further enable computation
+of similarity between two words, thus directly supporting paradigmatic relation dis-
+covery. Both the n-gram class language model and word2vec are briefly discussed
+in the context of term clustering in Chapter 14.
+Exercises
+13.1. What are the minimum and maximum possible values of the conditional
+entropy H(X | Y)? Under what situations do they occur?
+13.2. In the mutual information section, we applied a simple smoothing tech-
+nique. Based on your knowledge from Chapter 6, define a more robust smoothing
+method for calculating syntagmatic relations.
+13.3. Feature selection is the process of reducing the dimensionality of the feature
+space to increase performance and decrease running time (since there are fewer
+features). Outline a feature selection method for the unigram words feature repre-
+sentation using word relations.
+13.4. Do you think using the syntagmatic and paradigmatic word association min-
+ing methods would work for other feature types? Give some examples of other
+features where it may work and others where it may not.
+13.5. Use META to implement one or both of the word association mining meth-
+ods. Use the default unigram tokenization chain to read over a corpus and create

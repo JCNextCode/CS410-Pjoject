@@ -1,0 +1,46 @@
+11.2 Collaborative Filtering
+231
+while others might be more critical and have a lower average rating. So, their ratings
+can not be directly compared with each other or aggregated together, which is why
+we first normalize.
+Let ua be the user that we are interested in recommending items to (the “active”
+user). In particular, we are interested in recommending oj to ua. The idea here is
+to look at whether similar users to this user have liked this object or not. Mathe-
+matically, the predicted rating of this user on this object is a combination of the
+normalized ratings of different users. We’re picking a sum of all the users, but not
+all users contribute equally to the average; each user’s weight controls the influence
+of a user on the prediction. Naturally, the weight is related to the similarity between
+ua and a particular user, ui. The more similar they are, the more contribution we
+would like user ui to make in predicting the preference of ua.
+We have the following formulas. First, using the normalized ratings
+Vij = Xij − ni
+(11.2)
+we can write the predicted normalized rating
+ˆVaj = k .
+m
+�
+i=1
+w(ua, ui) . Vij ,
+(11.3)
+where w(., .) is the similarity function and k is the normalizer
+k =
+1
+�m
+i=1 w(ua, ui)
+(11.4)
+that ensures ˆVaj ∈ [0, 1]. Once we have the predicted normalized rating, we trans-
+form it into the rating range that ua uses:
+ˆXaj = ˆVaj + na.
+(11.5)
+If we want to write a program to implement this collaborative filtering, we still
+face the problem of determining the weighting function. Once we know this, then
+the formula is very easy to implement. Specific definitions of the weighting function
+define the different interpretations of the collaborative filtering rating estimate. As
+you may imagine, there are many possibilities of similarity functions. One popular
+approach is the Pearson Correlation Coefficient:
+wp(ua, ui) =
+�
+j(Xaj − na)(Xij − ni)
+��
+j(Xaj − na)2 �
+j(Xij − ni)2 .

@@ -1,0 +1,46 @@
+414
+Chapter 19
+Joint Analysis of Text and Structured Data
+Joint mining
+of non-text
+and text
+Text
+data
+Non-text
+data
+Multiple
+predictors
+(features)
+Real world
+Predicted
+values of real
+world variables
+Sensor 1
+…
+…
+…
+Sensor k
+Predictive
+model
+The Big Picture of Prediction: Data Mining Loop
+Change the world
+Figure 19.1
+The data mining loop.
+analysis of all the data, we can generate multiple predictors of the interesting
+variables to us. We call these predictors features, and they can further be combined
+and put into a predictive model to actually predict the value of any interesting
+variable. The prediction results would then allow us to act and change the world.
+This is the general process for making a prediction based on any data.
+It’s important to emphasize that a human actually plays a very important role in
+this process, especially because of the involvement of text data. First, a human user
+would be involved in the mining of the data. The user can control the generation
+of these features and can even manually create features. Second, humans can
+help understand the text data, because text data are created to be consumed by
+humans, and humans can consume and interpret text data much more effectively
+than a machine. The challenge, of course, is when there is an enormous amount
+of text data, since it would not be feasible for humans to read and digest all the
+information. Thus, machines must help and that’s why we need to do text data
+mining. Sometimes machines can even “see” patterns in data that humans may
+not see even if they have the time to read all the data.
+Next, humans also must be involved in building, adjusting and testing a predic-
+tive model. In particular, we humans will have important domain knowledge about

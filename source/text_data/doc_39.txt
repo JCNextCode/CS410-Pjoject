@@ -1,0 +1,24 @@
+Bibliographic Notes and Further Reading
+19
+of some key techniques important for text mining, notably the information extrac-
+tion (IE) techniques which are essential for text mining. We decided not to cover IE
+because the IE techniques tend to be language-specific and require non-trivial man-
+ual work by humans. Another reason is that many IE techniques rely on supervised
+machine learning approaches, which are well covered in many existing machine
+learning books (see, e.g., Bishop 2006, Mitchell 1997). Readers who are interested
+in knowing more about IE can start with the survey book [Sarawagi 2008] and review
+articles [Jiang 2012].
+From an application perspective, another important topic missing in this book
+is information visualization, which is due to our focus on the coverage of models
+and algorithms. However, since every application system must have a user-friendly
+interface to allow users to optimally interact with a system, those readers who are
+interested in developing text data application systems will surely find it useful to
+learn more about user interface design. An excellent reference to start with is Hearst
+[2009], which also has a detailed coverage of information visualization.
+Finally, due to our emphasis on breadth, the book does not cover any compo-
+nent algorithm in depth. To know more about some of the topics, readers can
+further read books in natural language processing (e.g., Jurafsky and Martin 2009,
+Manning and Sch¨utze 1999), advanced books on IR (e.g., Baeza-Yates and Ribeiro-
+Neto [2011]), and books on machine learning (e.g., Bishop [2006]). You may find
+more specific recommendations of readings relevant to a particular topic in the
+Bibliographic Notes at the end of each chapter that covers the corresponding topic.

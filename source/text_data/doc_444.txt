@@ -1,0 +1,41 @@
+424
+Chapter 19
+Joint Analysis of Text and Structured Data
+What’s more interesting, however, is the two cells of word distributions shown
+on the second and third rows in the first column, right below the cell about the
+United Nations. These two cells show the Iraq-specific view of the topic about
+the United Nations and the Afghanistan view of the same topic, respectively. The
+results show that in the Iraq War, the United Nations was more involved in weapon
+inspections, whereas in the Afghanistan War, it was more involved in, perhaps,
+aid to the Northern Alliance. These two context-specific views of the topic of the
+United Nations show different variations of the topic in the two wars, and reveal a
+more detailed understanding of topics in a context-specific way. This table is not
+only immediately useful for understanding the major topics and their variations
+in these two sets of news articles, but can also serve as entry points to facilitate
+browsing into very specific topics in the text collection; e.g., each cell can be made
+clickable to enable a user to examine the relevant discussion in the news articles
+in detail.
+The second column shows another shared common topic about fatalities, which
+again should not be surprising given that these articles are about wars. It also again
+confirms that CPLSA is able to extract meaningful common topics. As in the case
+of the first column, the collection-specific topics in the third column also further
+show the variations of the topic in these two different contexts.
+In Figure 19.7, we show the temporal trends of topics discovered from blog
+articles about Hurricane Katrina. The x-axis is the time, and the y-axis is the
+coverage of a topic. The plots are enabled directly by the parameters of CPLSA where
+we used time and location as context.
+In Figure 19.7, we show a visualization of the trends of topics over time. The top
+plot shows the temporal trends of two topics. One is oil price, and one is about the
+flooding of the city of New Orleans. The plot is based on the conditional probability
+of a topic given a particular time period, which is one of the parameters in CPLSA
+for capturing time-dependent coverage of topics. Here we see that initially the two
+curves tracked each other very well. Interestingly, later, the topic of New Orleans
+was mentioned again but oil prices was not. This turns out to be the time period
+when another hurricane (Hurricane Rita) hit the region, which apparently triggered
+more discussion about the flooding of the city, but not the discussion of oil price.
+The bottom figure shows the coverage of the topic about flooding of the city New
+Orleans by blog article authors in different locations (different states in the U.S.).
+We see that the topic was initially heavily covered by authors in the victim areas
+(e.g., Louisiana), but the topic was then picked up by the authors in Texas, which
+might be explained by the move of people from the state of Louisiana to Texas.
+Thus, these topical trends not only are themselves useful for revealing the topics

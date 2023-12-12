@@ -1,0 +1,51 @@
+198
+Chapter 10
+Web Search
+Output
+Map output
+After
+internal grouping
+<Hello,1>
+<World,1>
+<Bye,1>
+<World,1>
+<Hello,1>
+<Hadoop,1>
+<Bye,1>
+<Hadoop,1>
+…
+Reduce(K, V[])
+{ Int count = 0;  For each v in V,  count +=v;  Collect(K, count); }
+<Hadoop → 1, 1, 1, 1>
+<Bye → 1, 1, 1>
+<Hello → 1, 1, 1>
+<Hadoop, 4>
+<Bye, 3>
+<Hello, 3>
+Reduce(K, V[])
+Reduce(K, V[])
+Reduce(K, V[])
+Figure 10.4
+The reduce function for word counting.
+Let’s modify our word-counting example to create an inverted index. Figure 10.5
+illustrates this example. Now, we assume the input to map function is a (key, value)
+pair where the key is a document ID and the value denotes the string content of
+all the words in that document. The map function will do something very similar to
+what we have seen in the previous example: it simply groups all the counts of this
+word in this document together, generating new pairs. In the new pairs, each key
+is a word and the value is the count of this word in this document followed by the
+document ID. Later, in the inverted index, we would like to keep this document ID
+information, so the map function keeps track of it.
+After the map function, there is a sorting mechanism that would group the
+same words together and feed this data into the reduce function. We see the
+reduce function’s input looks like an inverted index entry. It’s just the word and
+all the documents that contain the word and the frequency of the word in those
+documents. All we need to do is simply to concatenate them into a continuous
+chunk of data, and this can be then stored on the filesystem. The reduce function
+is going to do very minimal work. Algorithm 10.1 can be used for this inverted index
+construction.
+Algorithm 10.1, adapted from Lin and Dyer [2010], describes the map and reduce
+functions. A programmer would specify these two functions to run on top of a
+MapReduce cluster. As described before, map counts the occurrences of a word
+using an associative array (dictionary), and outputs all the counts together with
+the document ID. The reduce function simply concatenates all the input that it

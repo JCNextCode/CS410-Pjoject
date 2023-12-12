@@ -1,0 +1,40 @@
+11.1 Content-based Recommendation
+225
+large loss is incurred if we deliver a bad one. The system in this case would be
+very reluctant to deliver many documents, and has to be absolutely sure that it’s a
+relevant one. In short, the utility function has to be designed based on a specific
+application preference, potentially different for different users.
+The three basic components in content-based filtering are the following.
+Initialization module.
+Gets the system started based only on a very limited text
+description, or very few examples, from the user.
+Decision module.
+Given a text document and a profile description of the user,
+decide whether the document should be delivered or not.
+Learning module.
+Learn from limited user relevance judgments on the deliv-
+ered documents. (If we don’t deliver a document to the user, we’d never know
+whether the user likes it or not.)
+All these modules would have to be optimized to maximize the utility function
+U. To solve these problems, we will talk about how to extend a retrieval system
+for information filtering. First, we can reuse retrieval techniques to do scoring; we
+know how to score documents against queries and measure the similarity between
+a profile text description and a document. We can use a score threshold θ for the
+filtering decision. If score(d) > θ, we say document d is relevant and we are going to
+deliver it to the user. Of course, we still need to learn from the history, and for this
+we can use the traditional feedback techniques to learn to improve scoring, such
+as Rocchio. What we don’t know how to do yet is learn how to set θ. We need to set
+it initially and then we have to learn how to update it over time as more documents
+are delivered to the user and we have more information.
+Figure 11.3 shows what the system might look like if we generalized a vector-
+space model for filtering problems. The document vector could be fed into a scoring
+module, which already exists in a search engine that implements the vector-space
+model, where the profile will be treated as a query. The profile vector can be
+matched with the document vector to generate the score. This score will be fed into
+a thresholding module that would say yes or no depending on the current value of θ.
+The evaluation would be based on the utility for the filtering results. If it says yes, the
+document will be sent to the user, and then the user could give some feedback. The
+feedback information would be used to both adjust the threshold and change the
+vector representation. In this sense, vector learning is essentially the same as query
+modification or feedback in search. The threshold learning is a new component
+that we need to talk a little bit more about.

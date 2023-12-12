@@ -1,0 +1,88 @@
+494
+Index
+F measure (continued)
+set retrieval evaluation, 172–173
+F-test for time series context, 437
+F1 score
+text categorization, 314
+text summarization, 324
+Fault tolerance in Google File System,
+195
+Feature generation for tokenizers, 150
+Features for text categorization, 304–307
+Feedback
+content-based filtering, 225
+KL-divergence, 475–476
+language models, 138–144
+overview, 133–135
+search engines, 147, 157–158
+vector space model, 135–138
+web searches, 201
+Feedback documents in unigram language
+model, 466
+Feelings. See Sentiment analysis
+fetch_docs function, 154
+file_corpus input format, 60
+Files in Google File System, 194–195
+Filter chains for tokenization, 61–64
+Filters
+content-based, 221–229
+documents, 155–156
+recommender systems. See Recom-
+mender systems
+text information systems, 11
+unigram language models, 54
+Focused crawling, 193
+forward_index indexes, 60–61
+Forward indexes
+description, 153
+k-nearest neighbors algorithm, 308
+Frame of reference encoding, 162
+Frequency and frequency counts
+bag-of-words representation, 89–90
+MapReduce, 197
+META analyses, 68–70
+term, 97–98
+vector space model, 99–100
+Frequency transformation in paradigmatic
+relations, 258–259
+Full structure parsing, 43
+G-means algorithm, 294
+Gain in search engine evaluation, 181–183
+Gamma bitwise compression, 160
+Gamma function, 457
+Gaussian distribution, 22, 404–405
+General EM algorithm, 431
+Generation-based text summarization, 318
+Generative classifiers, 309
+Generative models
+background language model, 346–347,
+349
+CPLSA, 419, 421
+description, 30, 36, 50
+LARA, 403, 405–406
+LDA, 381
+log-likelihood functions, 343–344, 384
+mining topics from text, 347
+n-gram models, 289
+network supervised topic models, 428–
+430
+PLSA, 370–371, 380
+topics, 338–340
+unigram language model, 341
+Geographical networks, 428
+Geometric mean average precision (gMAP),
+179
+GFS (Google File System), 194–195
+Gibbs sampling, 383
+Google File System (GFS), 194–195
+Google PageRank, 202–206
+Grammar learning, 252
+Grammatical parse trees, 305–307
+Granger test, 434, 437
+Graph mining, 49
+gz_corpus input format, 60
+Hidden variables
+EM algorithm, 362–364, 366, 368, 373–
+376, 465, 467
+LARA, 403

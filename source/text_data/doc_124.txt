@@ -1,0 +1,44 @@
+104
+Chapter 6
+Retrieval Models
+0
+1
+2
+2
+1
+3
+…
+Term frequency weight
+y = TF(w, d)
+TF transformation: c(w, d) → TF(w, d)
+x = c(w, d)
+0/1 bit vector
+y = log(1 + x)
+y = log(1 + log(1 + x))
+y = x
+Figure 6.14
+Illustration of different ways to transform TF.
+transformation that looks like the red lines in the figure. This will control the
+influence of a very high weight because it’s going to lower its influence, yet it will
+retain the influence of a small count. We might even want to bend the curve more by
+applying a logarithm twice. Researchers have tried all these methods and they are
+indeedworkingbetterthanthelineartransformation, butsofarwhatworksthebest
+seems to be this special transformation called BM25 TF, illustrated in Figure 6.15,
+where BM stands for best matching.
+In this transformation, there is a parameter k which controls the upper bound of
+this function. It’s easy to see this function has a upper bound, because if you look
+at the
+x
+x+k as being multiplied by (k + 1), the fraction will never exceed one, since
+the numerator is always less than the denominator. Thus, it’s upper-bounded by
+(k + 1). This is also the difference between the BM25 TF function and the logarithm
+transformation, which doesn’t have an upper bound. Furthermore, one interesting
+property of this function is that as we vary k, we can actually simulate different
+transformation functions including the two extremes that are shown in the figure.
+When k = 0, we have a zero one bit transformation. If we set k to a very large number,
+on the other hand, it’s going to look more like the linear transformation function.
+In this sense, this transformation is very flexible since it allows us to control the
+shape of the TF curve quite easily. It also has the nice property of a simple upper
+bound. This upper bound is useful to control the influence of a particular term. For
+example, we can prevent a spammer from just increasing the count of one term to
+spam all queries that might match this term. In other words, this upper bound

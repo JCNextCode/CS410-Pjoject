@@ -1,0 +1,52 @@
+438
+Chapter 19
+Joint Analysis of Text and Structured Data
+russia russian putin
+europe european
+germany
+bush gore presidential
+police court judge
+airlines airport air
+united trade terrorism
+food foods cheese
+nets scott basketball
+tennis williams open
+awards gay boy
+moss minnesota chechnya
+AAMRQ (American Airlines)
+AAPL (Apple)
+paid notice st
+russia russian europe
+olympicgames olympics
+she her ms
+oil ford prices
+black fashion blacks
+computer technology software
+internet com web
+football giants jets
+japan japanese plane
+Topics are biased toward each time series
+Figure 19.17
+Sample results: topics mined using two different stock time series. (Adapted from Kim
+et al. [2013])
+We would like to see whether we can discover biased topics toward either Amer-
+ican Airlines or Apple when we use their corresponding time series as context. The
+results here show that the iterative causal topic modeling approach indeed gener-
+ates topics that are more tuned toward each stock time series. Specifically, on the
+left column, we see topics highly relevant to American Airlines, including, e.g., a
+topic about airport and airlines, and another about terrorism (the topic is relevant
+because of the September 11th terrorist attack in 2001, which negatively impacted
+American Airlines), though the correlation of other topics with American Airlines
+stock is not obvious. In contrast, on the right column, we see topics that are clearly
+more related to AAPL, including a topic about computer technology, and another
+about the Web and Internet. While not all topics can be easily interpreted, it is
+clear the use of the time series as context has impacted the topics discovered and
+enabled discovery of specific topics that are intuitively related to the time series.
+These topics can serve as entry points for analysts to further look into the details
+for any potential causal relations between topics and time series. These results also
+clearly suggest the important role that humans must play in any real application
+of causal topic discovery, but these topics can be immediately used as features in a
+predictive model (for predicting stock prices). It is reasonable to assume that some
+of these topics would make better features than simple features such as n-grams or
+ordinary topics discovered from the collection without considering the time series
+context.

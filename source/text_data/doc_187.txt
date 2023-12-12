@@ -1,0 +1,30 @@
+9
+SearchEngineEvaluation
+This chapter focuses on the evaluation of text retrieval (TR) systems. In the previous
+chapter, we talked about a number of different TR methods and ranking functions,
+but how do we know which one works the best? In order to answer this question,
+we have to compare them, and that means we’ll have to evaluate these retrieval
+methods. This is the main focus of this chapter. We start out with the methodology
+behind evaluation. Then, we compare the retrieval of sets with the retrieval of
+ranked lists as well as judgements with multiple levels of relevance. We end with
+practical issues in evaluation, followed by exercises.
+9.1
+Introduction
+Let’s think about why we have to do evaluation. There are two main reasons;
+the first is that we have to use evaluation to figure out which retrieval method
+works the best. This is very important for advancing our knowledge, otherwise we
+wouldn’t know whether a new idea works better than an old idea. Previously in this
+book (Chapter 6), we discussed the problem of text retrieval and compared it with
+database retrieval. Search engine evaluation must rely on users, so this becomes
+a very challenging problem. Because of this, we must determine how we can get
+users involved and draw a fair comparison of different methods.
+The second reason to perform evaluation is to assess the actual utility of an
+overall TR system (as opposed to specific methods). Imagine you’re building your
+own applications; you would be interested in knowing how well your search engine
+works for your users. In this case, measures must reflect the utility to the actual
+users in the real application as opposed to measures on each individual retrieval
+result. Typically, this has been done via user studies—where human users inter-
+act with the corpus via the system. In the case of comparing different methods, the
+measures we use all need to be correlated with the utility to the users. The measures
+only need to be good enough to determine which method works better. This is usu-
+ally done by using a test collection, which is a main idea that we’ll be talking about

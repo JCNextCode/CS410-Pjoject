@@ -1,0 +1,40 @@
+68
+Chapter 4
+META: A Unified Toolkit for Text Data Management and Analysis
+many
+theoretical
+ideas
+JJ
+JJ
+NNS
+have
+VBP
+They
+PRP
+NP
+NP
+VP
+S
+Figure 4.1
+An example of a parse tree.
+tree are the words in the sentence, and the preterminals (the direct parents of the
+leaves) are part-of-speech tags.
+Some common features from a parse tree are production rules such as S →
+NP V P, tree depth, and structural tree features. Syntactic categories (node labels)
+alone can also be used.
+The following command runs the parser on each sentence in the input file:
+./profile config.toml two-cities.txt --parse
+Like POS-tagging, the parsing may also take a minute or two to complete.
+4.5. Frequency Analysis.
+Perhaps the most common text-processing technique is
+frequency counting. This simply counts how many times each unique word appears
+in a document (or corpus). Viewing a descending list of words sorted by frequency
+can give you an idea of what the document is about. Intuitively, similar documents
+should have some of the same high-frequency words . . . not including stop words.
+Instead of single words, we can also look at strings of n words, called n-grams.
+Consider this sentence: I took a vacation to go to a beach.
+1-grams (unigrams):
+{I : 1, took : 1, a : 2, vacation : 1, to : 2, go : 1, beach : 1}
+2-grams (bigrams):
+{I took : 1, took a : 1, a vacation : 1, vacation to : 1,
+to go : 1, go to : 1, to a : 1, a beach : 1}

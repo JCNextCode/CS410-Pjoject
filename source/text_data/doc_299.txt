@@ -1,0 +1,45 @@
+14.2 Document Clustering
+279
+data structures already in place for supporting search is especially desirable in a
+unified software system for supporting both text data access and text analysis. The
+clustering techniques we discuss are general, so they can be potentially used for
+clustering many different types of objects, including, e.g., unigram words, bigram
+words, trigram POS-tags, or syntactic tree features. All the clustering algorithms
+need are a term vocabulary represented as term IDs. The clustering algorithms only
+care about term occurrences and probabilities, not what they actually represent.
+Thus—with the same clustering algorithm—we can cluster documents by their
+word usage or by similar stylistic patterns represented as grammatical parse tree
+segments. For term clustering, we may not use an index, but we do also assume
+that each sentence or document is tokenized and term IDs are assigned.
+14.2
+Document Clustering
+In this section, we examine similarity-based document clustering through two
+methods: agglomerative clustering and divisive clustering. As these are both
+similarity-based clustering methods, a similarity measure is required. In case a
+refresh of similarity measures is required, we suggest the reader consult Chapter 6.
+In particular, the similarity algorithms we use for clustering need to be symmet-
+ric; that is, sim(d1, d2) must be equal to sim(d2, d1). Furthermore, our similarity
+algorithm must be normalized on some range. Usually, this range is [0, 1]. These
+constraints ensure that we can fairly compare similarity scores of different pairs of
+objects. Most retrieval formulas we have seen—such as BM25, pivoted length nor-
+malization, and query likelihood methods—are asymmetric since they treat the
+query differently from the current document being scored. Whissell and Clarke
+[2013] explore symmetric versions of popular retrieval formulas and they show that
+they are quite effective.
+Despite the fact that default query-document similarity measures are not used
+for clustering, it is possible to use (for example) Okapi BM25 term weighting in doc-
+ument vectors which are then scored with a simple symmetric similarity algorithm
+like cosine similarity. Recall that cosine similarity is defined as
+simcosine(x, y) =
+x . y
+||x|| . ||y|| =
+�
+i xiyi
+��
+i(xi)2��
+i(yi)2 .
+(14.1)
+Since all term weights in our document vector representation are positive, the co-
+sine similarity score ranges from [0, 1]. As mentioned, the term weights may be
+raw counts, TF-IDF, or anything else the user could imagine. The cosine similar-
+ity captures the cosine of the angle between the two document vectors plotted in

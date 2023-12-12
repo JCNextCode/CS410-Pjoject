@@ -1,0 +1,52 @@
+400
+Chapter 18
+Opinion Mining and Sentiment Analysis
+Classiﬁer 1
+p(r ≥ j|X) ≥ 0.5 , 
+r = j , score 2 [–αj, –αj+1), deﬁne α1 = 1, αk+1 = –1
+≥ 0.5 , score(X) ≥ –αj 
+score(X) = ∑M
+i=1βixi
+–αk
+–αk–1
+–α2
+eαj+score(X)
+—
+eαj+score(X) + 1
+Rating
+Classiﬁer 2
+Classiﬁer k – 1
+k – 1
+r = k
+r = 2
+r = 1
+r = k – 1
+k – 2
+…
+2
+1
+k
+Figure 18.8
+The decision process with ordinal logistic regression.
+This score will then be compared with a set of trained α values to see which range
+the score is in. Then, using the range, we can decide which rating the object should
+receive.
+18.3
+Latent Aspect Rating Analysis
+In this section, we’re going to continue discussing opinion mining and senti-
+ment analysis. In particular, we’re going to introduce Latent Aspect Rating Analysis
+(LARA) which allows us to perform detailed analysis of reviews with overall ratings.
+Figure 18.9 shows two hotel reviews. Both reviewers are given five stars. If you
+just look at the overall score, it’s not very clear whether the hotel is good for its
+locationorforitsservice.It’salsounclearspecificallywhyareviewerlikedthishotel.
+What we want to do is to decompose this overall rating into ratings on different
+aspects such as value, room, location, and service. If we can decompose the overall
+ratings into ratings on these different aspects, we can obtain a much more detailed
+understanding of the reviewers’ opinions about the hotel. This would also allow us
+to rank hotels along different dimensions such as value or room quality.
+Using this knowledge, we can better understand how the reviewers view this
+hotel from their own perspective. Not only do we want to infer these aspect ratings,
+we also want to infer the aspect weights. That is, some reviewers may care more
+about value as opposed to the service. Such a case is what’s shown on the left for
+the weight distribution, where you can see most weight is placed on value. Clearly,
+different users place priority on different rating aspects. For example, imagine a

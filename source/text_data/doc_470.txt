@@ -1,0 +1,37 @@
+450
+Chapter 20
+Toward A Unified System for Text Management and Analysis
+Select
+Topic
+Union
+Intersect
+Ranking
+Interpret
+Compare
+Split
+…
+Common
+C1
+C2
+Figure 20.3
+Illustration of potential operators for text analysis.
+Ranking. (WEIGHTED) TEXTOBJECTSET → TEXTOBJECTSEQUENCE. The Ranking
+operator takes as input a weighted set of text objects that specifies the per-
+spective of ranking and a set of text objects, and it produces a sequence
+of text objects (sorted in order) as output. As a special case, the WEIGHTED
+TEXTOBJECTSET can be a word distribution representing a query language
+model.
+TopicExtraction.
+TEXTOBJECTSET → TOPICSET. The TopicExtraction operator
+maps a set of text objects into a set of topics.
+Interpret.
+{TOPIC, TEXTOBJECTSET} → TEXTOBJECTSET. The Interpret operator
+maps a topic and a set of text objects into another set of text objects.
+Compare.
+{TEXTOBJECTSET, . . . , TEXTOBJECTSET} → TOPICSET, . . . , TOPICSET. The
+Compare operator maps a set of comparable sets of text objects into a set of
+common topics covered in all the comparable sets of text objects, and sets of
+context-specific topics.
+The formalization of some of the operators is illustrated in Figure 20.4, where
+θ denotes a weighted word vector. Even with these few operators, we already have
+some interesting combinations. For example, in Figure 20.5, we see an example of

@@ -1,0 +1,75 @@
+426
+Chapter 19
+Joint Analysis of Text and Structured Data
+Probability × 100000
+Katrina_0823-0829.GOVERNMENT
+0–7
+8–19
+20–51
+52–115
+116–190
+191–336
+337–917
+Probability × 100000
+Katrina_0830-0905.GOVERNMENT
+0–7
+8–19
+20–51
+52–115
+116–190
+191–336
+337–917
+Probability × 100000
+Katrina_0906-0912.GOVERNMENT
+0–7
+8–19
+20–51
+52–115
+116–190
+191–336
+337–917
+Probability × 100000
+Katrina_0913-0919.GOVERNMENT
+0–7
+8–19
+20–51
+52–115
+116–190
+191–336
+337–917
+Probability × 100000
+Katrina_0920-0926.GOVERNMENT
+0–7
+8–19
+20–51
+52–115
+116–190
+191–336
+337–917
+(a) Week One: 08/23–08/29
+(b) Week Two: 08/30–09/05
+(c) Week Three: 09/06–09/12
+(d) Week Four: 09/13–09/19
+(d) Week Five: 09/20–09/26
+Theme 1
+Government Response
+bush  0.0716374
+president 0.0610942
+federal 0.0514114
+govern 0.0476977
+fema 0.0474692
+administrate 0.0233903
+response 0.0208351
+brown 0.0199573
+blame 0.0170033
+governor 0.0142153
+Figure 19.8
+Spatiotemporal trends of the coverage of the topic about the governmental response.
+(Based on results from Mei et al. [2006a])
+that time. These results show that CPLSA can leverage location and time as context
+to reveal interesting topical patterns in text data. Note that the CPLSA model is
+completely general, so it can be easily applied to other kinds of text data to reveal
+similar spatiotemporal patterns or topical patterns.
+In Figure 19.9, we show yet another application of CPLSA for analysis of the
+impact of an event. The basic idea is to compare the views of topics covered in
+text before and after an event so as to reveal any difference. The difference can be

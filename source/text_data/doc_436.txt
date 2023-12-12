@@ -1,0 +1,44 @@
+416
+Chapter 19
+Joint Analysis of Text and Structured Data
+Joint mining
+of non-text
+and text
+Text
+data
+Non-text
+data
+Multiple
+predictors
+(features)
+Real world
+Sensor 1
+…
+…
+…
+Sensor k
+Text-Based Prediction
+How can we generate effective predictors from text?
+How can we jointly mine text and non-text data?
+Figure 19.2
+Illustration of text-based prediction.
+with the specific prediction problem, and is thus inevitably application-specific.
+However, there are some generic features we can often start with (like n-grams
+or topics) as discussed in some previous chapters. Supervised learning methods
+can be used to learn what features are most effective. The second question has
+been addressed to some extent in the previous chapters of the book since many
+techniques that we have introduced can be potentially used to obtain features
+from text data. For example, topic mining can be very useful to generate topic-
+based indicators or predictors that can be further fed into a predictive model.
+Such topic-based features can be mixed with word-based features to enrich the
+feature representation. Sizes of a certain cluster of terms or cluster of documents
+may also be potential features. A set of terms with paradigmatic relations may be
+a better indicator than any single term, and sentiment tags that we may be able
+to generate based on text data are yet another kind of useful feature for some
+prediction problems.
+What has not been discussed is how we can jointly mine text and non-text data
+together to discover interesting knowledge that could not be otherwise discovered
+by using either one alone. This interaction is the topic of the chapter.
+The benefit of joint analysis of text and non-text data can be seen from two differ-
+ent perspectives. First, non-text data can enrich text analysis. Specifically, non-text
+data can often provide a context for mining text data and thus enable us to partition

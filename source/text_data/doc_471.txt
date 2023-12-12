@@ -1,0 +1,41 @@
+20.1 Text Analysis Operators
+451
+.
+C = {D1, . . . , Dn}; S, S1, S2, . . . , Sk subset of C
+.
+Select Operator
+Querying(Q): C → S
+Browsing: C → S
+.
+Split
+Categorization (supervised): C → S1, S2, . . . , Sk
+Clustering (unsupervised): C → S1, S2, . . . , Sk
+.
+Interpret
+C × θ → S
+.
+Ranking
+θ × Si → ordered Si
+Figure 20.4
+Formalization of text analysis operators.
+Select
+Topic 1
+…
+Select
+Topic k
+Compare
+Interpret(Compare(Select(T1, C), Select(T2, C), …, Select(Tk, C)), C)  
+Interpret
+Interpret
+Interpret
+Common
+S1
+S2
+Figure 20.5
+Example of combination of topic selection, comparison, and interpretation.
+combination of multiple topic selections followed by a comparison operator, which
+would then be followed by an Interpret operator.
+In Figure 20.6, we show another example of combination of a Split operator
+followed by a comparison operator, which would then be followed by an Interpret
+operator. It is easy to imagine that there are many other ways to combine these
+operators.

@@ -1,0 +1,60 @@
+204
+Chapter 10
+Web Search
+d1 since d1 doesn’t link to itself and it doesn’t link to d2. Thus, Mij is the probability
+of going from di to dj. Each row’s values should sum to one, because the surfer will
+have to go to precisely one of these pages. Now, how can we compute the probability
+of a surfer visiting a particular page?
+We can compute the probability of reaching a page as follows:
+pt+1(dj) = (1 − α)
+N
+�
+i=1
+Mijpt(di)
+�
+��
+�
+reach dj by following a link
++
+α
+N
+�
+i=1
+1
+N pt(di)
+�
+��
+�
+reach dj by random jumping
+(10.1)
+On the left-hand side is the probability of visiting page dj at time t + 1, the next time
+count. On the right-hand side, we can see the equation involves the probability at
+page di at time t, the current time step. The equation captures the two possibilities
+of reaching a page dj at time t + 1: through random surfing or following a link. The
+first part of the equation captures the probability that the random surfer would
+reach this page by following a link. The random surfer chooses this strategy with
+probability 1 − α; thus, there is a factor of 1 − α before this term. This term sums
+over all the possible N pages that the surfer could have been at time t. Inside the
+sum is the product of two probabilities. One is the probability that the surfer was
+at di at time t. That’s pt(di). The other is the transition probability from di to dj,
+which we know is represented as Mij. So, in order to reach this dj page, the surfer
+must first be at di at time t and would have to follow the link to go from di to dj.
+The second part is a similar sum. The only difference is that now the transition
+probability is uniform: 1
+N . This part captures the probability of reaching this page
+through random jumping, where α is the probability of random jumping.
+This also allows us to see why PageRank captures a smoothing of the transition
+matrix. You can think this 1
+N comes from another transition matrix that has all the
+elements as 1
+N . It is then clear that we can merge the two parts. Because they are
+of the same form, we can imagine there’s a different matrix that’s a combination
+of this M and the uniform matrix I. In this sense, PageRank uses this idea of
+smoothing to ensure that there’s no 0 entry in the transition matrix.
+Now, we can imagine that if we want to compute average probabilities, they
+would satisfy this equation without considering the time index. So let’s drop the
+time index and assume that they would be equal; this would give us N equations,
+since each page has its own equation. Similarly, there are also precisely N variables.
+This means we now have a system of N linear equations with N variables. The
+problem boils down to solving this system of equations, which we can write in the
+following form:

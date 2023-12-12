@@ -1,0 +1,37 @@
+6.3 Vector Space Retrieval Models
+91
+Programming
+Query q
+Presidential
+d3 ?
+d2 ?
+d1 ?
+dM
+d4
+d5
+Library
+Figure 6.2
+Illustration of documents plotted in vector space. (Courtesy of Marti Hearst)
+In Figure 6.2, we show a three-dimensional space with three words: program-
+ming, library, and presidential. Each term defines one dimension. We can consider
+vectors in this three dimensional space, and we will assume all our documents and
+the query will all be placed in this vector space. For example, the vector d1 repre-
+sents a document that probably covers the terms library and presidential without
+really talking about programming. What does this mean in terms of representation
+of the document? It means that we will rely solely on this vector to represent the
+original document, and thus ignore everything else, including, e.g., the order of
+the words (which may sometimes be important to keep!). It is thus not an optimal
+representation, but it is often sufficient for many retrieval problems.
+Intuitively, in this representation, d1 seems to suggest a topic in either presi-
+dential or library. Now this is different from another document which might be
+represented as a different vector d2. In this case, the document covers programming
+and library, but it doesn’t talk about presidential. As you can probably guess, the
+topic is likely about programming language and the library is actually a software
+library. By using this vector space representation, we can intuitively capture the dif-
+ferences between topics of documents. Next, d3 is pointing in a direction that might
+be about presidential and programming. We place all documents in our collection in
+this vector space and they will be pointing to all kinds of directions given by these
+three dimensions.
+Similarly, we can place our query in this space as another vector. We can then
+measure the similarity between the query vector and every document vector. In this
+case, for example, we can easily see d2 seems to be the closest to the query vector

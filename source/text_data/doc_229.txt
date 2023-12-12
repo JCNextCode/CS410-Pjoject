@@ -1,0 +1,49 @@
+10.4 Learning to Rank
+209
+are the descriptions of links that point to d. These can all be clues about whether
+this document is relevant or not to the query. We can even include a feature such
+as whether the URL has a tilde because this might indicate a home page.
+The question is, of course, how can we combine these features into a single
+score? In this approach, we simply hypothesize that the probability that this docu-
+ment is relevant to this query is a function of all these features. We hypothesize that
+the probability of relevance is related to these features through a particular func-
+tion that has some parameters. These parameters control the influence of different
+features on the final relevance. This is, of course, just an assumption. Whether this
+assumption really makes sense is still an open question.
+Naturally, the next question is how to estimate those parameters. How do we
+know which features should have high weight and which features should have low
+weight? This is a task of training or learning.
+In this approach, we use training data. This is data that have been judged by
+users, so we already know the relevance judgments. We know which documents
+should be highly ranked for which queries, and this information can be based
+on real judgments by users or can be approximated by just using clickthrough
+information as we discussed in Chapter 7. We will try to optimize our search
+engine’s retrieval accuracy (using, e.g., MAP or NDCG) on the training data by
+adjusting these parameters. The training data would look like a table of tuples.
+Each tuple has three elements: the query, the document, and the judgment. Let’s
+take a look at a specific method that’s based on logistic regression:
+log
+P(R = 1 | q, d)
+1 − P(R = 1 | q, d) = β0 +
+n
+�
+i=1
+βiXi.
+(10.5)
+This is one of many different methods, and actually one of the simpler ones.
+In this approach, we simply assume the relevance of a document with respect to
+the query is related to a linear combination of all the features. Here we have Xi to
+denote the ith feature value, and we can have as many features as we would like.
+We assume that these features can be combined in a linear manner. The weight of
+feature Xi is controlled by a parameter βi. A larger βi would mean the feature would
+have a higher weight and it would contribute more to the scoring function.
+The specific form of the function also gives the following probability of rele-
+vance:
+P(R = 1 | d, q) =
+1
+1 + exp
+�
+−β0 − �n
+i=1 βiXi
+�.
+(10.6)

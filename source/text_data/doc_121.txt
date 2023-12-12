@@ -1,0 +1,68 @@
+6.3 Vector Space Retrieval Models
+101
+the IDF function is an open research question. With the evaluation skills you will
+learn in Chapter 9, you can test your different instantiations.
+If we use a linear function like the diagonal line (as shown in the figure), it may
+not be as reasonable as the IDF function we just defined. In the standard IDF,
+we have a dropping off point where we say “these terms are essentially not very
+useful.” This makes sense when the term occurs so frequently that it’s unlikely
+to differentiate two documents’ relevance (since the term is so common). But, if
+you look at the linear representation, there is no dropping off point. Intuitively,
+we want to focus more on the discrimination of low df words rather than these
+common words. Of course, which one works better still has to be validated by
+running experiments on a data set.
+Let’s look at the two documents again in Figure 6.11. Without IDF weighting,
+we just had bit vectors. With IDF weighting, we now can adjust the TF (term
+frequency) weight by multiplying it with the IDF weight. With this scheme, there
+is an adjustment by using the IDF value of about which is smaller than the IDF
+value of presidential. Thus, the IDF will distinguish these two words based on how
+informative they are. Including the IDF weighting causes d3 to be ranked above
+d2, since it matched a rare (informative) word, whereas d2 matched a common
+(uninformative) word. This shows that the idea of weighting can solve our second
+problem. How effective is this model in general when we use this TF-IDF weighting?
+Well, let’s take a look at all the documents that we have seen before.
+In Figure 6.12, we show all the five documents that we have seen before and their
+new scores using TF-IDF weighting. We see the scores for the first four documents
+d3
+… news of presidential campaign …
+V =
+{news,        about,        presidential,        campaign,        food        …}
+f(q, d2) = 5.6     <     f(q, d3) = 7.1
+IDF(W) =
+q =
+d2 =
+q =
+d3 =
+1.5
+(1,
+(1 * 1.5,
+(1,
+(1 * 1.5,
+1.0
+1,
+1 * 1.0,
+1,
+0,
+2.5
+1,
+0,
+1,
+1 * 2.5,
+3.1
+1,
+1 * 3.1,
+1,
+1 * 3.1,
+1.8
+0,
+0,
+0,
+0,
+…)
+…)
+…)
+…)
+d2
+… news about organic food campaign …
+Figure 6.11
+The impact of IDF weighting on document ranking.

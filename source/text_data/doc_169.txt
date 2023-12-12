@@ -1,0 +1,35 @@
+8.1 Tokenizer
+149
+scoring functions as necessary; storing only TF-IDF weight would then require us
+to always use TF-IDF weighting.
+Therefore, a tokenizer’s job is to segment the document into countable features
+or tokens. A document is then represented by how many and what kind of tokens
+appear in it. The raw counts of these tokens are used by the scorer to formulate the
+retrieval scoring functions that we discussed in the previous chapter.
+The most basic tokenizer we will consider is a whitespace tokenizer. This tok-
+enizer simply delimits words by their whitespace. Thus,
+whitespace_tokenizer(Mr. Quill’s book is very very long.)
+could result in
+{Mr.: 1, Quill′s: 1, book: 1, is: 1, very: 2, long.: 1}.
+A slightly more advanced unigram words tokenizer could first lowercase the
+sentence and split the words based on punctuation. There is a special case here
+where the period after Mr. is not split (since it forms a unique word):
+{mr.: 1, quill: 1, ’s: 1, book: 1, is: 1, very: 2, long: 1, .: 1}.
+Of course, we aren’t restricted to using a unigram words representation. Look
+back to the exercises from Chapter 4 to see some different ways in which we
+can represent text. We could use bigram words, POS-tags, grammatical parse tree
+features, or any combination. Common words (stop words) could be removed
+and words could also be reduced to their common stem (stemming). Again, the
+exercises in Chapter 4 give good examples of these transformations using META. In
+essence, the indexer and scorer shouldn’t care how the term IDs were generated;
+this is solely the job of the tokenizer.
+Another common task of the tokenizer is to assign document IDs. It is much
+more efficient to refer to documents as unique numbers as opposed to strings
+such as /home/jeremy/docs/file473.txt. It’s much faster to do integer com-
+parisons than string comparisons, in addition to integers taking up much less
+space. The same argument may be made for string terms vs. term IDs. Finally, it
+will almost always be necessary to map terms to counts or documents to counts. In
+C++, we could of course use some structure internally such as std::unordered_
+map<std::string, uint64_t>. As you know, using a hash table like this gives
+amortized O(1) lookup time to find a uint64_t corresponding to a particular
+std::string.

@@ -1,0 +1,58 @@
+126
+Chapter 6
+Retrieval Models
+Here, we can easily see what change we have made to the MLE. In this form,
+we see that we add a count of μ . p(w | C) to every word, which is proportional
+to the probability of w in the entire corpus. We pretend every word w has μ .
+p(w | C) additional pseudocounts. Since we add this extra probability mass in the
+numerator, we have to re-normalize in order to have a valid probability distribution.
+Since �
+w∈V p(w | C) = 1, we can add a μ in the denominator, which is the total
+number of pseudocounts we added for each w in the numerator.
+Let’s also take a look at this specific example again. For the word text, we will have
+ten counts that we actually observe but we also added some pseudocounts which
+are proportional to the probability of text in the entire corpus. Say we set μ = 3000,
+meaning we will add 3000 extra word counts into our smoothed model. We want
+some portion of the 3000 counts to be allocated to text; since p(text | C) = 0.001,
+we’ll assign 0.001 . 3000 counts to that word. The same goes for the word network;
+for d, we observe zero counts, but also add μ . p(network | C) extra pseudocounts
+for our smoothed probability.
+In Dirichlet prior smoothing, αd will actually depend on the current document
+being scored, since |d| is used in the smoothed probability. In the Jelinek-Mercer
+linear interpolation, αd = λ, which is a constant. For Dirichlet prior, we have αd =
+μ
+|d|+μ, which is the interpolation coefficient applied to the collection language
+model. For a slightly more detailed derivation of these variables, the reader may
+consult Appendix A.
+Now that we have defined pseen and αd for both smoothing methods, let’s plug
+these variables in the original smoothed query likelihood retrieval function. Let’s
+start with Jelinek-Mercer smoothing:
+pseen(w | d)
+αd . p(w | C) = (1 − λ) . pMLE(w | d) + λ . p(w | C)
+λ . p(w | C)
+= 1+ 1 − λ
+λ
+.
+c(w, d)
+|d| . p(w | C). (6.9)
+Then, plugging this into the entire query likelihood retrieval formula, we get
+scoreJM(q, d) =
+�
+w∈q,d
+c(w, q) log
+�
+1 + 1 − λ
+λ
+.
+c(w, d)
+|d| . p(w | C)
+�
+.
+(6.10)
+We ignore the |q| log αd additive term (derived in the previous section) since
+αd = λ does not depend on the current document being scored. We’ll end up having
+a ranking function that is strikingly similar to a vector space model since it is a
+sum over all the matched query terms. The value of the logarithm term is non-
+negative. We see very clearly the TF weighting in the numerator, which is scaled
+sublinearly. We also see the IDF-like weighting, which is the p(w | C) term in the
+denominator; the more frequent the term is in the entire collection, the more

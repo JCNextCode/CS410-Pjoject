@@ -1,0 +1,29 @@
+14
+Text Clustering
+Clustering is a natural problem in exploratory text analysis. In its most basic sense,
+clustering (i.e., grouping) objects together lets us discover some inherent structure
+in our corpus by collecting similar objects. These objects could be documents,
+sentences, or words. We could cluster search engine queries, search engine results,
+and even users themselves.
+Clustering is a general data mining technique very useful for exploring large data
+sets. When facing a large collection of text data, clustering can reveal natural se-
+mantic structures in the data in the form of multiple clusters (i.e., groups) of data
+objects. The clustering results can sometimes be regarded as knowledge directly
+useful in an application. For example, clustering customer emails can reveal major
+customer complaints about a product. In general, the clustering results are useful
+for providing an overview of the data, which is often very useful for understanding
+a data set at a high-level before zooming into any specific subset of the data for fo-
+cused analysis. The clustering results can also support navigation into the relevant
+subsets of the data since the structures can facilitate linking of objects inside a clus-
+ter and linking of related clusters. In general, clustering methods are very useful
+for text mining and exploratory text analysis with widespread applications espe-
+cially due to the fact that clustering algorithms are mostly unsupervised without
+requiring any manual effort, and can thus be applied to any text data set.
+The object types that we cluster necessitate different tasks, and this variation
+leads to many interesting applications. For example, clustering of retrieval results
+can be used as a result summary or as a way to remove redundant documents.
+Clustering the documents in our entire corpus lets us find common underlying
+themes and can give us a better understanding of the type of data it contains. Term
+clustering is a powerful way to find concepts or create a thesaurus.
+However, how do we formally define the problem of clustering? In particular,
+what does it actually mean for an object to be in a particular cluster? Intuitively, we

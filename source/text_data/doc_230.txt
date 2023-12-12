@@ -1,0 +1,45 @@
+210
+Chapter 10
+Web Search
+X1(q, d)
+X2(q, d)
+X3(q, d)
+d1(R = 1)
+0.7
+0.11
+0.65
+d2(R = 0)
+0.3
+0.05
+0.4
+Figure 10.9
+Example of a combination of multiple features in ranking.
+We know that the probability of relevance is within the range [0, 1] and we assume
+that the scoring function is a transformed form of the linear combination of
+features. We could have had a scoring function directly based on the linear com-
+bination of β and X, but then the value of this linear combination could easily go
+beyond 1. Thus the reason why we use the logistic regression instead of linear re-
+gression is to map this combination onto the range [0, 1]. This allows us to connect
+the probability of relevance (which is between 0 and 1) to a linear combination of
+arbitrary coefficients. If we rewrite this combination of weights into a probability
+function, we will get the predicted score.
+If this combination of features and weights gives us a high value, then the
+document is more likely relevant. This isn’t necessarily the best hypothesis, but
+it is a simple way to connect these features with the probability of relevance.
+The next task is to see how we estimate the parameters so that the function can
+truly be applied; that is, we need to estimate the β values. Let’s take a look at a
+simple example shown in Figure 10.9.
+In this example, we have three features. One is the BM25 score of the docu-
+ment for the query. One is the PageRank score of the document, which might
+or might not depend on the query. We might also have a topic-sensitive PageR-
+ank score that would depend on the query. Lastly, we have a BM25 score on the
+anchor text of the document. These are then the three feature values for a par-
+ticular (document, query) pair. In this case the document is d1 and the judgment
+says that it’s relevant. The document d2 is another training instance with differ-
+ent feature values, but in this case it’s non-relevant. Of course, this is an overly-
+simplified example where we just have two instances, but it’s sufficient to illustrate
+the point.
+We use the maximum likelihood estimator to estimate the parameters. That is,
+we’re going to predict the relevance status of the document based on the feature
+values. The likelihood of observing the relevance status of these two documents
+using our model is

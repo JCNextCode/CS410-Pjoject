@@ -1,0 +1,50 @@
+6.4 Probabilistic Retrieval Models
+121
+log p(q|d) = 
+pSeen(w|d)
+—
+αdp(w|C)
+∑
+w2d
+w2q
+N
+∑
+i=1
+c(w, q)[log
+] + n log αd + 
+log p(wi|C) 
+TF weighting
+Ignore for ranking
+Doc length
+normalization
+Matched query terms
+IDF weighting
+Figure 6.25
+The query likelihood retrieval formula captures the three heuristics from the vector
+space models.
+is in terms of words that we observe in the query. Just like in the vector space model,
+we are now able to take a sum of terms in the intersection of the query vector and
+the document vector.
+If we look at this rewriting further as shown in Figure 6.25, we can see how
+it actually would give us two benefits. The first benefit is that it helps us better
+understand the ranking function. In particular, we’re going to show that from this
+formula we can see the connection of smoothing using a collection language model
+with weighting heuristics similar to TF-IDF weighting and length normalization.
+The second benefit is that it also allows us to compute the query likelihood more
+efficiently, since we only need to consider terms matched in the query.
+We see that the main part of the formula is a sum over the matching query
+terms. This is much better than if we take the sum over all the words. After we
+smooth the document using the collection language model, we would have nonzero
+probabilities for all the words w ∈ V . This new form of the formula is much easier
+to compute. It’s also interesting to note that the last term is independent of the
+document being scored, so it can be ignored for ranking. Ignoring this term won’t
+affect the order of the documents since it would just be the same value added onto
+each document’s final score.
+Inside the sum, we also see that each matched query term would contribute
+a weight. This weight looks like TF-IDF weighting from the vector space models.
+First, we can already see it has a frequency of the word in the query, just like in the
+vector space model. When we take the dot product, the word frequency in the query
+appears in the sum as a vector element from the query vector. The corresponding
+term from the document vector encodes a weight that has an effect similar to TF-
+IDF weighting. pseen is related to the term frequency in the sense that if a word
+occurs very frequently in the document, then the seen probability will tend to be

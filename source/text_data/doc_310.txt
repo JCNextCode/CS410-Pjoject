@@ -1,0 +1,53 @@
+290
+Chapter 14
+Text Clustering
+be those that are distributed in very similar contexts (e.g., Tuesday and Wednesday)
+since by putting such words in the same class, the prediction power of the class
+would be about the same as that of the original word, allowing to minimize the loss
+of mutual information. Computation-wise, we simply do agglomerative hierarchi-
+cal clustering and measure the “distance” of two words based on a derived function
+based on the likelihood function that can capture the loss of mutual information
+due to merging the two words. Due to the complexity of the model, only bigrams
+(n = 2) were originally investigated [Brown et al. 1992].
+Empirically, the bigram class language model has been shown to work very
+well and can generate very high-quality paradigmatic word associations directly by
+treating words in the same class as having paradigmatic relation. Figure 14.6 shows
+some sample word clusters taken from Brown et al. [1992]; they clearly capture
+paradigmatic relations well.
+The model can also be used to generate syntagmatic associations by essentially
+computingthepointwisemutualinformationbetweenwordsthatoccurindifferent
+plan
+letter
+request
+memo
+case
+question
+charge
+statement
+draft
+evaluation
+assessment
+analysis
+understanding
+opinion
+conversation
+discussion
+accounts
+people
+customers
+individuals
+employees
+students
+day
+year
+week
+month
+quarter
+half
+reps
+representatives
+representative
+rep
+Figure 14.6
+Sample word classes constructed hierarchically using n-gram class language model.
+(From Brown et al. [1992])

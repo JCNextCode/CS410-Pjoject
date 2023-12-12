@@ -1,0 +1,36 @@
+Exercises
+85
+formation retrieval book by van Rijsbergen [1979]. [Hearst 2009] has a systematic
+discussion of user interfaces of a search system, which is relevant to the design of
+interfaces for any information system in general; in particular, many visualization
+techniques that can facilitate browsing and querying are discussed in the book. Ex-
+ploratory search is a particular type of search tasks that often requires multimodal
+information access including both querying and browsing. It was covered in a spe-
+cial issue of Communications of ACM [White et al. 2006], and White and Roth [2009].
+The probability ranking principle [Robertson 1997] is generally regarded as the the-
+oretical foundation for framing the retrieval problem as a ranking problem. More
+historical work related to this, as well as a set of important research papers in IR up
+to 1997, can be found in Readings in Information Retrieval [Sparck Jones and Willett
+1997]. A brief survey of IR history can be found in Sanderson and Croft [2012].
+Exercises
+5.1. When might browsing be preferable to querying?
+5.2. Given search engine user logs, how could you distinguish between browsing
+behavior and querying behavior?
+5.3. Often, push and pull modes are combined in a single system. Give an example
+of such an application.
+5.4. Imagine you have search engine session logs from users that you know are
+browsing for information. How can you use these logs to enhance search results of
+future users with ad hoc information needs?
+5.5. In a Chapter 11, we will discuss recommender systems. These are systems in
+push mode that deliver information to users. What are some specific applications
+of recommender systems? Can you name some services available to you that fit into
+this access mode?
+5.6. How could a recommender system (push mode) be coupled with a search
+engine (pull mode)? Can these two services mutually enhance one another?
+5.7. Design a text information system used to explore musical artists. For example,
+you can search for an artist’s name directly. The results are displayed as a graph,
+with edges to similar artists (as measured by some similarity algorithm). Use TIS
+access mode vocabulary to describe this system and any enhancements you could
+make to satisfy different information needs.
+5.8. In the same way as the previous question, categorize “Google knowledge
+graph” (http://www.google.com/insidesearch/features/search/knowledge.html).

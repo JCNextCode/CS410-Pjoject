@@ -1,0 +1,67 @@
+178
+Chapter 9
+Search Engine Evaluation
+i
+Rel
+p(i)
+1
++
+1
+1 = 1.0
+2
++
+2
+2 = 1.0
+3
+−
+0.0
+4
+−
+0.0
+5
++
+3
+5 = 0.6
+6
+−
+0.0
+7
+−
+0.0
+8
++
+4
+8 = 0.5
+...
+−
+0.0
+sum
+3.1
+avp
+3.1
+10 = 0.31
+Figure 9.6
+Calculating average precision for a ranked list of results.
+to where these four relevant documents are ranked in the list. If they are moved
+around the top ten spots, the precision at ten remains the same. In contrast, average
+precision is a much better measure since subtle differences in rank affect the overall
+score.
+9.3.1
+Evaluating Ranked Lists from Multiple Queries
+Average precision is computed for just one query. Generally, though, we experiment
+with many different queries in order to capture the variance across them. For ex-
+ample, one system may perform very well with one query on which another system
+happens to perform poorly; using only this query would not give an accurate assess-
+ment of each systems’ capability. Using more queries then requires the researcher
+to take an average of the average precision over all these queries. Naturally, we can
+simply calculate an arithmetic mean. In fact, this would give us what’s called mean
+average precision (MAP). In this case, we take arithmetic mean of all the average
+precisions over several queries or topics. Let L = L1, L2, . . . , Lm be the ranked lists
+returned from running m different queries. Then we have
+MAP(L) = 1
+m
+m
+�
+i=1
+avp(Li).
+(9.2)

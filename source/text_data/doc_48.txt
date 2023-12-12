@@ -1,0 +1,42 @@
+28
+Chapter 2
+Background
+The notation arg max represents the argument (i.e., θ in this case) that makes
+the likelihood function (i.e., p(D | θ)) reach its maximum. Thus, the value of an
+arg max expression stays the same if we perform any monotonic transformation of
+the function inside arg max. This is why we could use the logarithm transformation
+in the example above, which made it easier to compute the derivative.
+The solution to MLE shown above should be intuitive: the θ that maximizes our
+data likelihood is just the ratio of heads. It is a general characteristic of the MLE
+that the estimated probability is the normalized counts of the corresponding events
+denoted by the probability. As an example, the MLE of a multinomial distribution
+(which will be further discussed in detail later in the book) gives each possible
+outcome a probability proportional to the observed counts of the outcome. Note
+that a consequence of this is that all unobserved outcomes would have a zero
+probability according to MLE. This is often not reasonable especially when the data
+sample is small, a problem that motivates Bayesian parameter estimation which we
+discuss below.
+2.1.5
+Bayesian Parameter Estimation
+One potential problem of MLE is that it is often inaccurate when the size of the
+data sample is small since it always attempts to fit the data as well as possible.
+Consider an extreme example of observing just two data points of flipping a coin
+which happen to be all heads. The MLE would say that the probability of heads is
+1.0 while the probability of tails is 0. Such an estimate is intuitively inaccurate even
+though it maximizes the probability of the observed two data points.
+This problem of “overfitting” can be addressed and alleviated by considering the
+uncertainty on the parameter and using Bayesian parameter estimation instead of
+MLE. In Bayesian parameter estimation, we consider a distribution over all the
+possible values for the parameter; that is, we treat the parameter itself as a random
+variable.
+Specifically, we may use p(θ) to represent a distribution over all possible values
+for θ, which encodes our prior belief about what value is the true value of θ, while
+the data D provide evidence for or against that belief. The prior belief p(θ) can
+then be updated based on the observed evidence. We’ll use Bayes’ rule to rewrite
+p(θ | D), or our belief of the parameters given data, as
+p(θ | D) = p(D | θ)p(θ)
+p(D)
+,
+(2.8)
+where p(D) can be calculated by summing over all configurations of θ. For a
+continuous distribution, that would be

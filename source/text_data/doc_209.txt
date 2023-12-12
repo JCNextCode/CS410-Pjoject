@@ -1,0 +1,34 @@
+Exercises
+189
+(b) Can recall at five documents (R@5) ever be lower than R@10 for the same
+ranked list?
+(c) Assume there are 100 relevant documents. Can R@5 be higher than P@5 for
+the same ranked list?
+(d) Assume there is only one relevant document. Can R@5 be higher than P@5
+for the same ranked list?
+9.5. When using the NDCG evaluation metric, researchers sometimes consider
+NDCG@k. This is the NDCG score of the top k documents returned by the search
+engine. When calculating the ideal DCG, should we consider only k results or
+should we consider all relevant documents for the query?
+9.6. The breakeven point precision is the precision at the cutoff in the ranked list
+where precision and recall are equal. Can this value be used to compare two or more
+retrieval systems? How does this measure compare to other single-point measures
+such as F1 and average precision?
+9.7. A researcher wishes to show that his method is better than an existing method.
+He used a statistical significance test and found that with 95% confidence, the
+results were random (i.e., his method was not arguably better). If he changes the
+confidence level to 90%, he can show that his method is better than the baseline
+using the same significance test. Is there anything wrong with this?
+9.8. How does stemming words affect retrieval performance? Design an experi-
+ment to find an answer. What is your dataset? What other information do you need
+in order to perform this test? How can you quantify the results?
+9.9. Use META to perform the stemming experiment described above. A corpus
+with relevance judgements can be found on the META site.
+9.10. Find the best unigram words tokenization method for retrieval. For exam-
+ple, consider lowercasing, keeping only alpha characters, stemming, stopword
+removal, or a combination of these. Quantify your results by using IR evaluation
+techniques.
+9.11. Find a publicly available dataset and create your own queries and relevance
+judgements for it using the META format (described on the site).
+9.12. Modify META’s index::ir_eval class to add support for mean reciprocal
+rank (MRR) evaluation.

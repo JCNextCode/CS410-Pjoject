@@ -1,0 +1,39 @@
+482
+References
+Y. Lv and C. Zhai. 2009. A comparative study of methods for estimating query language
+models with pseudo feedback. In Proc. of the 18th ACM Conference on Information
+and Knowledge Management, CIKM ’09, ACM, pp. 1895–1898, New York. DOI:
+10.1145/1645953.1646259. 144
+Y. Lv and C. Zhai. 2010. Positional relevance model for pseudo-relevance feedback. In
+Proc. of the 33rd International ACM SIGIR Conference on Research and Development
+in Information Retrieval, SIGIR ’10, ACM, pages 579–586, New York. DOI: 10.1145/
+1835449.1835546. 144
+Y. Lv and C. Zhai. 2011. Lower-bounding Term Frequency Normalization. In Proc. of
+the 20th ACM International Conference on Information and Knowledge Management,
+CIKM ’11, pp. 7–16. DOI: 10.1145/2063576.2063584 88, 110
+P. Lyman, H. R. Varian, K. Swearingen, P. Charles, N. Good, L.L. Jordan, and J. Pal.
+2003. How much information? http://www2.sims.berkeley.edu/research/projects/
+how-much-info-2003. 3
+C. D. Manning and H. Sch¨utze. 1999. Foundations of Statistical Natural Language
+Processing. MIT Press, Cambridge, MA. 19, 54, 273
+C. D. Manning, P. Raghavan, and H. Sch¨utze. 2008. Introduction to Information Retrieval.
+Cambridge University Press, New York. xvii, 18, 165, 315
+M.E.MaronandJ.L.Kuhns.1960.Onrelevance, probabilisticindexingandinformation
+retrieval. Journal of the ACM, 7:216–244. DOI: 10.1145/321033.321035 87
+S. Massung and C. Zhai. 2015. SyntacticDiff: Operator-Based Transformation for
+Comparative Text Mining. In Proc. of the 3rd IEEE International Conference on Big
+Data, pp. 571–580. 306
+S. Massung and C. Zhai. 2016. Non-Native Text Analysis: A Survey. The Journal of Natural
+Language Engineering, 22(2):163–186. DOI: 10.1017/S1351324915000303 306
+S. Massung, C. Zhai, and J.Hockenmaier. 2013. Structural Parse Tree Features for Text
+Representation. In IEEE Seventh International Conference on Semantic Computing,
+pp. 9–13. DOI: 10.1109/ICSC.2013.13 305
+J. D. McAuliffe and D. M. Blei. 2008. Supervised topic models. In J.C. Platt, D. Koller,
+Y. Singer, and S.T. Roweis, eds., Advances in Neural Information Processing Systems
+20, pages 121–128. Curran Associates, Inc. 386
+G. J. McLachlan and T. Krishnan. 2008. The EM algorithm and extensions. 2nd ed. Wiley
+Series in Probability and Statistics. Hoboken, NJ., Wiley. http://gso.gbv.de/DB=2.1/
+CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=ppn+52983362X&sourceid=fbw_
+bibsonomy. DOI: 10.1002/9780470191613 466
+Q. Mei. 2009. Contextual text mining. Ph.D. Dissertation, University of Illinois at
+Urbana-Champaign. 440

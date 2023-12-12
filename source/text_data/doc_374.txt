@@ -1,0 +1,56 @@
+354
+Chapter 17
+Topic Analysis
+θd
+θB
+p(θd) = 0.5
+p(θB) = 0.5
+text ?
+the ?
+the 0.9
+text 0.1
+d =
+text the
+Note that p(“text”|θd) + p(“the”|θd) = 1
+How can we set p(“text”|θd) and p(“the”|θd) to maximize it?
+Likelihood:
+ 
+P(“text”) = p(θd)p(“text”|θd) + p(θB)p(“text”|θB)
+ 
+ 
+ 
+= 0.5 * p(“text”|θd) + 0.5 * 0.1
+ 
+P(“the”) = 0.5 * p(“the”|θd) + 0.5 * 0.9
+p(d|�) = p(“text”|�)p(“the”|�)
+ 
+ 
+= [0.5 * p(“text”|θd) + 0.5 * 0.1] × 
+ 
+ 
+   [0.5 * p(“the”|θd) + 0.5 * 0.9]
+Figure 17.19
+Illustration of behavior of mixture model.
+Obviously this is a naive oversimplification of the actual text, but it’s useful to ex-
+amine the behavior in such a special case. We further assume that the background
+model gives probability of 0.9 to the and 0.1 to text.
+We can write down the likelihood function in such a case as shown in Fig-
+ure 17.19. The probability of the two-word document is simply the product of the
+probability of each word, which is itself a sum of the probability of generating the
+word with each of the two distributions. Since we already know all the parameters
+except for the θd, the likelihood function has just two unknown variables, p(the | θd)
+and p(text | θd). Our goal of computing the maximum likelihood estimate is to find
+out for what values of these two probabilities the likelihood function would reach
+its maximum.
+Now the problem has become one to optimize a very simple expression with two
+variables as shown in Figure 17.20. Note that the two probabilities must sum to
+one, so we have to respect this constraint. If there were no constraint, we would
+have been able to set both probabilities to their maximum value (which would be
+1.0) to maximize the likelihood expression. However, we can’t do this because we
+can’t give both words a probability of one, or otherwise they would sum to 2.0.
+How should we allocate the probability between the two words? As we shift
+probability mass from one word to the other, it would clearly affect the value of the
+likelihood function. Imagine we start with an even allocation between the and text,
+i.e., each would have a probability of 0.5. We can then imagine we could gradually
+move some probability mass from the to text or vice versa. How would such a change
+affect the likelihood function value?

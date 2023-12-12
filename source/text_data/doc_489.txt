@@ -1,0 +1,50 @@
+B.5 The General Procedure of EM
+469
+the first term, which is the expectation of the complete likelihood, or the so-called
+“Q-function” denoted by Q(θ; θ(n)).
+Q(θ; θ(n)) = Ep(H|X,θ(n))[Lc(θ)] =
+�
+H
+Lc(θ)p(H | X, θ(n)).
+The Q-function for our mixture model is the following
+Q(θF; θ(n)
+F ) =
+�
+z
+Lc(θF)p(z | F , θ(n)
+F )
+=
+k
+�
+i=1
+|di|
+�
+j=1
+[p(zij = 0 | F , θ(n)
+F ) log((1 − λ)p(dij | θF))
++ p(zij = 1 | F , θ(n)
+F ) log(λp(dij | C))]
+B.5
+The General Procedure of EM
+Clearly, if we find a θ(n+1) such that Q(θ(n+1); θ(n)) > Q(θ(n); θ(n)), then we will also
+have L(θ(n+1)) > L(θ(n)). Thus, the general procedure of the EM algorithm is the
+following.
+1. Initialize θ(0) randomly or heuristically according to any prior knowledge
+about where the optimal parameter value might be.
+2. Iteratively improve the estimate of θ by alternating between the following two-
+steps:
+1.
+the E-step (expectation): Compute Q(θ; θ(n)), and
+2.
+the M-step (maximization): Re-estimate θ by maximizing the Q-
+function:
+θ(n+1) = argmaxθQ(θ; θ(n)).
+3. Stop when the likelihood L(θ) converges.
+As mentioned earlier, the complete likelihood Lc(θ) is much easier to maximize
+as the values of the hidden variable are assumed to be known. This is why the
+Q-function, which is an expectation of Lc(θ), is often much easier to maximize
+than the original likelihood function. In cases when there does not exist a natural
+latent variable, we often introduce a hidden variable so that the complete likelihood
+function is easy to maximize.
+The major computation to be carried out in the E-step is to compute p(H |
+X, θ(n)), which is sometimes very complicated. In our case, this is simple:

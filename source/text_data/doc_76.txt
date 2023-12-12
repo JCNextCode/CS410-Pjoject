@@ -1,0 +1,21 @@
+56
+Chapter 3
+Text Data Understanding
+3.6. Suppose we appended a duplicate copy of the topic collection to itself and
+re-estimated a maximum likelihood language model. Would θ change?
+3.7. A unigram language model as defined in this chapter can take a sequence of
+words as input and output its probability. Explain how this calculation has strong
+independence assumptions.
+3.8. Given a unigram language model θ estimated from this book, and two doc-
+uments d1 = information retrieval and d2 = retrieval information, then is
+p(d1 | θ) > p(d2 | θ)? Explain.
+3.9. An n-gram language model records sequences of n words. How does the num-
+ber of possible parameters change if we decided to use a 2-gram (bigram) language
+model instead of a unigram language model? How about a 3-gram (trigram) model?
+Give your answer in terms of V , the unigram vocabulary size.
+3.10. Using your favorite programming language, estimate a unigram language
+model using maximum likelihood. Do this by reading a single text file and delim-
+iting words by whitespace.
+3.11. Sort the words by their probabilities from the previous exercise. If you used
+a different text file, how would your sorted list be different? How would it be the
+same?

@@ -1,0 +1,31 @@
+308
+Chapter 15
+Text Categorization
+Algorithm 15.1
+k-NN Training
+Create an inverted index over the training documents
+Algorithm 15.2
+k-NN Testing
+Let R be the results from searching the index with the unseen document as the query
+Select the top k results from R
+return the label that is most common in the k documents via majority voting
+(k = 1)
+(k = 4)
+Figure 15.3
+An example of k-NN with three classes where k = 1, 4. The query is represented as the
+white square.
+similar documents are blue. In the case of a tie, the highest ranking document of
+the class with a tie would be chosen.
+k-NN can be applied to any distance measure and any document representation.
+With only some slight modifications, we can directly use this classification method
+with an existing inverted index. A forward index is not required. Despite these ad-
+vantages, there are some downsides as well. For one, finding the nearest neighbors
+requires performing a search engine query for each testing instance. While this is a
+heavily optimized operation, it will still be significantly slower than other machine
+learning algorithms in test time. As we’ll see, the other two algorithms perform
+simple vector operations on the query vector as opposed to querying the inverted
+index. However, these other algorithms have a much longer training time than k-
+NN—this is the tradeoff. One more important point is the chosen label for k-NN is
+highly dependant on only the k neighbors; on the other hand, the other two algo-
+rithms take all training examples in account. In this way, k-NN is sensitive to the
+local structure of the feature space that the top k documents occupy. If it so hap-

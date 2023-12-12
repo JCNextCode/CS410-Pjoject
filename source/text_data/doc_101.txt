@@ -1,0 +1,41 @@
+5.4 Text Retrieval vs. Database Retrieval
+81
+literature to a research problem, the user is unlikely able to clearly and completely
+specify which documents should be returned.
+Finally, the expected results in the two applications are also different. In data-
+base search, we can retrieve very specific data elements (e.g., specific columns); in
+TR, we are generally only able to retrieve a set of relevant documents. With passages
+or fields identified in a text document, a search engine can also retrieve passages,
+but it is generally difficult to retrieve specific entities or attribute values as we can in
+a database. This difference is not as essential as the difference in the vague specifi-
+cation of what exactly is the “correct” answer to a query, but is a direct consequence
+of the vague information need in TR.
+Due to these differences, the challenges in building a useful database and a
+useful search engine are also somewhat different. In databases, since what items
+should be returned is clearly specified, there is no challenge in determining which
+data elements satisfy the user’s query and thus should be returned; a major re-
+maining challenge is how to find the answers as quickly as possible especially
+when there are many queries being issued at the same time. While the efficiency
+challenge also exists in a search engine, a more important challenge there is to
+first figure out which documents should be returned for a query before worrying
+about how to return the answers quickly. In database applications—at least tradi-
+tional database applications—it is also very important to maintain the integrity
+of the data; that is, to ensure no inconsistency occurs due to power failure. In
+TR, modeling a user’s information need and search tasks is important, again due
+to the difficulty for a user to clearly specify information needs and the difficulty
+in NLP.
+Since what counts as the best answer to a query depends on the user, in TR,
+the user is actually part of our input (together with the query, and document
+set). Thus, there is no mathematical way to prove that one answer is better than
+another or prove one method is better than another. Instead, we always have to
+rely on empirical evaluation using some test collections and users. In contrast, in
+database research, since the main issue is efficiency, one can prove one algorithm
+is better than another by analyzing the computational complexity or do some
+simulation study. Note that, however, when doing simulation study (to determine
+which algorithm is faster), we also face the same problem as in text retrieval—the
+simulation may not accurately reflect the real applications. Thus, an algorithm
+shown to be faster with simulation may not be actually faster for a particular
+application. Similarly, a retrieval algorithm shown to be more effective with a test
+collection may turn out to be less effective for a particular application or even
+another test collection. How to reliably evaluate retrieval algorithms is itself a
+challenging research topic.

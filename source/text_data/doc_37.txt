@@ -1,0 +1,40 @@
+1.4 How to Use this Book
+17
+the entire book as an Introduction to Text Data Mining, while skipping some
+chapters in Part 2 that are more specific to search engine implementation and
+applications specific to the Web. Another choice would be using all parts as a
+supplemental graduate textbook, where there is still some emphasis on prac-
+tical programming knowledge that can be combined with reading referenced
+papers in each chapter. Exercises for graduate students could be implement-
+ing some methods they read in the references into META.
+The exercises at the end of each chapter give students experience working
+with a powerful—yet easily understandable—text retrieval and mining toolkit
+in addition to written questions. In a programming-focused class, using the
+META exercises is strongly encouraged. Programming assignments can be cre-
+ated from selecting a subset of exercises in each chapter. Due to the modular
+nature of the toolkit, additional programming experiments may be created by
+extending the existing system or implementing other well-known algorithms
+that do not come with META by default. Finally, students may use compo-
+nents of META they learned through the exercises to complete a larger final
+programming project. Using different corpora with the toolkit can yield dif-
+ferent project challenges, e.g., review summary vs. sentiment analysis.
+Practitioners.
+Most readers in industry would most likely use this book as a
+reference, although we also hope that it may serve as some inspiration in
+your own work. As with the student user suggestion, we think you would get
+the most of this book by first reading the initial three chapters. Then, you may
+choose a chapter relevant to your current interests and delve deeper or refresh
+your knowledge.
+Since many applications in META can be used simply via config files, we
+anticipate it as a quick way to get a handle on your dataset and provide some
+baseline results without any programming required.
+The exercises at the end of each chapter can be thought of as default
+implementations for a particular task at hand. You may choose to include
+META in your work since it uses a permissive free software license. In fact, it is
+dual-licensed under MIT and University of Illinois/NCSA licenses. Of course,
+we still encourage and invite you to share any modifications, extensions, and
+improvements with META that are not proprietary for the benefit of all the
+readers.
+No matter what your goal, we hope that you find this book useful and educa-
+tional. We also appreciate your comments and suggestions for improvement of the
+book. Thanks for reading!

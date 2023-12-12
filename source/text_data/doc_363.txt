@@ -1,0 +1,75 @@
+17.3 Mining One Topic from Text
+343
+Maximize p(d | θ):
+( ˆθ1, . . . , ˆθM) = arg maxθ1, ...,θM p(d | θ) = arg maxθ1, ...,θM
+M
+�
+i=1
+θc(wi,d)
+i
+Max. Log-Likelihood:
+( ˆθ1, . . . , ˆθM) = arg maxθ1, ...,θM log[p(d | θ)] = arg maxθ1, ...,θM
+M
+�
+i=1
+c(wi, d) log θi
+Subject to constraint:
+M
+�
+i=1
+θi = 1
+Use Lagrange multiplier approach
+Lagrange function:
+f (θ | d) =
+M
+�
+i=1
+c(wi, d) log θi + λ
+� M
+�
+i=1
+θi − 1
+�
+∂f (θ | d)
+∂θi
+= c(wi, d)
+θi
++ λ = 0 → θi = −c(wi, d)
+λ
+M
+�
+i=1
+−c(wi, d)
+λ
+= 1 → λ = −
+M
+�
+i=1
+c(wi, d) → ˆθt = p(wt | ˆθ) =
+x(wt, d)
+�M
+i=1 c(wi, d)
+= c(wt, d)
+| d |
+Figure 17.11
+Computation of a maximum likelihood estimate for a unigram language model.
+Now that we have a well defined likelihood function, we will attempt to find
+the parameter values (i.e., word probabilities) that maximize this likelihood func-
+tion. Let’s take a look at the maximum likelihood estimation problem more closely
+in Figure 17.11. The first line is the original optimization problem of finding the
+maximum likelihood estimate. The next line shows an equivalent optimization
+problem with the log-likelihood. The equivalence is due to the fact that the log-
+arithm function results in a monotonic transformation of the original likelihood
+function and thus does not affect the solution of the optimization problem. Such
+a transformation is purely for mathematical convenience because after the loga-
+rithm transformation our function will become a sum instead of product; the sum
+makes it easier to take the derivative, which is often needed for finding the optimal
+solution of this function.
+Although simple, this log-likelihood function reflects some general characteris-
+tics of a log-likelihood function of some more complex generative models.
+.
+The sum is over all the unique data points (the words in the vocabulary).
+.
+Inside the sum, there’s a count of each unique data point, i.e., the count of
+each word in the observed data, which is multiplied by the logarithm of the
+probability of the particular unique data point.

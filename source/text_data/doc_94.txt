@@ -1,0 +1,36 @@
+74
+Chapter 5
+Overview of Text Data Access
+Push mode
+(long-term)
+Pull mode
+(short-term)
+TIS access
+modes
+Browsing
+Querying
+Figure 5.1
+The dichotomy of text information access modes.
+In pull mode, the user initiates the access process to find the relevant text data,
+typically by using a search engine. This mode of text access is essential when a user
+has an ad hoc information need, i.e., a temporary information need that might
+disappear once the need is satisfied. In such a case, the user can use a query to
+find relevant information with a search engine. For example, a user may have a
+need to buy a product and thus be interested in retrieving all the relevant opinions
+about candidate products; after the user has purchased the product, the user would
+generally no longer need such information. Another example is that during the
+process of analyzing social media data to understand opinions about an emerging
+event, the analyst may also decide to explore information about a particular entity
+related to the event (e.g., a person), which can also trigger a search activity.
+While querying is the most common way of accessing text data in the pull mode,
+browsingisanothercomplementarywayofaccessingtextdatainthepullmode, and
+can be very useful when a user does not know how to formulate an effective query,
+or finds it inconvenient to enter a keyword query (e.g., through a smartphone), or
+simply wants to explore a topic with no fixed goal. Indeed, when searching the Web,
+users tend to mix querying and browsing (e.g., while traversing through hyperlinks).
+In general, we may regard querying and browsing as two complementary ways
+of finding relevant information in the information space. Their relation can be
+understood by making an analogy between information seeking and sightseeing
+in a physical world. When a tourist knows the exact address of an attraction, the
+tourist can simply take a taxi directly to the attraction; this is similar to when a
+user knows exactly what he or she is looking for and can formulate a query with the

@@ -1,0 +1,54 @@
+334
+Chapter 17
+Topic Analysis
+“Sports”
+count(“sports”, di) = 4
+count(“travel”, di) = 2
+count(“science”, di) = 1
+πi1
+πij = 
+πi2
+πik
+θ1
+θ2
+θk
+“Travel”
+…
+“Science”
+Doc di
+count(θL, di) 
+count(θj, di) 
+k∑
+L=1
+Figure 17.5
+Computing topic coverage when a topic is a term.
+“Sports”
+πi1 / c(“sports”, di) = 0
+πi2 / c(“travel”, di) = 1
+πik / c(“science”, di) = 0
+θ1
+θ2
+θk
+“Travel”
+…
+“Science”
+Doc di
+Cavaliers vs. Golden State Warriors: NBA playoff ﬁnals …
+basketball game … travel to Cleveland … star …
+1. Need to count
+related words also!
+3. Mine complicated topics?
+2. “Star” can be ambiguous (e.g., star in the sky).
+Figure 17.6
+Problems in representing a topic as a term.
+some specific examples. So now let’s examine the simple approach we have been
+discussing with a sample document in Figure 17.6.
+Here we have a text document that’s about an NBA basketball game. In terms of
+the content, it’s about sports, but if we simply count these words that represent our
+topics, we will find that the word sports actually did not occur in the article, even
+though the content is about sports. Since the count of sports is zero, the coverage of
+sports would be estimated as zero. We may note that the term science also did not
+occur in the document, and so its estimate is also zero, which is intuitively what we
+want since the document is not about science. However, giving a zero probability to
+sports certainly is a problem because we know the content is about sports. What’s
+worse, the term travel actually occurred in the document, so when we estimate

@@ -1,0 +1,39 @@
+17.5 Extension of PLSA and Latent Dirichlet Allocation
+377
+(coverage of topic θj in document d), the relevant counts would be the counts of
+words in d that have been allocated to topic θj, and the normalizer would be the
+sum of all such counts over all the topics so that after normalization, we would ob-
+tain a probability distribution over all the topics. Similarly, to re-estimate p(w | θj),
+the relevant counts are the sum of all the split counts of word w in all the doc-
+uments. These aggregated counts would then be normalized by the sum of such
+aggregated counts over all the words in the vocabulary so that after normalization,
+we again would obtain a distribution, this time over all the words rather than all
+the topics.
+If we complete all the computation of the E-step before starting the M-step, we
+wouldhavetoallocatealotofmemorytokeeptrackofalltheresultsfromtheE-step.
+However, it is possible to interleave the E-step and M-step so that we can collect and
+aggregate relevant counts needed for the M-step while we compute the E-step. This
+would eliminate the need for storing many intermediate values unnecessarily.
+17.5
+Extension of PLSA and Latent Dirichlet Allocation
+PLSA works well as a completely unsupervised method for analyzing topics in text
+data, thus it does not require any manual effort. While this is an advantage in the
+sense of minimizing human effort, the discovery of topics is solely driven by the
+data characteristics with no consideration of any extra knowledge about the topics
+and their coverage in the data set. Since we often have such extra knowledge or
+our application imposes a particular preference for the topics to be analyzed, it is
+beneficial or even necessary to impose some prior knowledge about the parameters
+to be estimated so that the estimated parameters would not only explain the text
+data well, but also be consistent with our prior knowledge. Prior knowledge or
+preferences may be available for all the parameters.
+First, a user may have some expectations about which topics to analyze in the
+text data, and such knowledge can be used to define a prior on the topic word
+distributions. For example, an analyst may expect to see “retrieval models” as a
+topic in a data set with research articles about information retrieval, thus we would
+like to tell the model to allocate one topic to capture the retrieval models topic.
+Similarly, a user may be interested in analyzing review data about a laptop with a
+focus on specific aspects such as battery life and screen size, thus we again want
+the model to allocate two topics for battery life and screen size, respectively.
+Second, users may have knowledge about what topics are (or are not) covered in
+a document. For example, if we have (topical) tags assigned to documents by users,
+we may regard the tags assigned to a document as knowledge about what topics

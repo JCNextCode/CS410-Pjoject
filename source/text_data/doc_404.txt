@@ -1,0 +1,40 @@
+384
+Chapter 17
+Topic Analysis
+The title and a short snippet is shown from d along with the top few high-probability
+words from each topic. The human judge must determine which θ is θu. As with the
+word intrusion test, the human judge should have a fairly easy task if the top three
+topics make sense together and with the document title and snippet. If it’s hard
+to discern θu, then the top topics must not be an adequate representation of d. Of
+course, this process is repeated for many different documents in the collection.
+Directly from Chang et al. [2009]:
+. . . we demonstrated that traditional metrics do not capture whether topics are
+coherent or not. Traditional metrics are, indeed, negatively correlated with the
+measures of topic quality.
+“Traditional metrics” refers to log-likelihood of held-out data in the case of gen-
+erative models. This misalignment of results is certainly a pressing issue, though
+mostrecentresearchstillreliesonthetraditionalmeasurestoevaluatenewmodels.
+Downstream task improvement is perhaps the most effective (and transparent)
+evaluation metric. If a different topic analysis variant is shown to statistically signif-
+icantly improve some task precision, then an argument may be made to prefer the
+new model. For example, if the topic analysis is meant to produce new features for
+text categorization, then classification accuracy is the metric we’d wish to improve.
+In such a case, log-likelihood of held-out data and even topic coherency is not a
+concern if the classification accuracy improves—although model interpretability
+may be compromised if topics are not human-distinguishable.
+17.7
+Summary of Topic Models
+In summary, we introduced techniques for topic analysis in this chapter. We started
+with the simple idea of using one term to represent a topic, and discussed the
+deficiency of such an approach. We then introduced the idea of representing a topic
+with a word distribution, or a unigram language model, and introduced the PLSA
+model, which is a mixture model with k unigram language models representing k
+topics. We also added a pre-specified background language model to help discover
+discriminative topics, because this background language model can help attract
+the common terms. We used the maximum likelihood estimator (computed using
+the EM algorithm) to estimate the parameters of PLSA. The estimated parameter
+values enabled us to discover two things, one is k word distributions with each
+one representing a topic, and the other is the proportion of each topic in each
+document.
+The topic word distributions and the detailed characterization of coverage of
+topics in each document can enable further analysis and applications. For exam-

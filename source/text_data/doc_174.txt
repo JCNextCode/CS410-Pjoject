@@ -1,0 +1,40 @@
+154
+Chapter 8
+Search Engine Implementation
+Algorithm 8.1
+Term-at-a-time Ranking
+scores = {}
+// score accumulator maps doc IDs to scores
+for w ∈ q do
+for d, count ∈ Idx.fetch docs(w) do
+scores[d] = scores[d] + score term(count)
+end for
+end for
+return top k documents from scores
+Most likely, many documents do not contain any of the query terms (especially
+if stop word removal is performed), which means that their ranking score will be
+zero. Why should we bother scoring these documents anyway? This is exactly how
+we can benefit from an inverted index: we can only score documents that match
+at least one query term—that is, we will only score documents that will have nonzero
+scores. We assume (and verify in practice) that scoring only documents containing
+terms that appear in the query results in much less scoring computation. This leads
+us to our first scoring algorithm using the inverted index.
+8.3.1
+Term-at-a-time Ranking
+Once an inverted index is built, scoring a query term-by-term can be done efficiently
+on an inverted index Idx using Algorithm 8.1 with query q.
+For each term, fetch the corresponding entries (frequency counts) in the inverted
+index. Create document score accumulators as needed (variables that hold the
+accumulated score for each document). Scan the inverted index entries for the
+currenttermandforeachentry(correspondingtoadocumentcontainingtheterm),
+update its score accumulator based on some term weighting method (the score_
+term function). This could be (for example) Okapi BM25. As we finish processing
+all the query terms, the score accumulators should have the final scores for all the
+documents that contain at least one query term. Note that we don’t need to create
+a score accumulator if the document doesn’t match any query term.
+In reality, the fetch_docs function would return some object that contains in-
+formation about the current term in the document, such as count, background
+probability, or any other necessary information that the score_term function would
+need to operate.
+Once we’ve iterated through all the query terms, the score accumulators have
+been finalized. We just need to sort these documents by their accumulated scores

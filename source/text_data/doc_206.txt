@@ -1,0 +1,37 @@
+186
+Chapter 9
+Search Engine Evaluation
+95% of outcomes
+0
+Figure 9.10
+The null hypothesis. (Courtesy of Douglas Oard and Philip Resnik)
+curve shows the probability that we would observe values that are deviating from
+zero here when we subtract system A’s MAP from system B’s MAP (or even vice
+versa). Based on the picture, we see that if a difference is observed at the dot shown
+in the figure, then the chance is very high that this is in fact a random observation.
+We can define the region of likely observation due to random fluctuation; we usually
+use the value 95% of all outcomes. Inside this interval the observed values are from
+random fluctuation with 95% chance. If you observe a value in the tails on the side,
+then the difference is unlikely from random fluctuation (only 5% likely). This 95%
+value determines where the lines are drawn on the x axis. If we are only confident
+in believing a 1% chance is due to random fluctuations, then the vertical lines are
+redrawn farther from the mean; determining the exact x values where the lines are
+drawn depends on the specific significance test used.
+The takeaway message here is that we need to use many queries to avoid jumping
+to an incorrect conclusion that one system is better than another. There are many
+different ways of doing this statistical significance test, which is essentially deter-
+mining where to place the boundary lines between random chance and an actual
+difference in systems.
+Now, let’s discuss the problem of making relevance judgements. As mentioned
+earlier, it’s very hard to judge all the documents completely unless it is a very
+small data set. The question is, if we can’t afford judging all the documents in
+the collection, which subset should we judge? The solution here is pooling. This
+is a strategy that has been used in many cases to solve this problem. First, choose
+a diverse set of ranking methods; these are different types of retrieval systems. We
+hope these methods can help us nominate likely relevant documents. The goal is
+to pick out the relevant documents so the users can make judgements on them.
+That way, we would have each system return the top k documents according to its
+ranking function. The k value can vary between systems, but the point is to ask them
+to suggest the most likely relevant documents. We then simply combine all these
+top k sets to form a pool of documents for human assessors to judge. Of course,
+there will be many duplicated documents since many systems might have retrieved

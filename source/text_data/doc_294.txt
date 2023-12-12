@@ -1,0 +1,22 @@
+274
+Chapter 13
+Word Association Mining
+feature vectors for each term ID. Then, given a query term, return the most similar
+terms.
+13.6. Outline a method to group together groups of words (i.e., more than two)
+that share similar meaning. For example, plane, car, and train may all be related.
+13.7. Outline a method to determine synonyms based on search engine logs. That
+is, you are given many queries, and for each query is a list of clicked (assumed
+relevant) documents.
+13.8. Outline a method to disambiguate homographs (two words that are spelled
+the same) based on search engine logs. For example, how can we distinguish a
+financial institution bank and a river bank based on these logs?
+13.9. In what scenario (if any) is word association mining a generalization of an
+n-gram language model?
+13.10. Depending on the context size, we get many different types of semantic
+meanings from word associations. Give two extremes of the types of relations we
+get when the context is very large and when it is very small.
+13.11. Is it possible to adjust the word association mining algorithms to find
+antonyms instead of synonyms? If so, explain how; if not, explain why it is not
+possible. That is, we would like to assign a high score to the pair (hot, cold) since
+they are opposites and a low score to (freezing, cold) since they are synonyms.

@@ -1,0 +1,59 @@
+3.3 Text Representation
+49
+Text Rep
+Generality
+Enabled Analysis
+Examples of Application
+String
+String processing
+Compression
+Words
+Word relation analysis;
+topic analysis; sentiment
+analysis
+Thesaurus discovery; topic-
+and opinion-related
+applications
++ Syntactic
+structures
+Syntactic graph analysis
+Stylistic analysis; structure-
+based feature extraction
++ Entities &
+relations
+Knowledge graph analysis;
+information network
+analysis
+Discovery of knowledge and
+opinions about specific
+entities
++ Logic
+predicates
+Integrative analysis of
+scattered knowledge;
+logic inference
+Knowledge assistant for
+biologists
+Figure 3.4
+Text representation and enabled analysis.
+seen; the first column shows the type of text representation while the second
+visualizes the generality of such a representation. By generality, we mean whether
+we can do this kind of representation accurately for all the text data (very general) or
+only some of them (not very general). The third column shows the enabled analysis
+techniques and the final column shows some examples of applications that can be
+achieved with a particular level of representation.
+As a sequence of characters, text can only be processed by string processing
+algorithms. They are very robust and general. In a compression application, we
+don’t need to know word boundaries (although knowing word boundaries might
+actually help). Sequences of words (as opposed to characters) offer a very important
+level of representation; it’s quite general and relatively robust, indicating that it
+supports many analysis techniques such as word relation analysis, topic analysis,
+and sentiment analysis. As you may expect, many applications can be enabled by
+these kinds of analysis. For example, thesaurus discovery has to do with discovering
+related words, and topic- and opinion-related applications can also be based on
+word-level representation. People might be interested in knowing major topics
+covered in the collection of text, where a topic is represented as a distribution over
+words.
+Moving down, we’ll see we can gradually add additional representations. By
+adding syntactic structures, we can enable syntactic graph analysis; we can use
+graph mining algorithms to analyze these syntactic graphs. For example, stylistic

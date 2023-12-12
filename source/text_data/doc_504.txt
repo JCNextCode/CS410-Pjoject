@@ -1,0 +1,39 @@
+484
+References
+I. J. Myung. 2003. Tutorial on maximum likelihood estimation. J. Math. Psychol.,
+47(1):90–100. DOI: 10.1016/S0022-2496(02)00028-7. 36
+A. Nenkova and K. McKeown. 2012. A survey of text summarization techniques. In
+Charu C. Aggarwal and C. Zhai, eds, Mining Text Data, pp. 43–76. Springer US. DOI:
+10.1007/978-1-4614-3223-4_3. 327
+L. Page, S. Brin, R. Motwani, and T. Winograd. 1999. The PageRank Citation Ranking:
+Bringing Order to the Web. http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf. 216
+B. Pang and L. Lee. 2008. Opinion Mining and Sentiment Analysis. Foundations and
+Trends in Information Retrieval, 2(1-2):1–135. DOI: 10.1561/1500000011 409, 410
+J. M. Ponte and W. B. Croft. 1998. A language modeling approach to information
+retrieval. In Proc. of the 21st Annual International ACM SIGIR Conference on Research
+and Development in Information Retrieval, SIGIR ’98, ACM, pp. 275–281, New York,
+NY. DOI: 10.1145/290941.291008. 87, 90, 128, 427
+J. R. Quinlan. 1986. Induction of Decision Trees. Machine Learning, 1(1):81–106. DOI:
+10.1007/BF00116251. 301
+D. R. Radev, H. Jing, M. Sty´s, and D. Tam. 2004. Centroid-based summarization of
+multiple documents. Information Processing & Management, 40(6):919–938. DOI:
+10.1016/j.ipm.2003.10.006. 327
+D. Ramage, D. Hall, R. Nallapati, and C. D. Manning. 2009. Labeled lda: A supervised
+topic model for credit attribution in multi-labeled corpora. In Proceedings of the
+2009 Conference on Empirical Methods in Natural Language Processing: Volume 1 -
+Volume 1, EMNLP ’09, Association for Computational Linguistics, pages 248–256,
+Stroudsburg, PA. 386
+E. Reiter and R. Dale. 2000. Building Natural Language Generation Systems. Cambridge
+University Press, New York. 324, 327
+F. Ricci, L. Rokach, B. Shapira, and P. B. Kantor. 2010. Recommender Systems Handbook.
+1st ed. Springer-Verlag New York, Inc. DOI: 10.1007/978-0-387-85820-3 235
+C. J. Van Rijsbergen. 1979. Information Retrieval. 2nd ed. Butterworth-Heinemann,
+Newton, MA.
+S. Robertson and K. Sparck Jones. 1976. Relevance weighting of search terms. Journal
+of the American Society for Information Science, 27:129–146. 87
+S. E. Robertson. 1997. Readings in Information Retrieval. In The Probability Ranking
+Principle in IR, San Francisco, CA, Morgan Kaufmann Publishers Inc. pp. 281–286.
+84, 85
+S. Robertson and H. Zaragoza. 2009. The Probabilistic Relevance Framework: BM25
+and Beyond. Found. Trends Inf. Retr., 3(4):333–389. DOI: 10.1561/1500000019. 88,
+89, 129

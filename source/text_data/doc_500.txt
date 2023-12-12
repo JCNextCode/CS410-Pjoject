@@ -1,0 +1,40 @@
+480
+References
+D. A. Grossman and O. Frieder. Kluwer, 2004. Information Retrieval - Algorithms and
+Heuristics, Second Edition, vol. 15 of The Kluwer International Series on Information
+Retrieval. DOI: 10.1007/978-1-4020-3005-5. 18
+G. Hamerly and C. Elkan. 2003. Learning the k in k-means. In Advances in Neural
+Information Processing Systems 16 [Neural Information Processing Systems, NIPS
+December 8-13, 2003, Vancouver and Whistler, British Columbia, Canada], pp.
+281–288. DOI: doi=10.1.1.9.3574 295
+J. Han. 2005. Data Mining: Concepts and Techniques. Morgan Kaufmann Publishers Inc.,
+San Francisco, CA. 296
+D. Harman. 2011. Information Retrieval Evaluation. Synthesis Lectures on Information
+Concepts, Retrieval, and Services. Morgan & Claypool Publishers. DOI: 10.1145/
+215206.215351 168, 188
+M. A. Hearst. 2009. Search User Interfaces. 1st ed. Cambridge University Press, New
+York. 19, 85
+J. L. Herlocker, J. A. Konstan, L. G. Terveen, and J. T. Riedl. 2004. Evaluating
+Collaborative Filtering Recommender Systems. ACM Trans. Inf. Syst., 22(1):5–53.
+DOI: 10.1145/963770.963772 235
+J. L. Hodges and E. L. Lehmann. 1970. Basic Concepts of Probability and Statistics.
+Holden Day, San Francisco. 36
+T. Hofmann. 1999. Probabilistic Latent Semantic Analysis. In Proc. of the Fifteenth
+Conference on Uncertainty in Artificial Intelligence, UAI’99, Morgan Kaufmann
+Publishers Inc., pp. 289–296, San Francisco, CA. DOI: 10.1145/312624.312649 370,
+385
+A. Huang. 2008. Similarity Measures for Text Document Clustering. In Proc. of the
+Sixth New Zealand Computer Science Research Student Conference (NZCSRSC2008),
+Christchurch, New Zealand, pages 49–56. 280
+F. Jelinek. 1997. Statistical Methods for Speech Recognition. MIT Press, Cambridge, MA.
+30, 54
+J. Jiang. 2012. Information extraction from text, In Charu C. Aggarwal and ChengXiang
+Zhai (Eds.), Mining Text Data, Springer, pp. 11–41. 19, 55
+S. Jiang and C. Zhai. 2014. Random walks on adjacency graphs for mining lexical
+relations from big text data. In 2014 IEEE International Conference on Big Data,
+Big Data 2014, Washington, DC, USA, October 27-30, pages 549–554. DOI:
+10.1109/BigData.2014.7004272. 273
+Y. Jo and A. H. Oh. 2011. Aspect and sentiment unification model for online review
+analysis. In Proceedings of the Fourth ACM International Conference on Web Search
+and Data Mining, WSDM ’11, ACM, pp. 815–824, New York. DOI: 10.1145/1935826
+.1935932. 410

@@ -1,0 +1,39 @@
+1.3 Organization of the Book
+13
+visualization of the results generated from various text mining algorithms is
+generally desirable.
+This list also serves as an outline of the major topics to be covered later in
+this book. Specifically, search and filtering are covered first in Part II about text
+data access, whereas categorization, clustering, topic analysis, and summarization
+are covered later in Part III about text data analysis. Information extraction is not
+covered in this book since we want to focus on general approaches that can be
+readily applied to text data in any natural language, but information extraction
+often requires language-specific techniques. Visualization is also not covered due
+to the intended focus on algorithms in this book. However, it must be stressed that
+both information extraction and visualization are very important topics relevant
+to text data analysis and management. Readers interested in these techniques can
+find some useful references in the Bibliographic Notes at the end of this chapter.
+1.3
+Organization of the Book
+The book is organized into four parts, as shown in Figure 1.4.
+Part I. Overview and Background.
+This part consists of the first four chapters
+and provides an overview of the book and background knowledge, including
+basic concepts needed for understanding the content of the book that some
+readers may not be familiar with, and an introduction to the META toolkit
+used for exercises in the book. This part also gives a brief overview of natu-
+ral language processing techniques needed for understanding text data and
+obtaining informative representation of text needed in all text data analysis
+applications.
+Part II. Text Data Access.
+This part consists of Chapters 5–11, covering the ma-
+jor techniques for supporting text data access. This part provides a systematic
+discussion of the basic information retrieval techniques, including the for-
+mulation of retrieval tasks as a problem of ranking documents for a query
+(Chapter 5), retrieval models that form the foundation of the design of rank-
+ing functions in a search engine (Chapter 6), feedback techniques (Chapter 7),
+implementation of retrieval systems (Chapter 8), and evaluation of retrieval
+systems (Chapter 9). It then covers web search engines, the most important
+application of information retrieval so far (Chapter 10), where techniques for
+analyzing links in text data for improving ranking of text objects are intro-
+duced and application of supervised machine learning to combine multiple

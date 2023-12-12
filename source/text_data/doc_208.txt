@@ -1,0 +1,34 @@
+188
+Chapter 9
+Search Engine Evaluation
+Willett [1997]. The book Information Retrieval Evaluation by Harman [2011] is an ex-
+cellent comprehensive introduction to this topic particularly in providing a histori-
+cal view of the development of the IR evaluation methodology and initiatives of eval-
+uation such as TREC. Sanderson’s book on test collection evaluation [Sanderson
+2010] is another very useful survey of research work on evaluation. The book on in-
+teractive IR evaluation by Kelly is yet another excellent introduction to interactive
+IR evaluation via user studies [Kelly 2009].
+Exercises
+9.1. In reality, high recall tends to be associated with low precision. Why?
+9.2. What is the range of values (minimum and maximum scores) for the following
+measures?
+(a) Precision
+(b) Recall
+(c) F1 score
+(d) Average precision
+(e) MAP
+(f) gMAP
+(g) MRR
+(h) DCG
+(i) NDCG
+9.3. Assume there are 16 total relevant documents in a collection. Consider the
+following result, where plus indicates relevant and minus indicates non-relevant:
+{+, +, −, +, +, −, −, +, −, −}
+Calculate the following evaluation measures on the ranked list.
+(a) Precision
+(b) Recall
+(c) F1 score
+(d) Average precision
+9.4. Consider how recall and precision interact with each other.
+(a) Can precision at five documents (P@5) ever be lower than P@10 for the same
+ranked list?

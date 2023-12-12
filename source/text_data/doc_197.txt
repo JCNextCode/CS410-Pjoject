@@ -1,0 +1,47 @@
+9.3 Evaluation of a Ranked List
+177
+beneficial to have one number to compare the systems so that we can easily make
+a lot of different system comparisons; we need a number to summarize the range
+of precision-recall values. One way is to look at the area underneath the curve—the
+average precision. Basically, we’re going to take a look at every different recall point
+and consider the precision.
+The precisions we add up correspond to retrieving the first relevant document,
+the second, and so on. In the example in the figure, we missed many relevant
+documents so in all of these cases we assume that they have zero precision. Finally,
+we take the average and divide it by ten, which is the total number of relevant
+documents in the collection. Note that we’re not dividing this sum by four (which
+is the number of retrieved relevant documents). Dividing by four is a common
+mistake; this favors a system that would retrieve very few documents, making the
+denominator very small. In the correct formula, the denominator is ten, the total
+number of relevant documents. This will allow us to compute the area under the
+PR-curve, combining recall and precision.
+Mathematically, we can define average precision on a ranked list L where
+|L| = n as
+avp(L) =
+1
+|Rel|
+n
+�
+i=1
+p(i),
+(9.1)
+where p(i) denotes the precision at rank i of the documents in L, and Rel is the set
+of all relevant documents in the collection. If Di is not relevant, we would ignore the
+contribution from this rank by setting p(i) = 0. If Di is relevant, to obtain p(i) we
+divide the number of relevant documents we’ve seen so far by the current position
+in the list (which is i). If the first relevant document is at the second rank, then
+p(2) = 1
+2. If the third relevant document is at the seventh rank, then p(7) = 3
+7. Let’s
+use this formula to calculate the average precision of the documents returned in
+Figure 9.4. Figure 9.6 shows the calculation.
+This measure is sensitive to a small change in position of a relevant document. If
+we move the third or fourth relevant document up, it would increase the averages.
+Conversely, if we move any relevant document down, then it would decrease. There-
+fore, this is a good measure because it’s sensitive to the ranking of each individual
+relevant document. It can distinguish small differences between two ranked lists,
+and that’s exactly what we want.
+In contrast, if we look at the precision at ten documents it’s easy to see that
+it’s four out of ten. That precision is very meaningful because it tells us what a
+user would see from their perspective. But, if we use this measure to compare two
+or more systems, it wouldn’t be as effective since precision alone is not sensitive

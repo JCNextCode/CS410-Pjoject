@@ -1,0 +1,56 @@
+Copyright © 2016 by the Association for Computing Machinery
+and Morgan & Claypool Publishers
+All rights reserved. No part of this publication may be reproduced, stored in a retrieval
+system, or transmitted in any form or by any means—electronic, mechanical, photocopy,
+recording, or any other except for brief quotations in printed reviews—without the prior
+permission of the publisher.
+Designations used by companies to distinguish their products are often claimed as
+trademarks or registered trademarks. In all instances in which Morgan & Claypool is aware
+of a claim, the product names appear in initial capital or all capital letters. Readers, however,
+should contact the appropriate companies for more complete information regarding
+trademarks and registration.
+Text Data Management and Analysis
+ChengXiang Zhai and Sean Massung
+books.acm.org
+www.morganclaypoolpublishers.com
+ISBN: 978-1-97000-119-8
+hardcover
+ISBN: 978-1-97000-116-7
+paperback
+ISBN: 978-1-97000-117-4
+ebook
+ISBN: 978-1-97000-118-1
+ePub
+Series ISSN: 2374-6769 print
+2374-6777 electronic
+DOIs:
+10.1145/2915031 Book
+10.1145/2915031.2915044 Chapter 12
+10.1145/2915031.2915032 Preface
+10.1145/2915031.2915045 Chapter 13
+10.1145/2915031.2915033 Chapter 1
+10.1145/2915031.2915046 Chapter 14
+10.1145/2915031.2915034 Chapter 2
+10.1145/2915031.2915047 Chapter 15
+10.1145/2915031.2915035 Chapter 3
+10.1145/2915031.2915048 Chapter 16
+10.1145/2915031.2915036 Chapter 4
+10.1145/2915031.2915049 Chapter 17
+10.1145/2915031.2915037 Chapter 5
+10.1145/2915031.2915050 Chapter 18
+10.1145/2915031.2915038 Chapter 6
+10.1145/2915031.2915051 Chapter 19
+10.1145/2915031.2915039 Chapter 7
+10.1145/2915031.2915052 Chapter 20
+10.1145/2915031.2915040 Chapter 8
+10.1145/2915031.2915053 Appendices
+10.1145/2915031.2915041 Chapter 9
+10.1145/2915031.2915054 References
+10.1145/2915031.2915042 Chapter 10
+10.1145/2915031.2915055 Index
+10.1145/2915031.2915043 Chapter 11
+A publication in the ACM Books series, #12
+Editor in Chief: M. Tamer ¨Ozsu, University of Waterloo
+Area Editor: Edward A. Fox, Virginia Tech
+First Edition
+10 9 8 7 6 5 4 3 2 1

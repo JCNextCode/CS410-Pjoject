@@ -1,0 +1,44 @@
+13.2 Discovery of paradigmatic relations
+257
+Probability that a randomly
+picked word from d1 is wi
+Probability that two randomly picked words
+from d1 and d2, respectively, are identical
+Count of word wi in d1
+Total counts of words in d1
+N
+∑
+i=1
+d1 = (x1, … xN)
+xi = c(wi, d1)
+—
+|d1|
+d2 = (y1, … yN)
+yi = c(wi, d2)
+—
+|d2|
+xi yi
+Sim(d1, d2) = d1.d2 = x1y2 + … + xNyN = 
+Figure 13.5
+A similarity function for word contexts.
+Figure 13.5 shows one plausible approach, where we match the similarity of con-
+text based on the expected overlap of words, and we call this EOW. We represent a
+context by a word vector where each word has a weight that’s equal to the proba-
+bility that a randomly picked word from this document vector is the current word.
+Equivalently, given a document vector x, xi is defined as the normalized account
+of word wi in the context, and this can be interpreted as the probability that you
+would randomly pick this word from d1. The xi’s would sum to one because they
+are normalized frequencies, which means the vector is a probability distribution
+over words. The vector d2 can be computed in the same way, and this would give
+us then two probability distributions representing two contexts. This addresses the
+problem of how to compute the vectors.
+For similarity, we simply use a dot product of two vectors. The dot product, in
+fact, gives us the probability that two randomly picked words from the two contexts
+are identical. That means if we try to pick a word from one context and try to
+pick another word from another context, we can then ask the question, are they
+identical? If the two contexts are very similar, then we should expect we frequently
+will see the two words picked from the two contexts are identical. If they are very
+different, then the chance of seeing identical words being picked from the two
+contexts would be small. This is quite intuitive for measuring similarity of contexts.
+Let’s look at the exact formulas and see why this can be interpreted as the
+probability that two randomly picked words are identical. Each term in the sum

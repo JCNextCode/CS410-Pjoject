@@ -1,0 +1,39 @@
+148
+Chapter 8
+Search Engine Implementation
+however, highly depend on the learning approaches and applications. Despite this,
+we did discuss some common methods for feedback in the previous chapter.
+We will additionally investigate two additional optimizations. These are not
+required to ensure the correctness of an information retrieval system, but they will
+enable such a system to be much more efficient in both speed and disk usage.
+Compression.
+The documents we index could consume hundreds of gigabytes
+or terabytes. We can simultaneously save disk space and increase disk read
+efficiency by losslessly compressing the data in our index, which is usually
+just integers.1
+Caching.
+Even after designing and compressing an efficient data structure for
+document retrieval storage, the system will still be at the mercy of the hard
+disk speed. Thus, it is common practice to add a cache between the front-
+facing API and the document index on disk. The cache will be able to save
+frequently-accessed term information so the number of slow disk seeks dur-
+ing query-time is reduced.
+The following sections in this chapter discuss each of the above components
+in turn.
+8.1
+Tokenizer
+Document tokenization is the first step in any text mining task. This determines
+how we represent a document. We saw in the previous chapter that we often rep-
+resent documents as document vectors, where each index corresponds to a single
+word. The value stored in the index is then a raw count of the number of occurrences
+of that word in a particular document.
+When running information retrieval scoring functions on these vectors, we usu-
+ally prefer some alternate representation of term count, such as smoothed term
+count, or TF-IDF weighting. In real search engine systems, we often leave the term
+scoring up to the index scorer module. Thus, in tokenization we will simply use
+the raw count of features (words), since the raw count can be used by the scorer to
+calculate some weighted term representation. Additionally, calculating something
+like TF-IDF is more involved than a simple scanning of a single document (since we
+need to calculate IDF). Furthermore, we’d like our scorer to be able to use different
+1. As we will discuss, the string terms themselves are almost always represented as term IDs, and
+most of the processing on “words” is done on integer IDs instead of strings for efficiency.

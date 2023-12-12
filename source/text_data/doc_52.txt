@@ -1,0 +1,46 @@
+32
+Chapter 2
+Background
+of bits for any x ∼ X using the formula
+H(X) = −
+�
+x∈X
+p(x) log2 p(x).
+(2.14)
+In the cases where we have log2 0, we generally just define this to be 0 since log2 0
+is undefined. We will get different H(X) for different random variables X.
+The exact theory and reasoning behind this formula are beyond the scope of this
+book, but it suffices to say that H(X) = 0 means there is no randomness, H(X) = 1
+means there is complete randomness in that all events are equally likely. Thus, the
+amount of randomness varies from 0 to 1. For our coin example where the sample
+space is two events (heads or tails), the entropy function looks like
+H(X) = −p(X = 0) log2 p(X = 0) − p(X = 1) log2 p(X = 1).
+For a fair coin, we would have p(X = 1) = p(X = 0) = 1
+2. To calculate H(X), we’d
+have the calculation
+H(X) = −1
+2 log2
+1
+2 − 1
+2 log2
+1
+2 = 1,
+whereas for a completely biased coin with p(X = 1) = 1, p(X = 0) = 0we would have
+H(X) = −0 log2 0 − 1 log2 1 = 0.
+For this example, we had only two possible outcomes (i.e., a binary random
+variable). As we can see from the formula, this idea of entropy easily generalizes
+to random variables with more than two outcomes; in those cases, the sum is over
+more than two elements.
+If we plot H(X) for our coin example against the probability of heads p(X = 1),
+we receive a plot like the one shown in Figure 2.1. At the two ends of the x-axis,
+the probability of X = 1 is either very small or very large. In both these cases, the
+entropy function has a low value because the outcome is not very random. The most
+random is when p(X = 1) = 1
+2. In that case, H(X) = 1, the maximum value. Since
+the two probabilities are symmetric, we get a symmetric inverted U-shape as the
+plot of H(X) as p(X = 1) varies.
+It’s a good exercise to consider when a particular random variable (not just the
+coin example) has a maximum or minimal value. In particular, let’s think about
+some special cases. For example, we might have a random variable Y that always
+takes a value of 1. Or, there’s a random variable Z that is equally likely to take a
+value of 1, 2, or 3. In these cases, H(Y) < H(Z) since the outcome of Y is much

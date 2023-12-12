@@ -1,0 +1,55 @@
+352
+Chapter 17
+Topic Analysis
+θd
+θB
+p(w|θd)
+p(θd) = 0.5
+p(θd) + p(θB) = 1
+p(θB) = 0.5
+p(w|θB)
+text 0.04
+mining 0.035
+association 0.03
+clustering 0.005
+…
+the 0.000001
+the 0.03
+a 0.02
+is 0.015
+we 0.01
+food 0.003
+…
+text 0.000006
+Topic choice
+Text mining paper
+d
+… text mining …
+is … clustering …
+we … Text … the
+Figure 17.17
+A mixture language model to factor out background words.
+as illustrated in Figure 17.17. This is also the scenario that we used to motivate the
+use of the mixture model.
+Figure 17.18 illustrates such a scenario. In this scenario, the only parameters
+unknown would be the topic word distribution p(w | θd). Thus, we have exactly the
+same number of parameters to estimate as in the case of a single unigram language
+model. Note that this is an example of customizing a general probabilistic model
+so that we can embed an unknown variable that we are interested in computing,
+while simplifying other parts of the model based on certain assumptions that we
+can make about them. That is, we assume that we have knowledge about other
+variables. Setting the background model to a fixed word distribution based on the
+maximum likelihood estimate of a unigram language model of a large sample of
+English text is not only feasible, but also desirable since our goal of designing
+such a generative model is to factor out the common words from the topic word
+distribution to be estimated. Feeding the model with a known background word
+distribution is a powerful technique to inject our knowledge about what words are
+countedasnoise(stopwordsinthiscase).Similarly, theparameterp(θB)canalsobe
+set based on our desired percentage of common words to factor out; the larger p(θB)
+is set, the more common words would be removed from the topic word distribution.
+It’s easy to see that if p(θB) = 0, then we would not be able to remove any common
+words as the model degenerates to the simple case of using just one distribution
+(to explain all the words).
+Note that we could have assumed that both θB and θd are unknown, and we can
+also estimate both by using the maximum likelihood estimation, but in such a case,
+we would no longer be able to guarantee that we will obtain a distribution θB that

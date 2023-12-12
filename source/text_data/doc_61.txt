@@ -1,0 +1,69 @@
+Chapter 3
+Text Data Understanding
+41
+A
+dog
+is
+chasing
+a
+on
+the
+playground Lexical
+analysis
+(part-of-speech
+tagging)
+Syntactic analysis
+(parsing)
+Semantic analysis
+Pragmatic analysis
+(speech act )
+A person saying this may be
+reminding another person
+to get the dog back.
+Dog (d1).
+Boy (b1).
+Playground (p1).
+Chasing (d1, b1, p1).
++
+Scared(x) if Chasing(_,x,_).
+Scared(b1)
+Inference
+boy
+Det
+Noun
+Noun phrase
+Noun phrase
+Noun phrase
+Prep phrase
+Verb phrase
+Complex verb
+Aux
+Verb
+Det
+Prep
+Det
+Noun
+Noun
+Verb phrase
+Sentence
+Figure 3.1
+An example of tasks in natural language understanding.
+ligence. In this sense, NLP is “AI complete”, i.e., as difficult as any other difficult
+problems in artificial intelligence.
+The following are a few examples of specific challenges in natural language
+understanding.
+Word-level ambiguity.
+A word may have multiple syntactic categories and mul-
+tiple senses. For example, design can be a noun or a verb (ambiguous POS);
+root has multiple meanings even as a noun (ambiguous sense).
+Syntactic ambiguity. A phrase or a sentence may have multiple syntactic struc-
+tures. For example, natural language processing can have two different inter-
+pretations: “processing of natural language” vs. “natural processing of lan-
+guage” (ambiguous modification). Another example: A man saw a boy with
+a telescope has two distinct syntactic structures, leading to a different result
+regarding who had the telescope (ambiguous prepositional phrase (PP) at-
+tachment).
+Anaphora resolution.
+What exactly a pronoun refers to may be unclear. For
+example, in John persuaded Bill to buy a TV for himself , does himself refer to
+John or Bill?

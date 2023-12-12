@@ -1,0 +1,67 @@
+19.3 Contextual Probabilistic Latent Semantic Analysis
+425
+0.08
+0.06
+0.04
+0.02
+0.00
+8/23
+8/30
+9/06
+9/13
+Time
+P(t/θ, l)
+0.08
+0.06
+0.04
+0.02
+0.00
+8/23
+8/30
+9/06
+9/13
+Time
+(b) Theme “New Orleans” over states
+(Hurricane Katrina)
+(a) Theme life cycles in Texas
+(Hurricane Katrina)
+P(t/θ, l)
+9/20
+9/27 10/03
+Florida
+Louisiana
+Texas
+Washington
+city 0.0634
+orleans 0.0541
+new 0.0342
+louisiana 0.0235
+ﬂood 0.0227
+evacuate 0.0211
+storm 0.0177
+…
+Hurricane Rita
+New Orleans
+Oil price
+price 0.0772
+oil 0.0643
+gas 0.0454
+increase 0.0210
+product 0.0203
+fuel 0.0188
+company 0.0182
+…
+Figure 19.7
+Temporal trends of topics discovered from blog articles about Hurricane Katrina.
+(Based on results from Mei et al. [2006a])
+and their dynamics over time, but also enable comparative analysis of topics across
+different contexts to help discover interesting patterns and potentially interesting
+events associated with the patterns.
+In Figure 19.8, we show spatiotemporal patterns of the coverage of the topic of
+government response in the same data set of blog articles about Hurricane Katrina.
+These visualizations show the distribution of the coverage of the topic in different
+weeks of the event over the states in the U.S. We see that initially, the coverage
+is concentrated mostly in the victim states in the south, but the topic gradually
+spread to other locations over time. In week four (shown on the bottom left), the
+coverage distribution pattern was very similar to that of the first week (shown on the
+top left). This can again be explained by Hurricane Rita hitting the region around

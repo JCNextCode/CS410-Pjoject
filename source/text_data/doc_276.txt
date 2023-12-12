@@ -1,0 +1,50 @@
+256
+Chapter 13
+Word Association Mining
+High sim(word1, word2)
+ 
+→ word1 and word2 are paradigmatically related
+Sim(“cat”, “dog”) =
+ 
+Sim(Left1(“cat”), Left1(“dog”))
+ 
+ 
++ Sim(Right1(“cat”), Right1(“dog”)) +
+ 
+ 
+ 
+…
+ 
+ 
+ 
+ 
++ Sim(Window8(“cat”), Window8(“dog”)) = ?
+Figure 13.4
+Multiple views of the context of a word can be used to compute similarity.
+words like eats and my or non-adjacent words like Saturday or Tuesday. This flexi-
+bility allows us to match the similarity in somewhat different ways. We might want
+to capture similarity based on general content, which yields loosely related paradig-
+matic relations. If we only used words immediately to the left and right, we would
+likely capture words that are very much related by their syntactic categories. Thus,
+the general idea of discovering paradigmatic relations is to compute the similarity
+of context of two words. For example, we can measure the similarity of cat and dog
+based on the similarity of their context, as shown in Figure 13.4.
+The similarity function can be a combination of similarities on different con-
+texts, and we can assign weights to these different similarities to allow us to focus
+more on a particular kind of context. Naturally, this would be application-specific,
+but again, the main idea for discovering pardigmatically related words is to com-
+pute the similarity of their contexts.
+Let’s see how we exactly compute these similarity functions. Unsurprisingly, we
+can use the vector space model on bag-of-words context data to model the context
+of a word for paradigmatic relation discovery. In general, we can represent a pseudo
+document or context of cat as one frequency vector d1 and another word dog would
+give us a different context, d2. We can then measure the similarity of these two
+vectors. By viewing context in the vector space model, we convert the problem of
+paradigmatic relation discovery into the problem of computing the vectors and
+their similarity.
+The two questions that we have to address are how to compute each vector and
+how to compute their similarity. There are many approaches that can be used to
+solve the problem, and most of them are developed for information retrieval. They
+have been shown to work well for matching a query vector and a document vector.
+We can adapt many of the ideas to compute a similarity of context documents for
+our purpose.

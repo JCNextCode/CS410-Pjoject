@@ -1,0 +1,42 @@
+14.2 Document Clustering
+281
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+A
+B
+C
+D
+E
+F
+H
+I
+J
+G
+Figure 14.2
+Hierarchical clustering represented as a dendrogram.
+Complete-link algorithm
+Average-link algorithm
+Single-link algorithm
+?
+……
+g2
+g1
+Figure 14.3
+Three different cluster-cluster similarity metrics.
+Below, we outline three cluster similarity measures and illustrate them in Fig-
+ure 14.3.
+Single-link merges the two clusters with the smallest minimum distance. This
+results in “looser” clusters, since we only need to find two individually close
+elements in each cluster in order to perform the merge.
+Complete-link merges the two clusters with the smallest maximum distance be-
+tween elements. This results in very “tight” and “compact” clusters since the
+cluster diameter is kept small (i.e., the distance between all elements low).

@@ -1,0 +1,45 @@
+396
+Chapter 18
+Opinion Mining and Sentiment Analysis
+learning program to work on. Machine learning methods can be applied to select
+the most effective features or to even construct new features. These features can
+then be further analyzed by humans through error analysis, using evaluation tech-
+niques we discuss in this book. We can look at categorization errors and further
+analyze what features can help us recover from those errors or what features cause
+overfitting. This can lead into feature validation that will cause a revision in the
+feature set. These steps are then iterated until a desired accuracy is achieved.
+In conclusion, a main challenge in designing features is to optimize a tradeoff
+between exhaustivity and specificity. This tradeoff turns out to be very difficult.
+Exhaustivity means we want the features to have high coverage on many documents.
+In that sense, we want the features to be frequent. Specificity requires the features
+to be discriminative, so naturally the features tend to be less frequent. Clearly, this
+causes a tradeoff between frequent versus infrequent features. Particularly in our
+case of sentiment analysis, feature engineering is a critical task.
+18.2
+Ordinal Regression
+In this section, we will discuss ordinal logistic regression for sentiment analysis.
+A typical sentiment classification problem is related to rating prediction because
+we often try to predict sentiment value on some scale, e.g., positive to negative
+with other labels in between. We have an opinionated text document d as input,
+and we want to generate as output a rating in the range of 1 through k. Since
+it’s a discrete rating, this could be treated as a categorization problem (finding
+which is the correct of k categories). Unfortunately, such a solution would not
+consider the order and dependency of the categories. Intuitively, the features that
+can distinguish rating 2 from 1 may be similar to those that can distinguish k from
+k − 1. For example, positive words generally suggest a higher rating. When we train
+a categorization problem by treating these categories as independent, we would not
+capture this. One approach that addresses this issue is ordinal logistic regression.
+Let’s first think about how we use logistic regression for binary sentiment (which
+is a binary categorization problem). Suppose we just wanted to distinguish positive
+from negative. The predictors (features) are represented as X, and we can output a
+score based on the log probability ratio:
+log p(Y = 1 | X)
+p(Y = 0 | X) = log
+p(Y = 1 | X)
+1 − p(Y = 1 | X) = β0 +
+M
+�
+i=1
+xiβi,
+(18.1)
+or the conditional probability

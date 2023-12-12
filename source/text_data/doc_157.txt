@@ -1,0 +1,113 @@
+7.1 Feedback in the Vector Space Model
+137
+After we have performed these operations, we will get a new query vector which
+can be used again to score documents in the index. This new query vector will then
+reflect the move of the original query vector toward the relevant centroid vector and
+away from the non-relevant centroid vector.
+Let’s take a look at a detailed example depicted below. Imagine we have a small
+vocabulary,
+V = {news, about, presidential, campaign, food, text}
+and a query
+⃗q = {1, 1, 1, 1, 0, 0}.
+Recall from Chapter 6 that our vocabulary V is a fixed-length term vector. It’s not
+necessary to know what type of weighting scheme this search engine is using, since
+in Rocchio feedback, we will only be adding and subtracting term weights from the
+query vector.
+Say we are given five feedback documents whose term vectors are denoted as
+relevant with a + prefix. The negative feedback documents are prefixed with −.
+{ news
+about
+pres.
+campaign food
+text
+}
+−
+d1
+{
+1.5
+0.1
+0.0
+0.0
+0.0
+0.0
+}
+− d2
+{
+1.5
+0.1
+0.0
+2.0
+2.0
+0.0
+}
++
+d3
+{
+1.5
+0.0
+3.0
+2.0
+0.0
+0.0
+}
++
+d4
+{
+1.5
+0.0
+4.0
+2.0
+0.0
+0.0
+}
+−
+d5
+{
+1.5
+0.0
+0.0
+6.0
+2.0
+0.0
+}
+For Rocchio feedback, we first compute the centroid of the positive and nega-
+tive feedback documents. The centroid of the positive documents would have the
+average of each dimension, and the case is the same for the negative centroid:
+{
+news
+about
+pres.
+campaign
+food
+text
+}
++
+Cr
+{
+1.5+1.5
+2
+0.0
+3.0+4.0
+2
+2.0+2.0
+2
+0.0
+0.0
+}
+− Cn
+{
+1.5+1.5+1.5
+3
+0.1+0.1+0.0
+3
+0.0
+0.0+2.0+6.0
+3
+0.0+2.0+2.0
+3
+0.0
+}
+Now that we have the two centroids, we modify the original query to create the
+expanded query ⃗qm:
+⃗qm = α . ⃗q + β . Cr − γ . Cn
+= {α + 1.5β − 1.5γ , α − 0.067γ , α + 3.5β, α + 2β − 2.67γ , −1.33γ , 0}.

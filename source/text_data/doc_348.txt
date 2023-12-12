@@ -1,0 +1,11 @@
+328
+Chapter 16
+Text Summarization
+16.9. Create some simple post-processing rules for natural language generation
+realization. The examples we gave in the text were sentence joining and pronoun
+insertion. What else can you think of?
+16.10. Explain how we can combine text summarization and topic modeling to
+create a powerful exploratory text mining application.
+16.11. What can we accomplish by interpolating a language model distribution
+for an abstractive summarizer with another probability distribution, perhaps from
+existing summaries?

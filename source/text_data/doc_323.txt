@@ -1,0 +1,41 @@
+15.3 Text Categorization Problem
+303
+In our forward index, we’d store
+xi = {1, 1, 1, 1, 1, 2, 1, 1}
+xj = {0, 0, 0, 1, 0, 0, 2, 0},
+so xik is the kth term in the ith document.
+We also have Y, which is a vector of labels for each document. Thus yi may be
+sports in our news article classification setup and yj could be politics.
+A classifier is a function f (.) that takes a document vector as input and outputs
+a predicted label ˆy ∈ Y. Thus we could have f (xi) = sports. In this case, ˆy = sports
+and the true y is also sports; the classifier was correct in its prediction.
+Notice how we can only evaluate a classification algorithm if we know the true
+labels of the data. In fact, we will have to use the true labels in order to learn a
+good function f (.) to take unseen document vectors and classify them. For this
+reason, we often split our corpus X into two parts: training data and testing data.
+The training portion is used to build the classifier, and the testing portion is used
+to evaluate the performance (e.g., seeing how many correct labels were predicted).
+But what does the function f (.) actually do? Consider this very simple example
+that determines whether a news article has positive or negative sentiment, i.e.,
+Y = {positive, negative}:
+f (x) =
+�
+positive
+if x’s count for the term good is greater than 1
+negative
+otherwise.
+Of course, this example is overly simplified, but it does demonstrate the basic
+idea of a classifier: it takes a document vector as input and outputs a class label.
+Based on the training data, the classifier may have determined that positive sen-
+timent articles contain the term good more than once; therefore, this knowledge
+is encoded in the function. Later in this chapter, we will investigate some specific
+algorithms for creating the function f (.) based on the training data.
+It’s also important to note that these learning algorithms come in several differ-
+ent flavors. In binary classification there are only two categories. Depending on the
+type of classifier, it may only support distinguishing between two different classes.
+Multiclass classification can support an arbitrary number of labels. As we will see,
+it’s possible to combine multiple binary classifiers to create a multiclass classifier.
+Regression is a very related problem to classification; it assigns real-valued scores
+on some range as opposed to discrete labels. For example, a regression problem
+could be to predict the amount of rainfall for a particular day given rainfall data for
+previous years. The output ˆy would be a number ≥ 0, perhaps representing rainfall

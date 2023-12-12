@@ -1,0 +1,33 @@
+1.1 Functions of Text Information Systems
+7
+retrieval and text mining to real-world text data and learn how to experiment with
+and improve some of the algorithms for interesting application tasks. This book
+can be used as a textbook for computer science undergraduates and graduates, li-
+brary and information scientists, or as a reference book for practitioners working
+on relevant application problems in analyzing and managing text data.
+1.1
+Functions of Text Information Systems
+From a user’s perspective, a text information system (TIS) can offer three distinct,
+but related capabilities, as illustrated in Figure 1.2.
+Information Access.
+This capability gives a user access to the useful informa-
+tion when the user needs it. With this capability, a TIS can connect the right
+information with the right user at the right time. For example, a search en-
+gine enables a user to access text information through querying, whereas a
+recommender system can push relevant information to a user as new informa-
+tion items become available. Since the main purpose of Information Access
+is to connect a user with relevant information, a TIS offering this capability
+Access
+Mining
+Select
+information
+Create
+knowledge
+Add
+structure/annotations
+Organization
+Figure 1.2
+Information access, knowledge acquisition, and text organization are three major
+capabilities of a text information system with text organization playing a supporting
+role for information access and knowledge acquisition. Knowledge acquisition is also
+often referred to as text mining.

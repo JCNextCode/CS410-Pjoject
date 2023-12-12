@@ -1,0 +1,41 @@
+434
+Chapter 19
+Joint Analysis of Text and Structured Data
+context for analyzing the text data. The output that we want to generate is the topics
+whose coverage in the text stream has strong correlations with the time series. That
+is, whenever the topic is mentioned frequently in the text stream, the time series
+variable tends to have higher (or lower) values.
+We call these topics causal topics since they can potentially explain the cause of
+fluctuation of the time series and offer insights for humans to further analyze the
+topics for better understanding of the time series. They can also be useful features
+for predicting time series.
+Intuitively, the output is similar to what we generate by using a topic model,
+but with an important difference. In regular topic modeling, our goal is to discover
+topics that best explain the content in the text data, but in our setup of discovering
+causal topics, the topics to be discovered should not only be semantically meaning-
+ful and coherent (as in the case of regular topic modeling), but also be correlated
+with the external time series.
+To solve this problem, a natural idea is to apply a model such as CPLSA to our
+text stream so as to discover a number of topics along with their coverage over time.
+This would allow us to obtain a time series for each topic representing its coverage
+in the text such as the temporal trends shown in Figure 19.7. We can then choose
+the topics from this set that have the strongest correlation with the external time
+series.
+However, this approach is not optimal because the content of the topics would
+have been discovered solely based on the text data (e.g., maximizing the likelihood
+function) without consideration of the time series at all. Indeed, the discovered
+topics would tend to be the major topics that explain the text data well (as they
+should be), but they are not necessarily correlated with time series. Even if we
+choose the best ones from them, the most correlated topics might still have a low
+correlation, and thus not be very useful from the perspective of discovering causal
+topics.
+One way to improve this simple approach is to use time series context to not
+only select the topics with the highest correlations with the time series, but also
+influence the content of topics. One approach is called Iterative Causal Topic
+Modeling, shown in Figure 19.15.
+The idea of this approach is to do an iterative adjustment of topics discovered
+by topic models using time series to induce a prior. Specifically, as shown in
+Figure 19.15, we first take the text stream as input and apply regular topic modeling
+to generate a number of topics (four shown here). Next, we use the external time
+series to assess which topic is more causally related (correlated) with the external
+time series by using a causality measure such as Granger Test. For example, in this

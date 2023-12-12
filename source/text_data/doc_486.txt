@@ -1,0 +1,51 @@
+466
+Appendix B
+Expectation- Maximization
+to solving this problem. The first is that we try many different initial values and
+choose the solution that has the highest converged likelihood value. The second
+uses a much simpler model (ideally one with a unique global maxima) to determine
+an initial value for more complex models. The idea is that a simpler model can
+hopefully help locate a rough region where the global optima exists, and we start
+from a value in that region to search for a more accurate optima using a more
+complex model.
+Here, we introduce the EM algorithm through a specific problem—estimating
+a simple mixture model. For a more in-depth introduction to EM, please refer to
+McLachlan and Krishnan [2008].
+B.1
+A Simple Mixture Unigram Language Model
+In the mixture model feedback approach [Zhai and Lafferty 2001], we assume
+that the feedback documents F = {d1, . . . , dk} are “generated” from a mixture
+model with two multinomial component models. One component model is the
+background model p(w | C) and the other is an unknown topic language model
+p(w | θF) to be estimated. (w is a word.) The idea is to model the common (non-
+discriminative) words in F with p(w | C) so that the topic model θF would attract
+more discriminative content-carrying words.
+The log-likelihood of the feedback document data for this mixture model is
+log L(θF) = log p(F | θF) =
+k
+�
+i=1
+|di|
+�
+j=1
+log((1 − λ)p(dij | θF) + λp(dij | C)),
+where dij is the jth word in document di, |di| is the length of di, and λ is a parameter
+that indicates the amount of “background noise” in the feedback documents,
+which will be set empirically. We thus assume λ to be known, and want to estimate
+p(w | θF).
+B.2
+Maximum Likelihood Estimation
+A common method for estimating θF is the maximum likelihood (ML) estimator,
+in which we choose a θF that maximizes the likelihood of F. That is, the estimated
+topic model (denoted by ˆθF) is given by
+ˆθF = arg maxθF L(θF)
+(B.1)
+= arg maxθF
+k
+�
+i=1
+|di|
+�
+j=1
+log((1 − λ)p(dij | θF) + λp(dij | C)).
+(B.2)

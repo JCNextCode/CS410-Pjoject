@@ -1,0 +1,39 @@
+2.3 Machine Learning
+35
+takes a real value, the problem is often called a regression problem. Both forms
+of the problem can also be called prediction when our goal is mainly to infer the
+unknown y for a given x; the term “prediction” is especially meaningful when y is
+some property of a future event.
+In text-based applications, both forms may occur, although the classification
+problem is far more common, in which case the problem is also called text catego-
+rization or text classification. We dedicate a chapter to this topic later in the book
+(Chapter 15). The regression problem may occur when we use text data to predict
+another non-text variable such as sentiment rating or stock prices; both cases are
+also discussed later.
+In classification as well as regression, the (input) data instance x is often repre-
+sented as a feature vector where each feature provides a potential clue about which
+y value is most likely the value of f (x). What the computer learns from the training
+data is an optimal way to combine these features with weights on them to indi-
+cate their importance and their influence on the final function value y. “Optimal”
+here simply means that the prediction error on the training data is minimum, i.e.,
+the predicted ˆy values are maximally consistent with the true y values in the train-
+ing data.
+More formally, let our collection of objects be X such that xi ∈ X is a feature
+vector that represents object i. A feature is an attribute of an object that describes
+it in some way. For example, if the objects are news articles, one feature could be
+whether the word good occurred in the article. All these different features are part
+of a document’s feature vector, which is used to represent the document. In our
+cases, the feature vector will usually have to do with the words that appear in the
+document.
+We also have Y, which is the set of possible labels for each object. Thus, yi may
+be sports in our news article classification setup and yj could be politics.
+A classifier is a function f (.) that takes a feature vector as input and outputs a
+predicted label ˆy ∈ Y. Thus, we could have f (xi) = sports, meaning ˆy = sports. If the
+true y is also sports, the classifier was correct in its prediction.
+Notice how we can only evaluate a classification algorithm if we know the true
+labels of the data. In fact, we will have to use the true labels in order to learn a good
+function f (.) to take unseen feature vectors and classify them. For this reason, when
+studying machine learning algorithms, we often split our corpus X into two parts:
+training data and testing data. The training portion is used to build the classifier,
+and the testing portion is used to evaluate the performance (e.g., determine how
+many correct labels were predicted). In applications, the training data are generally

@@ -1,0 +1,48 @@
+C.3 Computing the Query Model p(w | �θQ)
+475
+C.2
+Using Dirichlet Prior Smoothing
+Dirichlet prior smoothing is one particular smoothing method that follows the
+general smoothing scheme mentioned in the previous section. In particular,
+ps(w | d) = c(w, d) + μp(w | C)
+|d| + μ
+and
+αd =
+μ
+μ + |d|.
+Plugging these into equation C.1, we see that with Dirichlet prior smoothing, our
+KL-divergence scoring formula is
+⎡
+⎢⎣
+�
+w:c(w;d)>0,p(w|�
+θQ)>0
+p(w | �θQ) log(1 +
+c(w, d)
+μp(w | C))
+⎤
+⎥⎦ + log
+μ
+μ + |d|.
+C.3
+Computing the Query Model p(w | �θQ)
+You may be wondering how we can compute p(w | �θQ). This is exactly where the
+KL-divergenceretrievalmethodisbetter thanthesimplequerylikelihoodmethod—
+we can have different ways of computing it! The simplest way is to estimate this
+probability by the maximum likelihood estimator using the query text as evidence,
+which gives us
+pml(w | �θQ) = c(w, q)
+|q|
+.
+Using this estimated value, you should see easily that the KL-divergence scoring for-
+mula is essentially the same as the query likelihood retrieval formula as presented
+in Zhai and Lafferty [2004].
+A more interesting way of computing p(w | �θQ) is to exploit feedback documents.
+Specifically, we can interpolate the simple pml(w | �θQ) with a feedback model p(w |
+θF) estimated based on feedback documents. That is,
+p(w | �θQ) = (1 − α)pml(w | �θQ) + αp(w | θF),
+(C.2)
+where α is a parameter that needs to be set empirically. Please note that this α is
+different from αd in the smoothing formula.
+Of course, the next question is how to estimate p(w | θF)? One approach is to
+assume the following two component mixture model for the feedback documents,

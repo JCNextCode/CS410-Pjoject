@@ -1,0 +1,35 @@
+Exercises
+37
+ble comprehensive introduction to Bayesian statistics is given in the book Bayesian
+Data Analysis [Gelman et al. 1995]. Cover and Thomas [1991] provide a comprehen-
+sive introduction to information theory. There are many books on machine learning
+where a more rigorous introduction to the basic concepts in machine learning as
+well as many specific machine learning approaches can be found (e.g., Bishop 2006,
+Mitchell 1997).
+Exercises
+2.1. What can you say about p(X | Y) if we know X and Y are independent random
+variables? Prove it.
+2.2. In an Information Retrieval course, there are 78 computer science majors,
+21 electrical and computer engineering majors, and 10 library and information
+science majors. Two students are randomly selected from the course. What is the
+probability that they are from the same department? What is the probability that
+they are from different departments?
+2.3. Use Bayes’ rule to solve the following problem. One third of the time, Milo
+takes the bus to work and the other times he takes the train. The bus is less reliable,
+so he gets to work on time only 50% of the time. If taking the train, he is on time 90%
+of the time. Given that he was on time on a particular day, what is the probability
+that Milo took the bus?
+2.4. In a game based on a deck of 52 cards, a single card is drawn. Depending on
+the type of card, a certain value is either won or lost. If the card is one of the four
+aces, $10 is won. If the card is one of the four kings, $5 is won. If the card is one of
+the eleven diamonds that is not a king or ace, $2 is won. Otherwise, $1 is lost. What
+are the expected winnings or losings after drawing a single card? (Would you play?)
+2.5. Consider the game outlined in the previous question. Imagine that two
+aces were drawn, leaving 50 cards remaining. What is the expected value of the
+next draw?
+2.6. In the information theory section, we defined three random variables X, Y,
+and Z when discussing entropy. We compared H(Y) with H(Z). How does H(X)
+compare to the other two entropies?
+2.7. In the information theory section, we compared the entropy of the word the
+to that of the word unicorn. In general, what types of words have a high entropy and
+what types of words have a low entropy? As an example, consider a corpus of ten

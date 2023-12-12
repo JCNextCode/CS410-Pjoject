@@ -1,0 +1,33 @@
+11
+Recommender Systems
+In our many discussions of search engine systems, we have addressed the issue
+of short-term (ad hoc) information need. This is a temporary need from a static
+information source, where the user pulls relevant information. Examples are li-
+brary or web search. Conversely, most users also have long-term information needs,
+such as filtering or recommending documents (or any other item type) from a
+dynamic information source; here, the user is pushed information by a system.
+Examples include a news filter, email filter, movie/book recommender, or litera-
+ture recommender. Although there is some distinction between a recommender
+system (emphasizing delivery of useful items to users) and a filtering system (em-
+phasizing exclusion of useless items), the techniques used are similar, so we will
+use "recommender" and "filtering" interchangeably for convenience.
+Unlike ad hoc search where we may not get much feedback from a user, in
+filtering, we can expect to collect a lot of feedback information from the user,
+making it important to learn from the feedback information to improve filtering
+performance.
+In filtering, documents are delivered from some dynamic information source.
+A system must make a binary decision regarding the relevance of a document to a
+user as soon as it “arrives.” This is more difficult than search where we can simply
+provide a ranked list and rely on a user to flexibly set the cutoff. On the other hand,
+since we can collect feedback information, we can expect to get more and more
+information about what the user likes, making it easier to distinguish relevant
+documents from non-relevant ones.
+The essential filtering question is: will user u like item x? Our approach to
+answering this question defines which of the following two strategies we apply.
+.
+Content-based filtering: look at what u likes and characterize x
+.
+Collaborative filtering: look at who likes x and characterize u
+Content-based filtering is to learn what kind of content a user likes and then
+match the content of a current article with a “content prototype” that we believe
+describes well what the user likes. Collaborative filtering is to look at what other

@@ -1,0 +1,60 @@
+10.3 Link Analysis
+203
+page, and the edges between documents are hyperlinks connecting them to each
+other. Let’s assume that a random surfer or random walker can be on any of these
+pages. When the random surfer decides to move to a different page, they can either
+randomly follow a link from the current page or randomly choose a document to
+jump to from the entire collection. So, if the random surfer is at d1, with some
+probability that random surfer will follow the links to either d3 or d4. The random
+surfing model also assumes that the surfer might get bored sometimes and decide
+to ignore the actual links, randomly jumping to any page on the web. If the surfer
+takes that option, they would be able to reach any of the other pages even though
+there is no link directly to that page. Based on this model, we can ask the question,
+“How likely, on average, would the surfer reach a particular page?” This probability
+is precisely what PageRank computes.
+The PageRank score of a document di is the average probability that the surfer
+visits di. Intuitively, this should be proportional to the inlink count. If a page has a
+high number of inlinks then it would have a higher chance of being visited since
+there will be more opportunities of having the surfer follow a link there. This is
+how the random surfing model captures the idea of counting the inlinks. But, it
+also considers the indirect inlinks; if the pages that point to di have themselves a
+lot of inlinks, that would mean the random surfer would very likely reach one of
+them. This increases the chance of visiting di. This is a nice way to capture both
+indirect and direct links.
+Mathematically, we can represent this document network as a matrix M, dis-
+played in the center of Figure 10.7. Each row stands for a starting page. For example,
+row one would indicate the probability of going to any of the four pages from d1.
+We see there are only two non-zero entries. Each is one half since d1 is pointing to
+only two other pages; thus if we can randomly choose to visit either of them from
+d1, they’d each have a probability of 1
+2. We have zeros for the first two columns for
+0
+1
+0
+1/2
+0
+0
+1
+1/2
+Transition matrix
+Mij = probability of
+going from di to dj
+d1
+d2
+d3
+d4
+1/2
+0
+0
+0
+M = 
+1/2
+0
+0
+0
+N
+∑
+j=1
+Mij = 1
+Figure 10.7
+Example of a web graph and the corresponding transition matrix.

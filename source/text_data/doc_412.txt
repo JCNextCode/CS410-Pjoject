@@ -1,0 +1,40 @@
+392
+Chapter 18
+Opinion Mining and Sentiment Analysis
+about the battery of a smartphone. It could even be someone else’s opinion, and
+one person might comment on another person’s opinion. Clearly, there is much
+variation here that will cause the problem to take different forms.
+Opinion content can also vary on the surface: we can identify a one-sentence opin-
+ion or a one-phrase opinion. We can also have longer text to express an opinion,
+such as a whole news article. Furthermore, we can identify the variation in the sen-
+timent or emotion of the opinion holder. We can distinguish positive vs. negative
+or neutral sentiment.
+Finally, the opinion context can also vary. We can have a simple context, like a
+different time or different locations. There could be also complex contexts, such
+as some background of a topic being discussed. When an opinion is expressed in
+a particular discourse context, it has to be interpreted in different ways than when
+it’s expressed in another context.
+From a computational perspective, we’re mostly interested in what opinions can
+be extracted from text data. One computational objective might be to determine
+the target of an opinion. For example, “I don’t like this phone at all,” is clearly
+an opinion by the speaker about a phone. In contrast, the text might also report
+opinions about others. One could make an observation about another person’s
+opinion and report this opinion. For example, “I believe he loves the painting.”
+That opinion is really expressed from another person; it doesn’t mean this person
+loves that painting. Clearly, these two kinds of opinions need to be analyzed in
+different ways. Sometimes, a reviewer might mention opinions of his or her friend.
+Another complication is that there may be indirect opinions or inferred opinions
+that can be obtained by making inferences about what is expressed in the text
+that might not necessarily look like opinion. For example, one statement might
+be, “This phone ran out of battery in only one hour.” Now, this is in a way a
+factual statement because it’s either true or false. However, one can also infer some
+negative opinions about the quality of the battery of this phone, or the opinion
+about the battery life. These are interesting variations that we need to pay attention
+to when we extract opinions.
+The task of opinion mining can be defined as taking contextualized input to gen-
+erate a set of opinion representations, as shown in Figure 18.4. Each representation
+should identify the opinion holder, target, content, and context. Ideally, we can also
+infer opinion sentiment from the comment and the context to better understand
+the opinion. Often, some elements of the representation are already known. We
+just saw an example in the case of a product review where the opinion holder and
+the opinion target are often explicitly identified.

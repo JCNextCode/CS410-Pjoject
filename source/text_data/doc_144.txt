@@ -1,0 +1,74 @@
+124
+Chapter 6
+Retrieval Models
+zero probability, helping us decide what non-zero probability should be assigned
+to such a word. In Jelinek-Mercer smoothing, we do a linear interpolation between
+the maximum likelihood estimate and the collection language model. This is con-
+trolled by the smoothing parameter λ ∈ [0, 1]. Thus, λ is a smoothing parameter for
+this particular smoothing method. The larger λ is, the more smoothing we have,
+putting more weight on the background probabilities. By mixing the two distri-
+butions together, we achieve the goal of assigning non-zero probability to unseen
+words in the document that we’re currently scoring.
+So let’s see how it works for some of the words here. For example, if we com-
+pute the smoothed probability for the word text, we get the MLE estimate in the
+document interpolated with the background probability. Since text appears ten
+times in d and |d| = 100, our MLE estimate is
+10
+100. In the background, we have
+p(text | C) = 0.001, giving our smoothed probability of
+pseen(w | d) = (1 − λ) . pMLE(w | d) + λ . p(w | C)
+= (1 − λ) . 10
+100 + λ . 0.001.
+In Figure 6.26 we also consider the word network, which does not appear in d.
+In this case, the MLE estimate is zero, and its smoothed probability is 0 + λ .
+p(w | C) = λ . 0.001. You can see now that αd in this smoothing method is just λ
+Document d
+Total #words = 100
+p(“network”|d) = λ * 0.001
+p(“text”|d) = (1 – λ)
+10 + λ * 0.001
+—
+100
+p(w|d) = (1 – λ)
+λ2[0, 1]
+c(w, d) + λp(w|C)
+—
+|d|
+Collection LM
+P(w|C)
+Unigram LM   p(w|θ) = ?
+…
+text ?
+mining ?
+association ?
+database ?
+…
+query ?
+network ?
+10/100
+5/100
+3/100
+3/100
+1/100
+0/100
+text 10
+mining 5
+association 3
+database 3
+algorithm 2
+…
+query 1
+efﬁcient 1
+the 0.1
+a 0.08
+…
+computer 0.02
+database 0.01
+…
+text 0.001
+network 0.001
+mining 0.0009
+…
+Figure 6.26
+Smoothing the query likelihood retrieval function with linear interpolation: Jelinek-
+Mercer smoothing.

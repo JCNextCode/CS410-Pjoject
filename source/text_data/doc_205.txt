@@ -1,0 +1,73 @@
+9.5 Practical Issues in Evaluation
+185
+Query
+System A
+System B
+Sign Test
+Wilcoxon
+1
+0.02
+0.76
++
++0.74
+2
+0.39
+0.07
+−
+−0.32
+3
+0.16
+0.37
++
++0.21
+4
+0.58
+0.21
+−
+−0.37
+5
+0.04
+0.02
+−
+−0.02
+6
+0.09
+0.91
++
++0.82
+7
+0.12
+0.46
++
++0.34
+Average
+0.20
+0.40
+p = 1.0
+p = 0.9375
+Figure 9.9
+Statistical significance tests. (Courtesy Douglas W. Oard and Philip Resnik)
+So let’s look at these results again in the second case. In Figure 9.9, we show
+two different ways to compare them. One is a sign test. If system B is better than
+system A, then we have a plus sign. If system A is better, we have a minus sign. Using
+this, we have four cases where system B is better and three cases where system A is
+better. Intuitively, these results appear random. If you flip seven coins, using plus
+to denote heads and minus to denote tails, then these could easily be the results of
+just randomly flipping the seven coins. The fact that the average is larger doesn’t
+tell us anything! This intuition can be quantified by the concept of a p value. A p
+value is the probability that this result is in fact from random fluctuation. In this
+case, the probability is one; it means it surely is a random fluctuation.
+There are many different significance tests that we can use to quantify the
+likelihood that the observed difference in the results is simply due to random
+fluctuations. A particularly interesting test is the Wilcoxon signed-rank test. It’s
+a nonparametric test, and we not only look at the signs, but also consider the
+magnitude of the difference in scores. Another is the (parametric) t-test where a
+normaldistributionisassumed.Inanyevent, wewoulddrawasimilarconclusionin
+our example case: the outcome is very likely to be random. For further study on this
+and other statistical significance tests, we suggest the reader start with Smucker
+et al. [2007].
+To illustrate the concept of p-values, consider the distribution in Figure 9.10.
+This is a normal distribution, with a mean of zero in the center. Say we started with
+the assumption that there’s no difference between the two systems. But, we assume
+that because of random fluctuations depending on the queries we might observe a
+difference; thus, the actual difference might be on the left side or right side. This

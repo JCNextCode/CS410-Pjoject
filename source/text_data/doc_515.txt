@@ -1,0 +1,89 @@
+Index
+495
+Hierarchical clustering, 280–282
+High-level syntactic features, 305–306
+Hill-climbing algorithm, EM, 360, 366–367,
+465
+HITS algorithm, 206–208
+HTML files, cleaning, 218–219
+Hub pages in web searches, 202, 207–208
+Humans
+joint analysis, 413–415
+NLP, 48
+opinion mining. See Opinion mining
+as subjective sensors, 244–246
+unified systems, 445–448
+Hyperparameters
+Beta distribution, 458–460
+Dirichlet distribution, 461, 463
+ICU (International Components for
+Unicode), 61
+Icu_filter filter, 61
+Icu_tokenizer tokenizer, 61
+IDF (inverse document frequency)
+Dirichlet prior smoothing, 126
+paradigmatic relations, 258–260
+query likelihood retrieval model, 122
+vector space model, 99–101
+Illinois NLP Curator toolkit, 64
+Impact
+CPLSA, 426–427
+time series context, 437
+Implicit feedback, 134–135
+Incomplete data in EM algorithm, 467–468
+Incremental crawling, 193
+Independent random variables, 25
+Index sharding, 156–157
+Indexes
+compressed, 158–162
+forward, 153, 308
+k-nearest neighbors algorithm, 308
+MapReduce, 198–199
+META toolkit, 60–61, 453–455
+search engine implementation, 150–153
+search engines, 147, 150–153
+text categorization, 314
+web searches, 194–200
+Indirect citations in web searches, 202
+Indirect opinions, 391–392
+Indri/Lemur search engine toolkit, 64
+Inferences
+NLP, 41
+probabilistic, 88
+real world properties, 248
+Inferred opinions, 391–392
+Information access in text information
+systems, 7
+Information extraction
+NLP, 43
+text information systems, 9, 12
+Information retrieval (IR) systems, 6
+evaluation metrics, 324–325
+implementation. See Search engine
+implementation
+text data access, 79
+Information theory, 31–34
+Initial values in EM algorithm, 466
+Initialization modules in content-based
+filtering, 224–225
+Inlink counts in PageRank, 203
+Instance-based classifiers, 302
+Instructor reader category, 16–17
+Integer compression, 158–162
+Integration of information access in web
+searches, 213
+Integrity in text data access, 81
+Interactive access, multimode, 76–78
+Interactive task support in web searches,
+216
+International Components for Unicode
+(ICU), 61
+Interpolation for smoothing methods,
+125–126
+Interpret operator, 450–452
+Intersection operator, 449–450
+Intrusion detection, 271–273
+Inverse document frequency (IDF)
+Dirichlet prior smoothing, 126
+paradigmatic relations, 258–260
+query likelihood retrieval model, 122
