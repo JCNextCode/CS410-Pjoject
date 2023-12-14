@@ -1,0 +1,13 @@
+type = "line-corpus"
+index = "idx"
+corpus = "line.toml"
+stop-words = "stopwords.txt"
+dataset = "text_data"
+prefix = "."
+[query-runner]
+	query-id-start = 1
+	query-path = "subtitle-queries.txt"
+[[analyzers]]
+	filter = "default-unigram-chain"
+	ngram = 1
+	method = "ngram-word"
