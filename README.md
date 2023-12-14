@@ -29,4 +29,4 @@ Please goto the following link to access the progress report.
 
 Please goto the following link to access the progress report.
 
-[Progress Report](https://github.com/JCNextCode/CS410-Project/tree/main/document) 
+[Final Project Document](https://github.com/JCNextCode/CS410-Project/tree/main/document) 
