@@ -1,4 +1,0 @@
-{ "prescript_commands": [ "pip install --upgrade metapy pytoml tqdm requests"
-],
-    "entrypoint": "mp2.2_grader"
-}
