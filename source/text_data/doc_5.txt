@@ -1,9 +1,0 @@
-Text Data Management
-and Analysis
-A Practical Introduction to Information
-Retrieval and Text Mining
-ChengXiang Zhai
-University of Illinois at Urbana–Champaign
-Sean Massung
-University of Illinois at Urbana–Champaign
-ACM Books #12

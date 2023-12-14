@@ -1,9 +1,0 @@
-Exercises
-237
-and L2 error is defined as
-n
-�
-i=1
-(yi − f (xi))2,
-where yi represents the true value of a prediction, f (xi) is the prediction itself, and
-n is the total number of predictions.
