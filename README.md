@@ -13,7 +13,7 @@ The problem is that we rarely have the luxury of time to read a textbook cover t
 
 ## PRESENTATION and DEMO
 
-[Click on the Youtube Link](https://github.com/JCNextCode/CS410-Project/tree/main/document) 
+[Click on the Youtube Link](https://youtu.be/PT3r470kMA8) 
 
 
 ## PROPOSAL
