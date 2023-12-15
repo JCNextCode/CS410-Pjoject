@@ -15,9 +15,10 @@ The problem is that we rarely have the luxury of time to read a textbook cover t
 
 [Click on the Youtube Link](https://youtu.be/PT3r470kMA8) 
 
+<div>
 <img src="./resource/screen1.png" width=400>
-<img src="./resource/screen1.png" width=400>
-
+<img src="./resource/screen2.png" width=400>
+</div>
 
 ## PROPOSAL
 
